@@ -1,0 +1,8 @@
+.vim/
+.vimbackup/
+.vimswap/
+.vimundo/
+.vimviews/
+.cache/
+_*
+
