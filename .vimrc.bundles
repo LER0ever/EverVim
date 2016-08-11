@@ -278,6 +278,7 @@
         if count(g:evervim_bundle_groups, 'misc')
             Bundle 'rust-lang/rust.vim'
             Bundle 'tpope/vim-markdown'
+            Bundle 'hsitz/VimOrganizer'
             Bundle 'spf13/vim-preview'
             Bundle 'tpope/vim-cucumber'
             Bundle 'cespare/vim-toml'
