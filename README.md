@@ -12,6 +12,8 @@ So I created this repo just to share my config and modification of spf13.
 - C++ support added
 - Remove the php and ruby option by default.
 
+## ScreenShot:
+![evervim](http://i1.piimg.com/7134/88e4263393d72eec.png)
 
 ## License
 Dual License, under either MIT or Apache
