@@ -1,6 +1,7 @@
 .vim/
 .vimbackup/
 .vimswap/
+*viminfo
 .vimundo/
 .vimviews/
 .cache/
