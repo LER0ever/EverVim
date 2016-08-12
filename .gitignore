@@ -6,4 +6,5 @@
 .vimviews/
 .cache/
 _*
+.NERD*
 

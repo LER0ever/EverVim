@@ -78,7 +78,8 @@
         "set term=$TERM          " Make arrow and other keys work
     " endif
     filetype plugin indent on   " Automatically detect file types.
-    syntax on                   " Syntax highlighting
+    syntax on
+    set foldmethod=syntax       " Syntax highlighting
     set mouse=a                 " Automatically enable mouse usage
     set mousehide               " Hide the mouse cursor while typing
     scriptencoding utf-8
@@ -439,6 +440,19 @@
     " winresize {
         let g:winresizer_start_key = '<Leader>re'
 
+    " }
+
+    " vimwiki {
+        let g:vimwiki_folding = 'syntax'
+        map <Leader>vwe :Vimwiki2HTML<CR>
+        map <Leader>vwb :Vimwiki2HTMLBrowse<CR>
+    " }
+
+    " vim-uncrustify {
+        autocmd FileType c noremap <buffer> <Leader>fm :call Uncrustify('c')<CR>
+        autocmd FileType c vnoremap <buffer> <Leader>fm :call RangeUncrustify('c')<CR>
+        autocmd FileType cpp noremap <buffer> <Leader>fm :call Uncrustify('cpp')<CR>
+        autocmd FileType cpp vnoremap <buffer> <Leader>fm :call RangeUncrustify('cpp')<CR>
     " }
 
     " GoLang {

@@ -150,6 +150,7 @@
             Bundle 'tpope/vim-fugitive'
             Bundle 'mattn/webapi-vim'
             Bundle 'mattn/gist-vim'
+            Bundle 'vim-scripts/vim-uncrustify'
             Bundle 'scrooloose/nerdcommenter'
             Bundle 'chrisyip/AuthorInfo'
             Bundle 'tpope/vim-commentary'
@@ -281,7 +282,7 @@
         if count(g:evervim_bundle_groups, 'misc')
             Bundle 'rust-lang/rust.vim'
             Bundle 'tpope/vim-markdown'
-            Bundle 'hsitz/VimOrganizer'
+            Bundle 'vimwiki/vimwiki'
             Bundle 'spf13/vim-preview'
             Bundle 'tpope/vim-cucumber'
             Bundle 'cespare/vim-toml'
