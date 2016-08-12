@@ -8,5 +8,6 @@ if "%1"=="h" goto begin
 start mshta vbscript:createobject("wscript.shell").run("""%~nx0"" h",0)(window.close)&&exit 
 :begin
 set HOME=%~dp0\home\EverVim\
+SET PATH=%PATH%;%~dp0\tools\
 vim-x86\gvim.exe %*
 exit

@@ -90,6 +90,7 @@
             Bundle 'spf13/vim-colors'
             Bundle 'tpope/vim-surround'
             Bundle 'tpope/vim-repeat'
+            Bundle 'simeji/winresizer'
             Bundle 'rhysd/conflict-marker.vim'
             Bundle 'jiangmiao/auto-pairs'
             Bundle 'ctrlpvim/ctrlp.vim'
@@ -138,6 +139,7 @@
         if count(g:evervim_bundle_groups, 'cpp')
             Bundle 'octol/vim-cpp-enhanced-highlight'
             Bundle 'vim-scripts/c.vim'
+            Bundle 'vim-scripts/a.vim'
         endif
     " }
 
@@ -149,6 +151,7 @@
             Bundle 'mattn/webapi-vim'
             Bundle 'mattn/gist-vim'
             Bundle 'scrooloose/nerdcommenter'
+            Bundle 'chrisyip/AuthorInfo'
             Bundle 'tpope/vim-commentary'
             Bundle 'godlygeek/tabular'
             Bundle 'luochen1990/rainbow'

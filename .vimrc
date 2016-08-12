@@ -56,6 +56,9 @@
 " }
 
 " General {
+    let g:vimrc_author='LER0ever'
+    let g:vimrc_email='etasry@gmail.com'
+    let g:vimrc_homepage='http://yirong.ml'
 
     set background=dark         " Assume a dark background
 
@@ -433,6 +436,10 @@
 " }
 
 " Plugins {
+    " winresize {
+        let g:winresizer_start_key = '<Leader>re'
+
+    " }
 
     " GoLang {
         if count(g:evervim_bundle_groups, 'go')
