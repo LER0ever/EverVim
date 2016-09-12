@@ -96,6 +96,8 @@
             Bundle 'ctrlpvim/ctrlp.vim'
             Bundle 'tacahiroy/ctrlp-funky'
             Bundle 'dyng/ctrlsf.vim'
+            Bundle 'Shougo/vimproc.vim'
+            Bundle 'Shougo/vimshell.vim'
             Bundle 'terryma/vim-multiple-cursors'
             Bundle 'vim-scripts/sessionman.vim'
             Bundle 'matchit.zip'
