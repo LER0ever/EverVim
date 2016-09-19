@@ -3,3 +3,5 @@ let g:uncrustify_cfg_file_path =
     \ shellescape(fnamemodify('~/../../Tools/uncrustify.cfg', ':p'))
 let g:airline_powerline_fonts=1
 set encoding=utf-8
+let g:fastfold_savehook = 0
+
