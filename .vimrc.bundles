@@ -75,7 +75,7 @@
     " In your .vimrc.before.local file
     " list only the plugin groups you will use
     if !exists('g:evervim_bundle_groups')
-        let g:evervim_bundle_groups=['general', 'writing', 'neocomplete', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'cpp', ]
+        let g:evervim_bundle_groups=['general', 'writing', 'neocomplete', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'rust', 'cpp', ]
     endif
 
     " To override all the included bundles, add the following to your
@@ -280,10 +280,16 @@
             Bundle 'mattreduce/vim-mix'
         endif
     " }
+    
+    " rust {
+        if count(g:evervim_bundle_groups, 'rust')
+            Bundle 'rust-lang/rust.vim'
+            Bundle 'racer-rust/vim-racer'
+        endif 
+    " }
 
     " Misc {
         if count(g:evervim_bundle_groups, 'misc')
-            Bundle 'rust-lang/rust.vim'
             Bundle 'tpope/vim-markdown'
             Bundle 'vimwiki/vimwiki'
             Bundle 'spf13/vim-preview'
