@@ -15,6 +15,10 @@ cd ~/.vim/bundle/
 echo 'Cloning Vundle Plugin Manager to bundle ...'
 git clone https://github.com/VundleVim/Vundle.vim.git vundle
 
+echo 'Downloading Vim-Plug'
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 echo 'Linking Neovim Config'
 ln -s ~/.vim ~/.config/nvim
 ln -s ~/.vimrc ~/.config/nvim/init.vim

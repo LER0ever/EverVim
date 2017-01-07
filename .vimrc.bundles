@@ -38,19 +38,24 @@
 
     " Setup Bundle Support {
         " The next three lines ensure that the ~/.vim/bundle/ system works
+         " filetype off
+         " set rtp+=~/.vim/bundle/vundle
+         " call vundle#rc()
+    " }
+    "
+    " Setup Vim-Plug Support {
         filetype off
-        set rtp+=~/.vim/bundle/vundle
-        call vundle#rc()
+        call plug#begin('~/.vim/bundle')
     " }
 
     " Add an UnBundle command {
-    function! UnBundle(arg, ...)
-      let bundle = vundle#config#init_bundle(a:arg, a:000)
-      call filter(g:vundle#bundles, 'v:val["name_spec"] != "' . a:arg . '"')
-    endfunction
+    "function! UnBundle(arg, ...)
+    "  let bundle = vundle#config#init_bundle(a:arg, a:000)
+    "  call filter(g:vundle#bundles, 'v:val["name_spec"] != "' . a:arg . '"')
+    "endfunction
 
-    com! -nargs=+         UnBundle
-    \ call UnBundle(<args>)
+    "com! -nargs=+         UnBundle
+    "\ call UnBundle(<args>)
     " }
 
 " }
@@ -58,17 +63,17 @@
 " Bundles {
 
     " Deps {
-        Bundle 'gmarik/vundle'
-        Bundle 'MarcWeber/vim-addon-mw-utils'
-        Bundle 'tomtom/tlib_vim'
+        " Plug 'gmarik/vundle'
+        Plug 'MarcWeber/vim-addon-mw-utils'
+        Plug 'tomtom/tlib_vim'
         if executable('ag')
-            Bundle 'mileszs/ack.vim'
+            Plug 'mileszs/ack.vim'
             let g:ackprg = 'ag --nogroup --nocolor --column --smart-case'
         elseif executable('ack-grep')
             let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-            Bundle 'mileszs/ack.vim'
+            Plug 'mileszs/ack.vim'
         elseif executable('ack')
-            Bundle 'mileszs/ack.vim'
+            Plug 'mileszs/ack.vim'
         endif
     " }
 
@@ -89,175 +94,175 @@
 
     " General {
         if count(g:evervim_bundle_groups, 'general')
-            Bundle 'scrooloose/nerdtree'
-            Bundle 'altercation/vim-colors-solarized'
-            Bundle 'spf13/vim-colors'
-            Bundle 'tpope/vim-surround'
-            Bundle 'tpope/vim-repeat'
-            Bundle 'simeji/winresizer'
-            Bundle 'Konfekt/FastFold'
-            Bundle 'rhysd/conflict-marker.vim'
-            Bundle 'jiangmiao/auto-pairs'
-            Bundle 'ctrlpvim/ctrlp.vim'
-            Bundle 'tacahiroy/ctrlp-funky'
-            Bundle 'dyng/ctrlsf.vim'
-            Bundle 'Shougo/vimproc.vim'
-            Bundle 'Shougo/vimshell.vim'
-            Bundle 'terryma/vim-multiple-cursors'
-            Bundle 'vim-scripts/sessionman.vim'
-            Bundle 'matchit.zip'
+            Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
+            Plug 'altercation/vim-colors-solarized'
+            Plug 'spf13/vim-colors'
+            Plug 'tpope/vim-surround'
+            Plug 'tpope/vim-repeat'
+            Plug 'simeji/winresizer'
+            Plug 'Konfekt/FastFold'
+            Plug 'rhysd/conflict-marker.vim'
+            Plug 'jiangmiao/auto-pairs'
+            Plug 'ctrlpvim/ctrlp.vim'
+            Plug 'tacahiroy/ctrlp-funky'
+            Plug 'dyng/ctrlsf.vim'
+            Plug 'Shougo/vimproc.vim'
+            Plug 'Shougo/vimshell.vim'
+            Plug 'terryma/vim-multiple-cursors'
+            Plug 'vim-scripts/sessionman.vim'
+            Plug 'matchit.zip'
             if (has("python") || has("python3")) && exists('g:evervim_use_powerline') && !exists('g:evervim_use_old_powerline')
-                Bundle 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
+                Plug 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
             elseif exists('g:evervim_use_powerline') && exists('g:evervim_use_old_powerline')
-                Bundle 'Lokaltog/vim-powerline'
+                Plug 'Lokaltog/vim-powerline'
             else
-                Bundle 'vim-airline/vim-airline'
-                Bundle 'vim-airline/vim-airline-themes'
+                Plug 'vim-airline/vim-airline'
+                Plug 'vim-airline/vim-airline-themes'
             endif
-            Bundle 'powerline/fonts'
-            Bundle 'bling/vim-bufferline'
-            Bundle 'easymotion/vim-easymotion'
-            Bundle 'jistr/vim-nerdtree-tabs'
-            Bundle 'flazz/vim-colorschemes'
-            Bundle 'mbbill/undotree'
-            Bundle 'Yggdroot/indentLine'
+            Plug 'powerline/fonts'
+            Plug 'bling/vim-bufferline'
+            Plug 'easymotion/vim-easymotion'
+            Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
+            Plug 'flazz/vim-colorschemes'
+            Plug 'mbbill/undotree'
+            Plug 'Yggdroot/indentLine'
             if !exists('g:evervim_no_views')
-                Bundle 'vim-scripts/restore_view.vim'
+                Plug 'vim-scripts/restore_view.vim'
             endif
-            Bundle 'mhinz/vim-signify'
-            Bundle 'tpope/vim-abolish.git'
-            Bundle 'osyo-manga/vim-over'
-            Bundle 'kana/vim-textobj-user'
-            Bundle 'kana/vim-textobj-indent'
-            Bundle 'gcmt/wildfire.vim'
+            Plug 'mhinz/vim-signify'
+            Plug 'tpope/vim-abolish.git'
+            Plug 'osyo-manga/vim-over'
+            Plug 'kana/vim-textobj-user'
+            Plug 'kana/vim-textobj-indent'
+            Plug 'gcmt/wildfire.vim'
         endif
     " }
 
     " Writing {
         if count(g:evervim_bundle_groups, 'writing')
-            Bundle 'reedes/vim-litecorrect'
-            Bundle 'reedes/vim-textobj-sentence'
-            Bundle 'reedes/vim-textobj-quote'
-            Bundle 'reedes/vim-wordy'
+            Plug 'reedes/vim-litecorrect'
+            Plug 'reedes/vim-textobj-sentence'
+            Plug 'reedes/vim-textobj-quote'
+            Plug 'reedes/vim-wordy'
         endif
     " }
 
     " cpp {
         if count(g:evervim_bundle_groups, 'cpp')
-            Bundle 'octol/vim-cpp-enhanced-highlight'
-            Bundle 'vim-scripts/c.vim'
-            Bundle 'vim-scripts/a.vim'
+            Plug 'octol/vim-cpp-enhanced-highlight'
+            Plug 'vim-scripts/c.vim'
+            Plug 'vim-scripts/a.vim'
         endif
     " }
 
     " General Programming {
         if count(g:evervim_bundle_groups, 'programming')
             " Pick one of the checksyntax, jslint, or syntastic
-            Bundle 'scrooloose/syntastic'
-            Bundle 'tpope/vim-fugitive'
-            Bundle 'mattn/webapi-vim'
-            Bundle 'mattn/gist-vim'
-            Bundle 'scrooloose/nerdcommenter'
-            Bundle 'Chiel92/vim-autoformat'
-            Bundle 'chrisyip/AuthorInfo'
-            Bundle 'tpope/vim-commentary'
-            Bundle 'godlygeek/tabular'
-            Bundle 'luochen1990/rainbow'
+            Plug 'scrooloose/syntastic'
+            Plug 'tpope/vim-fugitive'
+            Plug 'mattn/webapi-vim'
+            Plug 'mattn/gist-vim'
+            Plug 'scrooloose/nerdcommenter'
+            Plug 'Chiel92/vim-autoformat'
+            Plug 'chrisyip/AuthorInfo'
+            Plug 'tpope/vim-commentary'
+            Plug 'godlygeek/tabular'
+            Plug 'luochen1990/rainbow'
             if executable('ctags')
-                Bundle 'majutsushi/tagbar'
+                Plug 'majutsushi/tagbar'
             endif
         endif
     " }
 
     " Snippets & AutoComplete {
         if count(g:evervim_bundle_groups, 'snipmate')
-            Bundle 'garbas/vim-snipmate'
-            Bundle 'honza/vim-snippets'
+            Plug 'garbas/vim-snipmate'
+            Plug 'honza/vim-snippets'
             " Source support_function.vim to support vim-snippets.
             if filereadable(expand("~/.vim/bundle/vim-snippets/snippets/support_functions.vim"))
                 source ~/.vim/bundle/vim-snippets/snippets/support_functions.vim
             endif
         elseif count(g:evervim_bundle_groups, 'youcompleteme')
-            Bundle 'Valloric/YouCompleteMe'
-            Bundle 'SirVer/ultisnips'
-            Bundle 'honza/vim-snippets'
+            Plug 'Valloric/YouCompleteMe'
+            Plug 'SirVer/ultisnips'
+            Plug 'honza/vim-snippets'
         elseif count(g:evervim_bundle_groups, 'neocomplcache')
-            Bundle 'Shougo/neocomplcache'
-            Bundle 'Shougo/neosnippet'
-            Bundle 'Shougo/neosnippet-snippets'
-            Bundle 'honza/vim-snippets'
+            Plug 'Shougo/neocomplcache'
+            Plug 'Shougo/neosnippet'
+            Plug 'Shougo/neosnippet-snippets'
+            Plug 'honza/vim-snippets'
         elseif count(g:evervim_bundle_groups, 'neocomplete')
-            Bundle 'Shougo/neocomplete.vim.git'
-            Bundle 'Shougo/neosnippet'
-            Bundle 'Shougo/neosnippet-snippets'
-            Bundle 'honza/vim-snippets'
+            Plug 'Shougo/neocomplete.vim.git'
+            Plug 'Shougo/neosnippet'
+            Plug 'Shougo/neosnippet-snippets'
+            Plug 'honza/vim-snippets'
         endif
     " }
 
     " PHP {
         if count(g:evervim_bundle_groups, 'php')
-            Bundle 'spf13/PIV'
-            Bundle 'arnaud-lb/vim-php-namespace'
-            Bundle 'beyondwords/vim-twig'
+            Plug 'spf13/PIV'
+            Plug 'arnaud-lb/vim-php-namespace'
+            Plug 'beyondwords/vim-twig'
         endif
     " }
 
     " Python {
         if count(g:evervim_bundle_groups, 'python')
             " Pick either python-mode or pyflakes & pydoc
-            Bundle 'klen/python-mode'
-            Bundle 'yssource/python.vim'
-            Bundle 'python_match.vim'
-            Bundle 'pythoncomplete'
+            Plug 'klen/python-mode'
+            Plug 'yssource/python.vim'
+            Plug 'python_match.vim'
+            Plug 'pythoncomplete'
         endif
     " }
 
     " Javascript {
         if count(g:evervim_bundle_groups, 'javascript')
-            Bundle 'elzr/vim-json'
-            Bundle 'groenewege/vim-less'
-            Bundle 'pangloss/vim-javascript'
-            Bundle 'briancollins/vim-jst'
-            Bundle 'kchmck/vim-coffee-script'
+            Plug 'elzr/vim-json'
+            Plug 'groenewege/vim-less'
+            Plug 'pangloss/vim-javascript', {'for': 'javascript'}
+            Plug 'briancollins/vim-jst'
+            Plug 'kchmck/vim-coffee-script', {'for': ['javascript', 'coffeescript']}
         endif
     " }
 
     " Scala {
         if count(g:evervim_bundle_groups, 'scala')
-            Bundle 'derekwyatt/vim-scala'
-            Bundle 'derekwyatt/vim-sbt'
-            Bundle 'xptemplate'
+            Plug 'derekwyatt/vim-scala'
+            Plug 'derekwyatt/vim-sbt'
+            Plug 'xptemplate'
         endif
     " }
 
     " Haskell {
         if count(g:evervim_bundle_groups, 'haskell')
-            Bundle 'travitch/hasksyn'
-            Bundle 'dag/vim2hs'
-            Bundle 'Twinside/vim-haskellConceal'
-            Bundle 'Twinside/vim-haskellFold'
-            Bundle 'lukerandall/haskellmode-vim'
-            Bundle 'eagletmt/neco-ghc'
-            Bundle 'eagletmt/ghcmod-vim'
-            Bundle 'Shougo/vimproc.vim'
-            Bundle 'adinapoli/cumino'
-            Bundle 'bitc/vim-hdevtools'
+            Plug 'travitch/hasksyn'
+            Plug 'dag/vim2hs'
+            Plug 'Twinside/vim-haskellConceal'
+            Plug 'Twinside/vim-haskellFold'
+            Plug 'lukerandall/haskellmode-vim'
+            Plug 'eagletmt/neco-ghc'
+            Plug 'eagletmt/ghcmod-vim'
+            Plug 'Shougo/vimproc.vim'
+            Plug 'adinapoli/cumino'
+            Plug 'bitc/vim-hdevtools'
         endif
     " }
 
     " HTML {
         if count(g:evervim_bundle_groups, 'html')
-            Bundle 'amirh/HTML-AutoCloseTag'
-            Bundle 'hail2u/vim-css3-syntax'
-            Bundle 'gorodinskiy/vim-coloresque'
-            Bundle 'tpope/vim-haml'
-            Bundle 'mattn/emmet-vim'
+            Plug 'amirh/HTML-AutoCloseTag'
+            Plug 'hail2u/vim-css3-syntax'
+            Plug 'gorodinskiy/vim-coloresque'
+            Plug 'tpope/vim-haml'
+            Plug 'mattn/emmet-vim'
         endif
     " }
 
     " Ruby {
         if count(g:evervim_bundle_groups, 'ruby')
-            Bundle 'tpope/vim-rails'
+            Plug 'tpope/vim-rails', {'for': 'ruby'}
             let g:rubycomplete_buffer_loading = 1
             "let g:rubycomplete_classes_in_global = 1
             "let g:rubycomplete_rails = 1
@@ -266,41 +271,41 @@
 
     " Puppet {
         if count(g:evervim_bundle_groups, 'puppet')
-            Bundle 'rodjek/vim-puppet'
+            Plug 'rodjek/vim-puppet'
         endif
     " }
 
     " Go Lang {
         if count(g:evervim_bundle_groups, 'go')
-            "Bundle 'Blackrush/vim-gocode'
-            Bundle 'fatih/vim-go'
+            "Plug 'Blackrush/vim-gocode'
+            Plug 'fatih/vim-go', {'for': 'go'}
         endif
     " }
 
     " Elixir {
         if count(g:evervim_bundle_groups, 'elixir')
-            Bundle 'elixir-lang/vim-elixir'
-            Bundle 'carlosgaldino/elixir-snippets'
-            Bundle 'mattreduce/vim-mix'
+            Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}
+            Plug 'carlosgaldino/elixir-snippets', {'for': 'elixir'}
+            Plug 'mattreduce/vim-mix', {'for': 'elixir'}
         endif
     " }
-    
+
     " rust {
         if count(g:evervim_bundle_groups, 'rust')
-            Bundle 'rust-lang/rust.vim'
-            Bundle 'racer-rust/vim-racer'
-        endif 
+            Plug 'rust-lang/rust.vim'
+            Plug 'racer-rust/vim-racer'
+        endif
     " }
 
     " Misc {
         if count(g:evervim_bundle_groups, 'misc')
-            Bundle 'tpope/vim-markdown'
-            Bundle 'vimwiki/vimwiki'
-            Bundle 'spf13/vim-preview'
-            Bundle 'tpope/vim-cucumber'
-            Bundle 'cespare/vim-toml'
-            Bundle 'quentindecock/vim-cucumber-align-pipes'
-            Bundle 'saltstack/salt-vim'
+            Plug 'tpope/vim-markdown', {'for': 'markdown'}
+            Plug 'vimwiki/vimwiki'
+            Plug 'spf13/vim-preview'
+            Plug 'tpope/vim-cucumber'
+            Plug 'cespare/vim-toml', {'for': 'toml'}
+            Plug 'quentindecock/vim-cucumber-align-pipes'
+            Plug 'saltstack/salt-vim'
         endif
     " }
 
@@ -318,4 +323,8 @@
     if filereadable(expand("~/.vimrc.bundles.local"))
         source ~/.vimrc.bundles.local
     endif
+" }
+"
+" Vim-Plug Teardown {
+    call plug#end()
 " }
