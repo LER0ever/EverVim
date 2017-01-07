@@ -79,7 +79,7 @@
     " endif
     filetype plugin indent on   " Automatically detect file types.
     syntax on
-    set foldmethod=syntax       " Syntax highlighting
+    set foldmethod=indent       " Syntax highlighting | using indentation as foldmethod to speed up vim
     set mouse=a                 " Automatically enable mouse usage
     set mousehide               " Hide the mouse cursor while typing
     scriptencoding utf-8
