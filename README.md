@@ -5,6 +5,14 @@ My Ultimate Personal Vim Config based on [spf13-vim](https://github.com/spf13/sp
 I am a faithful vim user and [spf13](https://github.com/spf13/spf13-vim) works fine for me. But it's not easy to install and not portable.  
 So I created this repo just to share my config and modification of [spf13](https://github.com/spf13/spf13-vim).  
 
+## Install
+```bash
+git clone https://github.com/LER0ever/EverVim ~/.EverVim
+cd ~/.EverVim
+sh Boot-EverVim.sh
+# open vim or nvim and type :PlugInstall
+```
+
 ## Feature
 - Support Vim 7.4.x, Vim 8 and of course Neovim
 - Portable under windows
