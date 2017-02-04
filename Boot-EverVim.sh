@@ -11,7 +11,7 @@ ln -s "$(pwd)"/.vimrc.before ~/.vimrc.before
 
 echo 'Creating Directories ...'
 mkdir -p ~/.vim/bundle/
-y
+
 echo 'Downloading Vim-Plug'
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
