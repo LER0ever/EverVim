@@ -26,6 +26,11 @@ sh Boot-EverVim.sh
 - Require +lua. (And +python if you use YouCompleteMe)
 
 ## ScreenShot
+##### Under NeoVim Terminal
+![evervimterm](http://i.imgur.com/KRvlDp3.png)
+##### Under GVim
+![evervimgui](http://i.imgur.com/8ICWEmw.png)
+##### Older Shots
 ![evervim](http://i1.piimg.com/7134/88e4263393d72eec.png)
 
 ## License
