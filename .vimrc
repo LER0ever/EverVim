@@ -115,7 +115,7 @@
     " Instead of reverting the cursor to the last position in the buffer, we
     " set it to the first line when editing a git commit message
     au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
-
+    
     " http://vim.wikia.com/wiki/Restore_cursor_to_file_position_in_previous_editing_session
     " Restore cursor to file position in previous editing session
     " To disable this, add the following to your .vimrc.before.local file:
@@ -162,7 +162,7 @@
         let g:solarized_termtrans=1
         let g:solarized_contrast="normal"
         let g:solarized_visibility="normal"
-        color molokai             " Load a colorscheme
+        color dracula             " Load a colorscheme
     endif
 
     set tabpagemax=15               " Only show 15 tabs
@@ -611,6 +611,12 @@
         endif
     " }
 
+    " vim-markdown {
+        let g:vim_markdown_toml_frontmatter = 1
+        let g:vim_markdown_math = 1
+        let g:vim_markdown_fenced_languages = ['csharp=cs', 'c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosini', 'toml=toml']
+    " }
+
     " Session List {
         set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
         if isdirectory(expand("~/.vim/bundle/sessionman.vim/"))
@@ -1055,7 +1061,7 @@
         " Use the powerline theme and optionally enable powerline symbols.
         " To use the symbols , , , , , , and .in the statusline
         " segments add the following to your .vimrc.before.local file:
-        "   let g:airline_powerline_fonts=1
+        let g:airline_powerline_fonts=1
         " If the previous symbols do not render for you then install a
         " powerline enabled font.
 
@@ -1063,7 +1069,7 @@
         " Default in terminal vim is 'dark'
         if isdirectory(expand("~/.vim/bundle/vim-airline-themes/"))
             if !exists('g:airline_theme')
-                let g:airline_theme = 'molokai' "'solarized'
+                let g:airline_theme = 'dracula' " 'molokai' 'solarized'
             endif
             if !exists('g:airline_powerline_fonts')
                 " Use the default set of separators with a few customizations
@@ -1085,7 +1091,7 @@
         set lines=40                " 40 lines of text instead of 24
         if !exists("g:evervim_no_big_font")
             if LINUX() && has("gui_running")
-                set guifont=Noto\ Mono\ Regular\ 12,Menlo\ Regular\ 11,Consolas\ Regular\ 12,Courier\ New\ Regular\ 14
+                set guifont=Knack\ Nerd\ Font\ Regular\ 11,Noto\ Mono\ Regular\ 12,Menlo\ Regular\ 11,Consolas\ Regular\ 12,Courier\ New\ Regular\ 14
             elseif OSX() && has("gui_running")
                 set guifont=Andale\ Mono\ Regular:h12,Menlo\ Regular:h11,Consolas\ Regular:h12,Courier\ New\ Regular:h14
             elseif WINDOWS() && has("gui_running")

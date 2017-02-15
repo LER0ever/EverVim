@@ -124,6 +124,8 @@
             Plug 'easymotion/vim-easymotion'
             Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
             Plug 'flazz/vim-colorschemes'
+            Plug 'dracula/vim'
+            Plug 'ryanoasis/vim-devicons'
             Plug 'mbbill/undotree'
             Plug 'Yggdroot/indentLine'
             if !exists('g:evervim_no_views')
@@ -300,7 +302,7 @@
 
     " Misc {
         if count(g:evervim_bundle_groups, 'misc')
-            Plug 'tpope/vim-markdown', {'for': 'markdown'}
+            Plug 'tpope/vim-markdown' ", {'for': 'markdown'}
             Plug 'vimwiki/vimwiki'
             Plug 'spf13/vim-preview'
             Plug 'tpope/vim-cucumber'
