@@ -1,8 +1,8 @@
 # EverVim
-My Ultimate Personal Vim Config based on [spf13-vim](https://github.com/spf13/spf13-vim)
+A Powerful Vim Distrobution based on [spf13-vim](https://github.com/spf13/spf13-vim)
 
 ## About
-I am a faithful vim user and [spf13](https://github.com/spf13/spf13-vim) works fine for me. But it's not easy to install and not portable.  
+I am a faithful vim user and [spf13](https://github.com/spf13/spf13-vim) works fine for me. But it lacks some specific features and is not portable  
 So I created this repo just to share my config and modification of [spf13](https://github.com/spf13/spf13-vim).  
 
 ## Install
@@ -19,6 +19,7 @@ sh Boot-EverVim.sh
 - Easy to setup, just one bash away.
 - Fancy Molokai theme
 - C++ support added
+- Collaboration using CoVim
 - Remove the php and ruby option by default.
 - Use Vim-Plug, its Async!
 - Use YouCompleteMe by default, neocomplete as a windows fallback
