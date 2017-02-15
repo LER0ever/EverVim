@@ -578,6 +578,7 @@
             map <leader>e :NERDTreeFind<CR>
             nmap <leader>nt :NERDTreeToggle<CR>
 
+            let g:NERDTreeWinSize=30
             let NERDTreeShowBookmarks=1
             let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
             let NERDTreeChDirMode=0
