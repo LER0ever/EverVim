@@ -121,6 +121,7 @@
             endif
             Plug 'powerline/fonts'
             Plug 'bling/vim-bufferline'
+            Plug 'jlanzarotta/bufexplorer'
             Plug 'easymotion/vim-easymotion'
             Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
             Plug 'flazz/vim-colorschemes'
