@@ -133,7 +133,7 @@
                 Plug 'vim-scripts/restore_view.vim'
             endif
             Plug 'mhinz/vim-signify'
-            Plug 'tpope/vim-abolish.git'
+            Plug 'tpope/vim-abolish'
             Plug 'osyo-manga/vim-over'
             Plug 'kana/vim-textobj-user'
             Plug 'kana/vim-textobj-indent'
@@ -256,7 +256,7 @@
 
     " HTML {
         if count(g:evervim_bundle_groups, 'html')
-            Plug 'amirh/HTML-AutoCloseTag'
+            Plug 'alvan/vim-closetag'
             Plug 'hail2u/vim-css3-syntax'
             Plug 'gorodinskiy/vim-coloresque'
             Plug 'tpope/vim-haml'
