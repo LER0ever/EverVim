@@ -561,7 +561,7 @@
 
     " AutoCloseTag {
         " Make it so AutoCloseTag works for xml and xhtml files as well
-        let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
+        let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.xml"
         " nmap <Leader>ac <Plug>ToggleAutoCloseMappings
     " }
 
