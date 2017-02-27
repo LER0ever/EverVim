@@ -225,6 +225,7 @@
         if count(g:evervim_bundle_groups, 'javascript')
             Plug 'elzr/vim-json'
             Plug 'groenewege/vim-less'
+            Plug 'digitaltoad/vim-pug'
             Plug 'pangloss/vim-javascript', {'for': 'javascript'}
             Plug 'briancollins/vim-jst'
             Plug 'kchmck/vim-coffee-script', {'for': ['javascript', 'coffeescript']}
@@ -260,6 +261,7 @@
             Plug 'hail2u/vim-css3-syntax'
             Plug 'gorodinskiy/vim-coloresque'
             Plug 'tpope/vim-haml'
+            Plug 'wavded/vim-stylus'
             Plug 'mattn/emmet-vim'
         endif
     " }

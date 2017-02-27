@@ -220,7 +220,7 @@
     set nowrap                      " Do not wrap long lines
     set autoindent                  " Indent at the same level of the previous line
     set shiftwidth=4                " Use indents of 4 spaces
-    set expandtab                   " Tabs are spaces, not tabs
+    set noexpandtab                 " Tabs are spaces, not tabs
     set tabstop=4                   " An indentation every four columns
     set softtabstop=4               " Let backspace delete indent
     set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
@@ -1037,7 +1037,7 @@
             " let g:indent_guides_guide_size = 1
             " let g:indent_guides_enable_on_vim_startup = 1
             " Vim
-            let g:indentLine_color_term = 239
+            let g:indentLine_color_term = 253
 
             "GVim
             let g:indentLine_color_gui = '#A4E57E'
