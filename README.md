@@ -33,7 +33,7 @@ sh Boot-EverVim.sh
 ##### Under GVim
 ![evervimgui](http://i.imgur.com/8ICWEmw.png)
 ##### Older Shots
-![evervim](http://i1.piimg.com/7134/88e4263393d72eec.png)
+![evervimold](http://i.imgur.com/l8oK1Mj.png)
 
 ## License
 Dual License, under either MIT or Apache
