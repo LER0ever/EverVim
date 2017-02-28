@@ -26,6 +26,8 @@ sh Boot-EverVim.sh
 - Require +lua. (And +python if you use YouCompleteMe)
 
 ## ScreenShot
+##### Startup Screen
+![evervimstartify](http://i.imgur.com/JdfjGdi.png)
 ##### Under NeoVim Terminal
 ![evervimterm](http://i.imgur.com/KRvlDp3.png)
 ##### Under GVim

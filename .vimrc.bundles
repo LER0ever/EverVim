@@ -97,6 +97,7 @@
             Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
             Plug 'altercation/vim-colors-solarized'
             Plug 'spf13/vim-colors'
+            Plug 'mhinz/vim-startify'
             Plug 'tpope/vim-surround'
             Plug 'tpope/vim-repeat'
             Plug 'simeji/winresizer'

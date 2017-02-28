@@ -502,6 +502,16 @@
         endif
     " }
 
+    " Startify {
+        highlight StartifyHeader ctermfg=120 guifg=#87ff87
+        let g:startify_custom_header = [
+                    \'   ||===========================================||', 
+                    \'   || Welcome to EverVim. The Vim Distribution. ||',
+                    \'   || Made with <3 by LER0ever                  ||',
+                    \'   || https://github.com/LER0ever/EverVim       ||',
+                    \'   ||===========================================||']
+    " }
+
     " PIV {
         if isdirectory(expand("~/.vim/bundle/PIV"))
             let g:DisableAutoPHPFolding = 0
