@@ -313,6 +313,8 @@
             Plug 'cespare/vim-toml', {'for': 'toml'}
             Plug 'quentindecock/vim-cucumber-align-pipes'
             Plug 'saltstack/salt-vim'
+			Plug 'ryanss/vim-hackernews'
+			Plug 'itchyny/calendar.vim'
         endif
     " }
 
