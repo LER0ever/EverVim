@@ -1110,6 +1110,16 @@
             \   'fileformat': 'DeviconsFileFormat',
             \   'fugitive': 'LightlineFugitive',
             \ },
+            \ 'tabline': {
+            \   'left': [ ['tabs'] ],
+            \   'right': [ ['bufferline'] ]
+            \ },
+            \ 'component_expand': {
+            \   'bufferline': 'LightlineBufferline',
+            \ },
+            \ 'component_type': {
+            \   'bufferline': 'tabsel',
+            \ },
             \ 'separator': { 'left': '', 'right': '' },
             \ 'subseparator': { 'left': '', 'right': '' }
             \}
@@ -1129,7 +1139,11 @@
                 return branch !=# '' ? ''.branch : ''
             endif
             return ''
-        endfunction   
+        endfunction
+        function! LightlineBufferline()
+            call bufferline#refresh_status()
+            return [ g:bufferline_status_info.before, g:bufferline_status_info.current, g:bufferline_status_info.after]
+        endfunction
     " }
 
 
