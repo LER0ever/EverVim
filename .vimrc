@@ -1089,6 +1089,33 @@
         endif
     " }
 
+    " vim-lightline {
+        let g:lightline = {
+            \ 'colorscheme': 'Dracula',
+            \ 'active': {
+            \   'left': [ [ 'mode', 'paste' ],
+            \             [ 'fugitive', 'readonly', 'filename', 'modified' ]]
+            \ },
+            \ 'component': {
+            \   'readonly': '%{&readonly?"":""}',
+            \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}',
+            \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+            \ },
+            \ 'component_function': {
+            \   'filetype': 'DeviconsFileType',
+            \   'fileformat': 'DeviconsFileFormat',
+            \ },
+            \ 'separator': { 'left': '', 'right': '' },
+            \ 'subseparator': { 'left': '', 'right': '' }
+            \}
+        function! DeviconsFileType()
+            return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+        endfunction
+
+        function! DeviconsFileFormat()
+            return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+        endfunction
+    " }
 
 
 " }

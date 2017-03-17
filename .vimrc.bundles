@@ -112,13 +112,13 @@
             Plug 'terryma/vim-multiple-cursors'
             Plug 'vim-scripts/sessionman.vim'
             Plug 'matchit.zip'
-            if (has("python") || has("python3")) && exists('g:evervim_use_powerline') && !exists('g:evervim_use_old_powerline')
+            if (has("python") || has("python3")) && exists('g:evervim_use_powerline')
                 Plug 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
-            elseif exists('g:evervim_use_powerline') && exists('g:evervim_use_old_powerline')
-                Plug 'Lokaltog/vim-powerline'
-            else
+            elseif exists('g:evervim_use_airline') 
                 Plug 'vim-airline/vim-airline'
                 Plug 'vim-airline/vim-airline-themes'
+            else
+                Plug 'itchyny/lightline.vim'
             endif
             Plug 'powerline/fonts'
             Plug 'bling/vim-bufferline'
