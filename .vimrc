@@ -31,6 +31,7 @@
         " across (heterogeneous) systems easier.
         if WINDOWS()
           set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+          autocmd VimEnter * Startify
         endif
     " }
     
