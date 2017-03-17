@@ -593,7 +593,7 @@
     " NerdTree {
         if isdirectory(expand("~/.vim/bundle/nerdtree"))
             " map <C-e> <plug>NERDTreeTabsToggle<CR>
-            map <C-e> :NERDTreeTabsToggle<CR>
+            map <F3> :NERDTreeTabsToggle<CR>
             map <leader>e :NERDTreeFind<CR>
             nmap <leader>nt :NERDTreeToggle<CR>
 
