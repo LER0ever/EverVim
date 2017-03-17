@@ -241,6 +241,8 @@
 
     autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 
+    autocmd FileType vim set tabstop=4 shiftwidth=4 expandtab
+
     " Workaround vim-commentary for Haskell
     autocmd FileType haskell setlocal commentstring=--\ %s
     " Workaround broken colour highlighting in Haskell
