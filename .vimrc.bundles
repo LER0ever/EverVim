@@ -121,7 +121,7 @@
                 Plug 'itchyny/lightline.vim'
             endif
             Plug 'powerline/fonts'
-            Plug 'bling/vim-bufferline'
+            "Plug 'bling/vim-bufferline'
             Plug 'jlanzarotta/bufexplorer'
             Plug 'easymotion/vim-easymotion'
             Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }

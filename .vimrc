@@ -1092,6 +1092,10 @@
     " vim-lightline {
         let g:lightline = {
             \ 'colorscheme': 'Dracula',
+            \ 'enable': {
+            \   'statusline': 1,
+            \   'tabline': 1,
+            \ },
             \ 'active': {
             \   'left': [ [ 'mode', 'paste' ],
             \             [ 'fugitive', 'readonly', 'filename', 'modified' ]]
@@ -1104,10 +1108,14 @@
             \ 'component_function': {
             \   'filetype': 'DeviconsFileType',
             \   'fileformat': 'DeviconsFileFormat',
+            \   'fugitive': 'LightlineFugitive',
             \ },
             \ 'separator': { 'left': '', 'right': '' },
             \ 'subseparator': { 'left': '', 'right': '' }
             \}
+        
+        " show tabline by default
+        set showtabline=2
         function! DeviconsFileType()
             return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
         endfunction
@@ -1115,6 +1123,13 @@
         function! DeviconsFileFormat()
             return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
         endfunction
+        function! LightlineFugitive()
+            if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
+                let branch = fugitive#head()
+                return branch !=# '' ? ''.branch : ''
+            endif
+            return ''
+        endfunction   
     " }
 
 
