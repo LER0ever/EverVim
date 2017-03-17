@@ -505,13 +505,13 @@
     " Startify {
         highlight StartifyHeader ctermfg=120 guifg=#87ff87
         let g:startify_custom_header = [
-					\' _______   ___      ___ _______   ________  ___      ___ ___  _____ ______      ',
-					\'|\  ___ \ |\  \    /  /|\  ___ \ |\   __  \|\  \    /  /|\  \|\   _ \  _   \    ',
-					\'\ \   __/|\ \  \  /  / | \   __/|\ \  \|\  \ \  \  /  / | \  \ \  \\\__\ \  \   ',
-					\' \ \  \_|/_\ \  \/  / / \ \  \_|/_\ \   _  _\ \  \/  / / \ \  \ \  \\|__| \  \  ',
-					\'  \ \  \_|\ \ \    / /   \ \  \_|\ \ \  \\  \\ \    / /   \ \  \ \  \    \ \  \ ',
-					\'   \ \_______\ \__/ /     \ \_______\ \__\\ _\\ \__/ /     \ \__\ \__\    \ \__\',
-					\'    \|_______|\|__|/       \|_______|\|__|\|__|\|__|/       \|__|\|__|     \|__|',
+                    \' _______   ___      ___ _______   ________  ___      ___ ___  _____ ______      ',
+                    \'|\  ___ \ |\  \    /  /|\  ___ \ |\   __  \|\  \    /  /|\  \|\   _ \  _   \    ',
+                    \'\ \   __/|\ \  \  /  / | \   __/|\ \  \|\  \ \  \  /  / | \  \ \  \\\__\ \  \   ',
+                    \' \ \  \_|/_\ \  \/  / / \ \  \_|/_\ \   _  _\ \  \/  / / \ \  \ \  \\|__| \  \  ',
+                    \'  \ \  \_|\ \ \    / /   \ \  \_|\ \ \  \\  \\ \    / /   \ \  \ \  \    \ \  \ ',
+                    \'   \ \_______\ \__/ /     \ \_______\ \__\\ _\\ \__/ /     \ \__\ \__\    \ \__\',
+                    \'    \|_______|\|__|/       \|_______|\|__|\|__|\|__|/       \|__|\|__|     \|__|',
                     \'   ||=========================================================================||', 
                     \'   || Welcome to EverVim. The Ultimate Vim Distribution for everyone.         ||',
                     \'   || Made with <3 by LER0ever https://i.yirong.ml                            ||',
@@ -1105,17 +1105,20 @@
             \ },
             \ 'active': {
             \   'left': [ [ 'mode', 'paste' ],
-            \             [ 'fugitive', 'readonly', 'filename', 'modified' ]]
+            \             [ 'fugitive', 'filename' ]],
+            \   'right': [ ['percent', 'lineinfo'], ['fileformat', 'fileencoding', 'filetype'], ['synatastic'] ]
             \ },
             \ 'component': {
             \   'readonly': '%{&readonly?"":""}',
-            \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}',
             \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
             \ },
             \ 'component_function': {
             \   'filetype': 'DeviconsFileType',
             \   'fileformat': 'DeviconsFileFormat',
             \   'fugitive': 'LightlineFugitive',
+            \   'mode': 'LightlineMode',
+            \   'fileencoding': 'LightlineFileencoding',
+            \   'filename': 'LightlineFilename',
             \ },
             \ 'tabline': {
             \   'left': [ ['tabs'] ],
@@ -1140,7 +1143,12 @@
         function! DeviconsFileFormat()
             return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
         endfunction
+
+        " Functions from lightline author
         function! LightlineFugitive()
+            if winwidth(0) < 70
+                return ''
+            endif
             if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
                 let branch = fugitive#head()
                 return branch !=# '' ? ''.branch : ''
@@ -1150,6 +1158,43 @@
         function! LightlineBufferline()
             call bufferline#refresh_status()
             return [ g:bufferline_status_info.before, g:bufferline_status_info.current, g:bufferline_status_info.after]
+        endfunction
+
+        function! LightlineModified()
+            return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
+        endfunction
+
+        function! LightlineReadonly()
+            return &ft !~? 'help' && &readonly ? '' : ''
+        endfunction
+
+        function! LightlineFilename()
+            let fname = expand('%:t')
+            return fname == 'ControlP' && has_key(g:lightline, 'ctrlp_item') ? g:lightline.ctrlp_item :
+                        \ fname == '__Tagbar__' ? g:lightline.fname :
+                        \ fname =~ '__Gundo\|NERD_tree' ? '' :
+                        \ &ft == 'vimfiler' ? vimfiler#get_status_string() :
+                        \ &ft == 'unite' ? unite#get_status_string() :
+                        \ &ft == 'vimshell' ? vimshell#get_status_string() :
+                        \ ('' != LightlineReadonly() ? LightlineReadonly() . '  ' : '') .
+                        \ ('' != fname ? fname . '  ' : '[No Name] ' ) .
+                        \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
+        endfunction
+
+        function! LightlineMode()
+            let fname = expand('%:t')
+            return fname == '__Tagbar__' ? 'Tagbar' :
+                        \ fname == 'ControlP' ? 'CtrlP' :
+                        \ fname == '__Gundo__' ? 'Gundo' :
+                        \ fname == '__Gundo_Preview__' ? 'Gundo Preview' :
+                        \ fname =~ 'NERD_tree' ? 'NERDTree' :
+                        \ &ft == 'unite' ? 'Unite' :
+                        \ &ft == 'vimfiler' ? 'VimFiler' :
+                        \ &ft == 'vimshell' ? 'VimShell' :
+                        \ winwidth(0) > 60 ? lightline#mode() : ''
+        endfunction
+        function! LightlineFileencoding()
+            return winwidth(0) > 70 ? (&fenc !=# '' ? &fenc : &enc) : ''
         endfunction
     " }
 
