@@ -16,6 +16,11 @@ echo 'Downloading Vim-Plug'
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+echo 'Downloading Markdown2Ctags ...'
+curl -fLo ~/.vim/bundle/markdown2ctags/markdown2ctags.py \
+    https://raw.githubusercontent.com/jszakmeister/markdown2ctags/master/markdown2ctags.py
+sed -i '1 s/python/python2/' ~/.vim/bundle/markdown2ctags/markdown2ctags.py
+
 echo 'Linking Neovim Config'
 ln -s ~/.vim ~/.config/nvim
 ln -s ~/.vimrc ~/.config/nvim/init.vim
