@@ -1,24 +1,61 @@
-# EverVim
-A Powerful Vim Distrobution based on [spf13-vim](https://github.com/spf13/spf13-vim)
+# EverVim: The Ultimate Vim Distrobution
+![EverVim](https://img.shields.io/badge/Coded%20with-EverVim-bd93f9.svg?style=flat-square)
 
 ## About
-I am a faithful vim user and [spf13](https://github.com/spf13/spf13-vim) works fine for me. But it lacks some specific features and is not portable  
-So I created this repo just to share my config and modification of [spf13](https://github.com/spf13/spf13-vim).  
+EverVim is the ultimate vim distribution that supports **NeoVim**, Vim, GVim and MacVim. It ships with tons of powerful features through vim plugins, which makes it easy to get started for both newcomers and experienced users.
+
+The distribution is completely customisable using a ~/.vimrc.local, ~/.vimrc.bundles.local, and ~/.vimrc.before.local Vim RC files.
+
+EverVim started as a fork of spf13-vim, which is great but not actively maintained any more. Unlike spf13-vim, EverVim always keeps its modern features up-to-date. It uses [Vim-Plug](https://github.com/junegunn/vim-plug) as a plugin manager, which is async and is about 10x faster than Vundle. Keeping your plugins always up to date is just a command away. Vim-Plug uses a plugin bundle so that having lots of them won't mess up the folder structure.
+
+The default config of EverVim is powerful and easy to use just out of the box, and is suitable for most vim users. Customization is easy as well. With `.local` files, you can customize the whole collection without modify the original files. That means you're still able to update the EverVim config using `git pull` without compromizing your own modification.
 
 ## Install
+
+#### Linux, BSD and macOS
+EverVim needs vim with `+python` support for YouCompleteMe 
+YouCompleteMe also requires `cmake` `gcc | clang` in $PATH
+
 ```bash
 git clone https://github.com/LER0ever/EverVim ~/.EverVim
 cd ~/.EverVim
 sh Boot-EverVim.sh
 # open vim or nvim and type :PlugInstall
+
+# steps below are for YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe/
+./install.py
 ```
 
+#### Windows (Portable)
+EverVim needs vim with `+lua` support on Windows for NeoComplete  
+git(with git-bash) and curl is also required for this config to setup and update.  
+The following commands should be executed in git bash.  
+
+```bash
+cd some-temporary-empty-foler
+mkdir home tools vim-x86
+cd home
+git clone https://github.com/LER0ever/EverVim
+export HOME=$(pwd)/EverVim
+sh Boot-EverVim.sh
+mv EverVim/RunEverVim.bat ..
+```
+And then:
+
+- Download the vim x86 to folder vim-x86
+- Double Click the RunEverVim.bat
+- Type `:PlugInstall` in the gvim and wait for it to finish installing
+
+Tools folder is for the executables required by vim, e.g. ctags, uncrustify  
+After the setup, you can move the whole folder to wherever you want and code anywhere.
+
 ## Feature
-- Support Vim 7.4.x, Vim 8 and of course Neovim
+- Support Vim 7.4.x, Vim 8, MacVim and of course Neovim
 - Portable under windows
 - Easy to setup, just one bash away.
-- Fancy Molokai theme
-- C++ support added
+- Fancy Dracula Theme
+- Full IDE-like support for C/C++, Go, Rust, javascript, etc.
 - Collaboration using CoVim
 - Remove the php and ruby option by default.
 - Use Vim-Plug, its Async!
@@ -37,4 +74,4 @@ sh Boot-EverVim.sh
 ![evervimold](http://i.imgur.com/l8oK1Mj.png)
 
 ## License
-Dual License, under either MIT or Apache
+EverVIm is licensed under **Apache 2.0**
