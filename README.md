@@ -99,4 +99,6 @@ After the setup, you can move the whole folder to wherever you want and code any
 ![evervimold](http://i.imgur.com/l8oK1Mj.png)
 
 ## License
-EverVIm is licensed under **Apache 2.0**
+EverVim is licensed under **Apache 2.0**
+This repo contains part of code from [spf13-vim](https://github.com/spf13/spf13-vim), 
+which is also licensed under [Apache 2.0](https://github.com/spf13/spf13-vim/blob/3.0/LICENSE.txt)
