@@ -23,6 +23,7 @@ sh Boot-EverVim.sh
 - Remove the php and ruby option by default.
 - Use Vim-Plug, its Async!
 - Use YouCompleteMe by default, neocomplete as a windows fallback
+- Markdown CTags support via markdown2ctags
 - Require +lua. (And +python if you use YouCompleteMe)
 
 ## ScreenShot
