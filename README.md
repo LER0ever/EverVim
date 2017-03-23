@@ -1,6 +1,14 @@
 # EverVim: The Ultimate Vim Distrobution
 ![EverVim](https://img.shields.io/badge/Coded%20with-EverVim-bd93f9.svg?style=flat-square)
 
+<h2> | [About](#about)
+| [Installation](#installation)
+| [Features](#features)
+| [ScreenShots](#screenshots)
+| [License](#license)
+|
+</h2>
+
 ## About
 EverVim is the ultimate vim distribution that supports **NeoVim**, Vim, GVim and MacVim. It ships with tons of powerful features through vim plugins, which makes it easy to get started for both newcomers and experienced users.
 
@@ -86,7 +94,7 @@ After the setup, you can move the whole folder to wherever you want and code any
 ### Other Awesomeness
 - Collaboration using CoVim
 
-## ScreenShot
+## ScreenShots
 ##### Startup Screen
 ![evervimstartify](http://i.imgur.com/JdfjGdi.png)
 ##### Under NeoVim Terminal
