@@ -10,11 +10,11 @@ EverVim started as a fork of spf13-vim, which is great but not actively maintain
 
 The default config of EverVim is powerful and easy to use just out of the box, and is suitable for most vim users. Customization is easy as well. With `.local` files, you can customize the whole collection without modify the original files. That means you're still able to update the EverVim config using `git pull` without compromizing your own modification.
 
-## Install
+## Installation
 
-#### Linux, BSD and macOS
+##### Linux, BSD and macOS
 EverVim needs vim with `+python` support for YouCompleteMe 
-YouCompleteMe also requires `cmake` `gcc | clang` in $PATH
+YouCompleteMe also requires `cmake` `gcc | clang` in `$PATH`
 
 ```bash
 git clone https://github.com/LER0ever/EverVim ~/.EverVim
@@ -27,7 +27,7 @@ cd ~/.vim/bundle/YouCompleteMe/
 ./install.py
 ```
 
-#### Windows (Portable)
+##### Windows (Portable)
 EverVim needs vim with `+lua` support on Windows for NeoComplete  
 git(with git-bash) and curl is also required for this config to setup and update.  
 The following commands should be executed in git bash.  
@@ -50,18 +50,41 @@ And then:
 Tools folder is for the executables required by vim, e.g. ctags, uncrustify  
 After the setup, you can move the whole folder to wherever you want and code anywhere.
 
-## Feature
+# Features
+### Cross Platform
 - Support Vim 7.4.x, Vim 8, MacVim and of course Neovim
 - Portable under windows
+- Tested under all platforms
+	- Windows (gvim, vim)
+	- Linux (neovim, vim, gvim)
+	- macOS (MacVim, neovim)
+	- BSD (vim)
+	- Android (neovim, vim under Termux)
+
+### Powerful & Easy to use
 - Easy to setup, just one bash away.
-- Fancy Dracula Theme
+- All the wonderful features are enabled out of the box
 - Full IDE-like support for C/C++, Go, Rust, javascript, etc.
-- Collaboration using CoVim
-- Remove the php and ruby option by default.
-- Use Vim-Plug, its Async!
 - Use YouCompleteMe by default, neocomplete as a windows fallback
+- NERDTree as file explorer
+- Git operation right inside vim with fugitive
+- Syntastic provides syntax check on every save
+- Jump to anywhere in 2 key with EasyMotion
 - Markdown CTags support via markdown2ctags
-- Require +lua. (And +python if you use YouCompleteMe)
+
+### Pleasant to code
+- Fancy Dracula Theme
+- Lightline for statusline and tabline
+- TagBar for code navigation
+- Startup screen to pick up recent files (using Startify)
+
+### Asynchronous
+- Use Vim-Plug as vim plugin manager
+	- Parallel installation
+	- 10x faster initial PlugInstall
+
+### Other Awesomeness
+- Collaboration using CoVim
 
 ## ScreenShot
 ##### Startup Screen
