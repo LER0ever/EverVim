@@ -284,17 +284,6 @@ Use `:color molokai` to switch to a color scheme.
 
 It also contains a very complete set of [snippets](https://github.com/spf13/snipmate-snippets) for use with snipmate or [neocomplete].
 
-[Git]:http://git-scm.com
-[Curl]:http://curl.haxx.se
-[Vim]:http://www.vim.org/download.php#pc
-[msysgit]:http://msysgit.github.io
-[Chocolatey]: http://chocolatey.org/
-[spf13-vim package]: https://chocolatey.org/packages/spf13-vim
-[MacVim]:http://code.google.com/p/macvim/
-[spf13-vim]:https://github.com/spf13/spf13-vim
-[contributors]:https://github.com/spf13/spf13-vim/contributors
-
-[Vundle]:https://github.com/gmarik/vundle
 [PIV]:https://github.com/spf13/PIV
 [NERDCommenter]:https://github.com/scrooloose/nerdcommenter
 [Undotree]:https://github.com/mbbill/undotree
