@@ -1,4 +1,4 @@
-# EverVim: The Ultimate Vim Distrobution
+# EverVim: The Ultimate Vim Distribution
 ![EverVim](https://img.shields.io/badge/Coded%20with-EverVim-bd93f9.svg?style=flat-square)
 
 ## | [About](https://github.com/LER0ever/EverVim/blob/master/README.md#about) | [Installation](https://github.com/LER0ever/EverVim/blob/master/README.md#installation) | [Features](https://github.com/LER0ever/EverVim/blob/master/README.md#features) | [ScreenShots](https://github.com/LER0ever/EverVim/blob/master/README.md#screenshots) | [Documentation](https://github.com/LER0ever/EverVim/blob/master/DOC.md) | [License](https://github.com/LER0ever/EverVim/blob/master/README.md#license) |
