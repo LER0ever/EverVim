@@ -1,8 +1,7 @@
 " Modeline and Notes {
 " EverVim is a vim distribution based on spf13-vim(Apache License)
-" EverVim is Licensed under either of
+" EverVim is Licensed under
 " * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
-" * MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
 " }
 
 " Environment {
@@ -589,7 +588,7 @@
     " SnipMate {
         " Setting the author var
         " If forking, please overwrite in your .vimrc.local file
-        let g:snips_author = 'Steve Francia <steve.francia@gmail.com>'
+        let g:snips_author = 'LER0ever <etasry@gmail.com>'
     " }
 
     " NerdTree {

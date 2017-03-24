@@ -1,7 +1,7 @@
 # EverVim: The Ultimate Vim Distrobution
 ![EverVim](https://img.shields.io/badge/Coded%20with-EverVim-bd93f9.svg?style=flat-square)
 
-## | [About](https://github.com/LER0ever/EverVim/blob/master/README.md#about) | [Installation](https://github.com/LER0ever/EverVim/blob/master/README.md#installation) | [Features](https://github.com/LER0ever/EverVim/blob/master/README.md#features) | [ScreenShots](https://github.com/LER0ever/EverVim/blob/master/README.md#screenshots) | [License](https://github.com/LER0ever/EverVim/blob/master/README.md#license) |
+## | [About](https://github.com/LER0ever/EverVim/blob/master/README.md#about) | [Installation](https://github.com/LER0ever/EverVim/blob/master/README.md#installation) | [Features](https://github.com/LER0ever/EverVim/blob/master/README.md#features) | [ScreenShots](https://github.com/LER0ever/EverVim/blob/master/README.md#screenshots) | [Documentation](https://github.com/LER0ever/EverVim/blob/master/DOC.md) | [License](https://github.com/LER0ever/EverVim/blob/master/README.md#license) |
 
 ## About
 EverVim is the ultimate vim distribution that supports **NeoVim**, Vim, GVim and MacVim. It ships with tons of powerful features through vim plugins, which makes it easy to get started for both newcomers and experienced users.
@@ -13,7 +13,6 @@ EverVim started as a fork of spf13-vim, which is great but not actively maintain
 The default config of EverVim is powerful and easy to use just out of the box, and is suitable for most vim users. Customization is easy as well. With `.local` files, you can customize the whole collection without modify the original files. That means you're still able to update the EverVim config using `git pull` without compromizing your own modification.
 
 ## Installation
-
 ##### Linux, BSD and macOS
 EverVim needs vim with `+python` support for YouCompleteMe 
 YouCompleteMe also requires `cmake` `gcc | clang` in `$PATH`
@@ -51,6 +50,12 @@ And then:
 
 Tools folder is for the executables required by vim, e.g. ctags, uncrustify  
 After the setup, you can move the whole folder to wherever you want and code anywhere.
+##### Fonts
+For lightline to work properly, you need to install the patched nerd fonts for Hack: [Knack Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Regular/complete/Knack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)
+
+#### Before you get started !
+Finished the installation above?  
+PLEASE read the [Documentation](https://github.com/LER0ever/EverVim/blob/master/DOC.md) to have an overview about some of EverVim's essential plugins.
 
 # Features
 ### Cross Platform
@@ -97,6 +102,8 @@ After the setup, you can move the whole folder to wherever you want and code any
 ![evervimgui](http://i.imgur.com/8ICWEmw.png)
 ##### Older Shots
 ![evervimold](http://i.imgur.com/l8oK1Mj.png)
+
+## [Documentation](https://github.com/LER0ever/EverVim/blob/master/DOC.md)
 
 ## License
 EverVim is licensed under **Apache 2.0**
