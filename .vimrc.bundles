@@ -215,7 +215,7 @@
     " Python {
         if count(g:evervim_bundle_groups, 'python')
             " Pick either python-mode or pyflakes & pydoc
-            Plug 'klen/python-mode'
+            Plug 'python-mode/python-mode'
             Plug 'yssource/python.vim'
             Plug 'python_match.vim'
             Plug 'pythoncomplete'
