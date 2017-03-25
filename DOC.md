@@ -1,5 +1,5 @@
 # EverVim Documentation
--------------
+* * *
 # Customization
 Create `~/.vimrc.local` and `~/.gvimrc.local` for any local
 customizations.
