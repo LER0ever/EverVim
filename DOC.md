@@ -274,6 +274,9 @@ To use powerline fonts and file icons, you need to install the nerd icons patche
 
 **You don't need to install powerline-patched fonts, Nerd Fonts have got powerline symbols included**
 
+## [Vim-Multi-Cursors]
+
+
 ## Amazing Colors
 
 EverVim includes [Dracula] and [a lot more colors](https://github.com/flazz/vim-colorschemes).
@@ -293,6 +296,7 @@ It also contains a very complete set of [snippets](https://github.com/spf13/snip
 [neocomplete]:https://github.com/shougo/neocomplete
 [Fugitive]:https://github.com/tpope/vim-fugitive
 [Surround]:https://github.com/tpope/vim-surround
+[Vim-Multi-Cursors]:https://github.com/terryma/vim-multiple-cursors
 [Tagbar]:https://github.com/majutsushi/tagbar
 [Syntastic]:https://github.com/scrooloose/syntastic
 [vim-easymotion]:https://github.com/Lokaltog/vim-easymotion

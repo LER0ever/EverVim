@@ -10,7 +10,7 @@
     " Basics {
         set nocompatible        " Must be first line
         set background=dark     " Assume a dark background
-    " }
+    " e
 
     " Windows Compatible {
         " On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
@@ -107,7 +107,7 @@
             Plug 'ctrlpvim/ctrlp.vim'
             Plug 'tacahiroy/ctrlp-funky'
             Plug 'dyng/ctrlsf.vim'
-            Plug 'Shougo/vimproc.vim'
+            Plug 'Shougo/vimproc.vim', {'do' : 'make'}
             Plug 'Shougo/vimshell.vim'
             Plug 'terryma/vim-multiple-cursors'
             Plug 'vim-scripts/sessionman.vim'
@@ -253,7 +253,6 @@
             Plug 'lukerandall/haskellmode-vim'
             Plug 'eagletmt/neco-ghc'
             Plug 'eagletmt/ghcmod-vim'
-            Plug 'Shougo/vimproc.vim', {'do' : 'make'}
             Plug 'adinapoli/cumino'
             Plug 'bitc/vim-hdevtools'
         endif
