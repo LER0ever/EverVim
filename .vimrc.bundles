@@ -253,7 +253,7 @@
             Plug 'lukerandall/haskellmode-vim'
             Plug 'eagletmt/neco-ghc'
             Plug 'eagletmt/ghcmod-vim'
-            Plug 'Shougo/vimproc.vim'
+            Plug 'Shougo/vimproc.vim', {'do' : 'make'}
             Plug 'adinapoli/cumino'
             Plug 'bitc/vim-hdevtools'
         endif
