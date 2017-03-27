@@ -114,7 +114,7 @@
             Plug 'matchit.zip'
             if (has("python") || has("python3")) && exists('g:evervim_use_powerline')
                 Plug 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
-            elseif exists('g:evervim_use_airline') 
+            elseif exists('g:evervim_use_airline')
                 Plug 'vim-airline/vim-airline'
                 Plug 'vim-airline/vim-airline-themes'
             else
@@ -312,7 +312,6 @@
             Plug 'tpope/vim-markdown' ", {'for': 'markdown'}
             Plug 'vimwiki/vimwiki'
             Plug 'spf13/vim-preview'
-            Plug 'bronson/vim-trailing-whitespace'
             Plug 'tpope/vim-cucumber'
             Plug 'cespare/vim-toml', {'for': 'toml'}
             Plug 'quentindecock/vim-cucumber-align-pipes'
