@@ -278,9 +278,9 @@ To use powerline fonts and file icons, you need to install the nerd icons patche
 
 Vim-Multiple-Cursors provides sublime-text like multi-cursor support. EverVim use the default keybindings
 
-- <C-n> for both activating multi-cursors mode and next selection
-- <C-p> for previous selection
-- <C-x> for giving up current selection and move to next virtual cursor
+- `<C-n>` for both activating multi-cursors mode and next selection
+- `<C-p>` for previous selection
+- `<C-x>` for giving up current selection and move to next virtual cursor
 
 
 ## Amazing Colors
