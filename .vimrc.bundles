@@ -312,6 +312,7 @@
             Plug 'tpope/vim-markdown' ", {'for': 'markdown'}
             Plug 'vimwiki/vimwiki'
             Plug 'spf13/vim-preview'
+            Plug 'bronson/vim-trailing-whitespace'
             Plug 'tpope/vim-cucumber'
             Plug 'cespare/vim-toml', {'for': 'toml'}
             Plug 'quentindecock/vim-cucumber-align-pipes'
