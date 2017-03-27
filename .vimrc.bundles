@@ -265,6 +265,7 @@
             Plug 'gorodinskiy/vim-coloresque'
             Plug 'tpope/vim-haml'
             Plug 'wavded/vim-stylus'
+            Plug 'posva/vim-vue'
             Plug 'mattn/emmet-vim'
         endif
     " }
