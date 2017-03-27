@@ -40,8 +40,8 @@ See `.vimrc.bundles` for specifics on what options can be set to override bundle
 
 These two mappings can themselves be customized by setting the following in .vimrc.before.local:
 ```bash
-let g:evervim_edit_config_mapping='<Leader>ev'
-let g:evervim_apply_config_mapping='<Leader>sv'
+    let g:evervim_edit_config_mapping='<Leader>ev'
+    let g:evervim_apply_config_mapping='<Leader>sv'
 ```
 
 # Plugins
