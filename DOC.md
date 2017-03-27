@@ -197,7 +197,7 @@ file
  * `<leader>gl` :Glog<CR>
  * `<leader>gp` :Git push<CR>
  * `<leader>gw` :Gwrite<CR>
- * :Git ___ will pass anything along to git.
+ * :Git will pass anything along to git.
 
 ![fugitive image][fugitive-img]
 
@@ -275,6 +275,12 @@ To use powerline fonts and file icons, you need to install the nerd icons patche
 **You don't need to install powerline-patched fonts, Nerd Fonts have got powerline symbols included**
 
 ## [Vim-Multi-Cursors]
+
+Vim-Multiple-Cursors provides sublime-text like multi-cursor support. EverVim use the default keybindings
+
+- <C-n> for both activating multi-cursors mode and next selection
+- <C-p> for previous selection
+- <C-x> for giving up current selection and move to next virtual cursor
 
 
 ## Amazing Colors
