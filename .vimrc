@@ -33,7 +33,7 @@
           autocmd VimEnter * Startify
         endif
     " }
-    
+
     " Arrow Key Fix {
         " https://github.com/spf13/spf13-vim/issues/780
         if &term[:4] == "xterm" || &term[:5] == 'screen' || &term[:3] == 'rxvt'
@@ -116,9 +116,10 @@
     " Instead of reverting the cursor to the last position in the buffer, we
     " set it to the first line when editing a git commit message
     au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
-    
+
     " http://vim.wikia.com/wiki/Restore_cursor_to_file_position_in_previous_editing_session
     " Restore cursor to file position in previous editing session
+    " This may cause NERDTree and tagbar's abnormal behavior
     " To disable this, add the following to your .vimrc.before.local file:
     "   let g:evervim_no_restore_cursor = 1
     if !exists('g:evervim_no_restore_cursor')
@@ -515,7 +516,7 @@
                     \'  \ \  \_|\ \ \    / /   \ \  \_|\ \ \  \\  \\ \    / /   \ \  \ \  \    \ \  \ ',
                     \'   \ \_______\ \__/ /     \ \_______\ \__\\ _\\ \__/ /     \ \__\ \__\    \ \__\',
                     \'    \|_______|\|__|/       \|_______|\|__|\|__|\|__|/       \|__|\|__|     \|__|',
-                    \'   ||=========================================================================||', 
+                    \'   ||=========================================================================||',
                     \'   || Welcome to EverVim. The Ultimate Vim Distribution for everyone.         ||',
                     \'   || Made with <3 by LER0ever https://i.yirong.ml                            ||',
                     \'   || Github Repository: https://github.com/LER0ever/EverVim                  ||',
@@ -602,7 +603,7 @@
             let NERDTreeShowBookmarks=1
             let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
             let NERDTreeChDirMode=0
-            let NERDTreeQuitOnOpen=1
+            let NERDTreeQuitOnOpen=0
             let NERDTreeMouseMode=2
             let NERDTreeShowHidden=1
             let NERDTreeKeepTreeInNewTab=1
@@ -628,6 +629,29 @@
             vmap <Leader>a,, :Tabularize /,\zs<CR>
             nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
             vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+        endif
+    " }
+
+    " vim-tabman {
+        if isdirectory(expand("~/.vim/bundle/tabman.vim"))
+            let g:tabman_toggle="<Leader>tl"
+            let g:tabman_focus="<Leader>tf"
+            let g:tabman_side = 'left'
+            let g:tabman_width = 25
+            let g:tabman_number = 0
+            let g:tabman_specials = 1
+        endif
+    " }
+
+    " GoldenView {
+        if isdirectory(expand("~/.vim/bundle/GoldenView.Vim"))
+            let g:goldenview__enable_default_mapping = 0
+            nmap <silent> <Leader>gvs  <Plug>GoldenViewSplit
+            nmap <silent> <Leader>gvm   <Plug>GoldenViewSwitchMain
+            nmap <silent> <Leader>gvt <Plug>GoldenViewSwitchToggle
+            nmap <silent> <Leader>gvn  <Plug>GoldenViewNext
+            nmap <silent> <Leader>gvp  <Plug>GoldenViewPrevious
+            "let g:goldenview__ignore_urule = "ignore"
         endif
     " }
 
@@ -718,6 +742,7 @@
     " TagBar {
         if isdirectory(expand("~/.vim/bundle/tagbar/"))
             nnoremap <silent> <leader>tt :TagbarToggle<CR>
+            let g:tagbar_width = 30
         endif
         " Add support for markdown files in tagbar.
         let g:tagbar_type_markdown = {
@@ -1159,7 +1184,7 @@
             \ 'separator': { 'left': '', 'right': '' },
             \ 'subseparator': { 'left': '', 'right': '' }
             \}
-        
+
         " show tabline by default
         set showtabline=2
         function! DeviconsFileType()
@@ -1359,23 +1384,23 @@
         endfor
         return s:is_fork
     endfunction
-     
+
     function! s:ExpandFilenameAndExecute(command, file)
         execute a:command . " " . expand(a:file, ":p")
     endfunction
-     
+
     function! s:EditevervimConfig()
         call <SID>ExpandFilenameAndExecute("tabedit", "~/.vimrc")
         call <SID>ExpandFilenameAndExecute("vsplit", "~/.vimrc.before")
         call <SID>ExpandFilenameAndExecute("vsplit", "~/.vimrc.bundles")
-     
+
         execute bufwinnr(".vimrc") . "wincmd w"
         call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.local")
         wincmd l
         call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.before.local")
         wincmd l
         call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.bundles.local")
-     
+
         if <SID>IsevervimFork()
             execute bufwinnr(".vimrc") . "wincmd w"
             call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.fork")
@@ -1384,10 +1409,10 @@
             wincmd l
             call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.bundles.fork")
         endif
-     
+
         execute bufwinnr(".vimrc.local") . "wincmd w"
     endfunction
-     
+
     execute "noremap " . s:evervim_edit_config_mapping " :call <SID>EditevervimConfig()<CR>"
     execute "noremap " . s:evervim_apply_config_mapping . " :source ~/.vimrc<CR>"
 " }
