@@ -127,6 +127,7 @@
             Plug 'easymotion/vim-easymotion'
             Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
             Plug 'kien/tabman.vim'
+			Plug 'MattesGroeger/vim-bookmarks'
             "Plug 'zhaocai/GoldenView.Vim'
             Plug 'flazz/vim-colorschemes'
             Plug 'dracula/vim'
@@ -320,7 +321,6 @@
             Plug 'quentindecock/vim-cucumber-align-pipes'
             Plug 'saltstack/salt-vim'
             Plug 'ryanss/vim-hackernews'
-            Plug 'joshhartigan/vim-reddit'
             Plug 'itchyny/calendar.vim'
         endif
     " }

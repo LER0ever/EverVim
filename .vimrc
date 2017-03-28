@@ -83,6 +83,7 @@
     set mouse=a                 " Automatically enable mouse usage
     set mousehide               " Hide the mouse cursor while typing
     scriptencoding utf-8
+    set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936 " support for open multi-byte encoded file
     set encoding=utf-8
 
     if has('clipboard')
@@ -652,6 +653,21 @@
             nmap <silent> <Leader>gvn  <Plug>GoldenViewNext
             nmap <silent> <Leader>gvp  <Plug>GoldenViewPrevious
             "let g:goldenview__ignore_urule = "ignore"
+        endif
+    " }
+
+    " vim-bookmarks {
+        if isdirectory(expand("~/.vim/bundle/vim-bookmarks"))
+            let g:bookmark_no_default_key_mappings = 1
+            nmap <Leader>bb <Plug>BookmarkToggle
+            nmap <Leader>bi <Plug>BookmarkAnnotate
+            nmap <Leader>ba <Plug>BookmarkShowAll
+            nmap <Leader>bj <Plug>BookmarkNext
+            nmap <Leader>bk <Plug>BookmarkPrev
+            nmap <Leader>bc <Plug>BookmarkClear
+            nmap <Leader>bx <Plug>BookmarkClearAll
+            nmap <Leader>bkk <Plug>BookmarkMoveUp
+            nmap <Leader>bjj <Plug>BookmarkMoveDown
         endif
     " }
 
