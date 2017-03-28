@@ -103,6 +103,7 @@
             Plug 'simeji/winresizer'
             Plug 'Konfekt/FastFold'
             Plug 'rhysd/conflict-marker.vim'
+            Plug 'lpenz/vimcommander'
             Plug 'jiangmiao/auto-pairs'
             Plug 'ctrlpvim/ctrlp.vim'
             Plug 'tacahiroy/ctrlp-funky'

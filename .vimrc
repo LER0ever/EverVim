@@ -689,6 +689,13 @@
         endif
     " }
 
+    " VimCommander {
+        if isdirectory(expand("~/.vim/bundle/vimcommander"))
+            noremap <silent> <Leader>vc :cal VimCommanderToggle()<CR>
+        endif
+
+    " }
+
     " ctrlp {
         if isdirectory(expand("~/.vim/bundle/ctrlp.vim/"))
             let g:ctrlp_working_path_mode = 'ra'
