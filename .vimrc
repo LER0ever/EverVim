@@ -450,16 +450,20 @@
     " }
 
     " vimwiki {
-        let g:vimwiki_folding = 'syntax'
-        map <Leader>vwe :Vimwiki2HTML<CR>
-        map <Leader>vwb :Vimwiki2HTMLBrowse<CR>
+        if isdirectory(expand("~/.vim/bundle/vimwiki"))
+            let g:vimwiki_folding = 'syntax'
+            map <Leader>vwe :Vimwiki2HTML<CR>
+            map <Leader>vwb :Vimwiki2HTMLBrowse<CR>
+        endif
     " }
 
     " vim-uncrustify {
-        autocmd FileType c noremap <buffer> <Leader>fm :call Uncrustify('c')<CR>
-        autocmd FileType c vnoremap <buffer> <Leader>fm :call RangeUncrustify('c')<CR>
-        autocmd FileType cpp noremap <buffer> <Leader>fm :call Uncrustify('cpp')<CR>
-        autocmd FileType cpp vnoremap <buffer> <Leader>fm :call RangeUncrustify('cpp')<CR>
+        if isdirectory(expand("~/.vim/bundle/vim-uncrustify"))
+            autocmd FileType c noremap <buffer> <Leader>fm :call Uncrustify('c')<CR>
+            autocmd FileType c vnoremap <buffer> <Leader>fm :call RangeUncrustify('c')<CR>
+            autocmd FileType cpp noremap <buffer> <Leader>fm :call Uncrustify('cpp')<CR>
+            autocmd FileType cpp vnoremap <buffer> <Leader>fm :call RangeUncrustify('cpp')<CR>
+        endif
     " }
 
     " GoLang {
@@ -668,6 +672,23 @@
             nmap <Leader>bx <Plug>BookmarkClearAll
             nmap <Leader>bkk <Plug>BookmarkMoveUp
             nmap <Leader>bjj <Plug>BookmarkMoveDown
+        endif
+    " }
+
+    " Vim-AutoFormat {
+        if isdirectory(expand("~/.vim/bundle/vim-autoformat"))
+            noremap <Leader>fm :Autoformat<CR>
+            au BufWrite *.c,*.cpp,*.h,*.hpp,*.cxx :Autoformat
+            au BufWrite *.go :Autoformat
+            au BufWrite *.rust,*.rs :Autoformat
+            au BufWrite *.js,*.ts,*.jsx :Autoformat
+            au BufWrite *.cs :Autoformat
+            au BufWrite *.sh,*.bash :Autoformat
+            au BufWrite *.java :Autoformat
+            au BufWrite *.py :Autoformat
+            au Bufwrite *.html :Autoformat
+            au BufWrite *.css :Autoformat
+            au BufWrite *.ts :Autoformat
         endif
     " }
 
