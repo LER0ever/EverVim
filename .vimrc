@@ -239,6 +239,7 @@
     autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl,sql autocmd BufWritePre <buffer> if !exists('g:evervim_keep_trailing_whitespace') | call StripTrailingWhitespace() | endif
     "autocmd FileType go autocmd BufWritePre <buffer> Fmt
     autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
+    autocmd BufNewFile,BufRead *.lumos set filetype=html
     autocmd FileType haskell,puppet,ruby,yml setlocal expandtab shiftwidth=2 softtabstop=2
     " preceding line best in a plugin but here for now.
 
