@@ -21,7 +21,8 @@ YouCompleteMe also requires `cmake` `gcc | clang` in `$PATH`
 git clone https://github.com/LER0ever/EverVim ~/.EverVim
 cd ~/.EverVim
 sh Boot-EverVim.sh
-# open vim or nvim and type :PlugInstall
+nvim +PlugInstall
+# or open vim, gvim, nvim, MacVim and type :PlugInstall
 
 # steps below are for YouCompleteMe
 cd ~/.vim/bundle/YouCompleteMe/

@@ -81,9 +81,9 @@
     " list only the plugin groups you will use
     if !exists('g:evervim_bundle_groups')
         if WINDOWS()
-            let g:evervim_bundle_groups=['general', 'writing', 'neocomplete', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'rust', 'cpp', ]
+            let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'neocomplete', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'rust', 'cpp', ]
         else
-            let g:evervim_bundle_groups=['general', 'writing', 'youcompleteme', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'rust', 'cpp', ]
+            let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'youcompleteme', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'rust', 'cpp', ]
         endif
     endif
 
@@ -92,11 +92,10 @@
     "   let g:override_evervim_bundles = 1
     if !exists("g:override_evervim_bundles")
 
+    " General are for basic functionalities and uniform appearance
     " General {
         if count(g:evervim_bundle_groups, 'general')
             Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
-            Plug 'altercation/vim-colors-solarized'
-            Plug 'spf13/vim-colors'
             Plug 'mhinz/vim-startify'
             Plug 'tpope/vim-surround'
             Plug 'tpope/vim-repeat'
@@ -104,13 +103,12 @@
             Plug 'Konfekt/FastFold'
             Plug 'rhysd/conflict-marker.vim'
             Plug 'lpenz/vimcommander'
-            Plug 'jiangmiao/auto-pairs'
+
             Plug 'ctrlpvim/ctrlp.vim'
             Plug 'tacahiroy/ctrlp-funky'
             Plug 'dyng/ctrlsf.vim'
             Plug 'Shougo/vimproc.vim', {'do' : 'make'}
             Plug 'Shougo/vimshell.vim'
-            Plug 'terryma/vim-multiple-cursors'
             Plug 'vim-scripts/sessionman.vim'
             Plug 'matchit.zip'
             if (has("python") || has("python3")) && exists('g:evervim_use_powerline')
@@ -121,17 +119,14 @@
             else
                 Plug 'itchyny/lightline.vim'
             endif
-            Plug 'powerline/fonts'
             Plug 'bling/vim-bufferline'
             Plug 'jlanzarotta/bufexplorer'
             Plug 'easymotion/vim-easymotion'
             Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
             Plug 'kien/tabman.vim'
-			Plug 'MattesGroeger/vim-bookmarks'
+            Plug 'MattesGroeger/vim-bookmarks'
             "Plug 'zhaocai/GoldenView.Vim'
-            Plug 'flazz/vim-colorschemes'
-            Plug 'dracula/vim'
-            Plug 'ryanoasis/vim-devicons'
+            Plug 'dracula/vim' " Main theme for EverVim
             Plug 'mbbill/undotree'
             Plug 'Yggdroot/indentLine'
             if !exists('g:evervim_no_views')
@@ -144,6 +139,16 @@
             Plug 'kana/vim-textobj-indent'
             Plug 'gcmt/wildfire.vim'
             " Plug 'FredKSchott/CoVim'
+        endif
+    " }
+
+    " Appearance {
+        if count(g:evervim_bundle_groups, 'appearance')
+            Plug 'altercation/vim-colors-solarized'
+            Plug 'spf13/vim-colors'
+            Plug 'flazz/vim-colorschemes'
+            Plug 'joshdick/onedark.vim'
+            Plug 'ryanoasis/vim-devicons'
         endif
     " }
 
@@ -170,6 +175,7 @@
             " Pick one of the checksyntax, jslint, or syntastic
             Plug 'scrooloose/syntastic'
             Plug 'tpope/vim-fugitive'
+            Plug 'jiangmiao/auto-pairs'
             Plug 'mattn/webapi-vim'
             Plug 'mattn/gist-vim'
             Plug 'scrooloose/nerdcommenter'
@@ -178,6 +184,7 @@
             Plug 'tpope/vim-commentary'
             Plug 'godlygeek/tabular'
             Plug 'luochen1990/rainbow'
+            Plug 'terryma/vim-multiple-cursors'
             if executable('ctags')
                 Plug 'majutsushi/tagbar'
             endif
@@ -289,7 +296,7 @@
         endif
     " }
 
-    " Go Lang {
+    " Golang {
         if count(g:evervim_bundle_groups, 'go')
             "Plug 'Blackrush/vim-gocode'
             Plug 'fatih/vim-go', {'for': 'go'}
@@ -308,6 +315,12 @@
         if count(g:evervim_bundle_groups, 'rust')
             Plug 'rust-lang/rust.vim'
             Plug 'racer-rust/vim-racer'
+        endif
+    " }
+
+    " latex {
+        if count(g:evervim_bundle_groups, 'latex')
+            Plug 'lervag/vimtex'
         endif
     " }
 
