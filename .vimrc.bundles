@@ -81,9 +81,9 @@
     " list only the plugin groups you will use
     if !exists('g:evervim_bundle_groups')
         if WINDOWS()
-            let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'neocomplete', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'rust', 'cpp', ]
+            let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'neocomplete', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'rust', 'cpp', 'lua']
         else
-            let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'youcompleteme', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'rust', 'cpp', ]
+            let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'youcompleteme', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'rust', 'cpp', 'lua', 'bash']
         endif
     endif
 
@@ -315,6 +315,18 @@
         if count(g:evervim_bundle_groups, 'rust')
             Plug 'rust-lang/rust.vim'
             Plug 'racer-rust/vim-racer'
+        endif
+    " }
+
+    " lua {
+        if count(g:evervim_bundle_groups, 'lua') 
+            Plug 'WolfgangMehner/lua-support'
+        endif
+    " }
+
+    " bash {
+        if count(g:evervim_bundle_groups, 'bash')
+            Plug 'WolfgangMehner/bash-support'
         endif
     " }
 
