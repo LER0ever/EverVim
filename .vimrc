@@ -684,7 +684,6 @@
             au BufWrite *.rust,*.rs :Autoformat
             au BufWrite *.js,*.ts,*.jsx :Autoformat
             au BufWrite *.cs :Autoformat
-            au BufWrite *.sh,*.bash :Autoformat
             au BufWrite *.java :Autoformat
             au BufWrite *.py :Autoformat
             au Bufwrite *.html :Autoformat
