@@ -842,6 +842,11 @@
             " enable completion from tags
             let g:ycm_collect_identifiers_from_tags_files = 1
 
+            " YcmCompleter GoTo keymap
+            nnoremap <leader>gtd :YcmCompleter GoToDefinition<CR>
+            nnoremap <leader>gtc :YcmCompleter GoToDeclaration<CR>
+            nnoremap <leader>gto :YcmCompleter GoTo<CR>
+
             " remap Ultisnips for compatibility for YCM
             let g:UltiSnipsExpandTrigger = '<C-j>'
             let g:UltiSnipsJumpForwardTrigger = '<C-j>'
