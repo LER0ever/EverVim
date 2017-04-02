@@ -22,7 +22,7 @@ git clone https://github.com/LER0ever/EverVim ~/.EverVim
 cd ~/.EverVim
 sh Boot-EverVim.sh
 nvim +PlugInstall
-# or open vim, gvim, nvim, MacVim and type :PlugInstall
+# or open vim, gvim, nvim, nvim-qt, MacVim and type :PlugInstall
 
 # steps below are for YouCompleteMe
 cd ~/.vim/bundle/YouCompleteMe/
@@ -64,7 +64,7 @@ PLEASE read the [Documentation](https://github.com/LER0ever/EverVim/blob/master/
 - Portable under windows
 - Tested under all platforms
 	- Windows (gvim, vim)
-	- Linux (neovim, vim, gvim)
+	- Linux (neovim, neovim-qt, vim, gvim)
 	- macOS (MacVim, neovim)
 	- BSD (vim)
 	- Android (neovim, vim under Termux)
