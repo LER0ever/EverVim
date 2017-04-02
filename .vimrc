@@ -620,6 +620,7 @@
             let NERDTreeShowHidden=1
             let NERDTreeKeepTreeInNewTab=1
             let g:nerdtree_tabs_open_on_gui_startup=0
+            let NERDTreeMapOpenRecursively='<C-O>'
         endif
     " }
 
