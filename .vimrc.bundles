@@ -103,7 +103,6 @@
             Plug 'Konfekt/FastFold'
             Plug 'rhysd/conflict-marker.vim'
             Plug 'lpenz/vimcommander'
-
             Plug 'ctrlpvim/ctrlp.vim'
             Plug 'tacahiroy/ctrlp-funky'
             Plug 'dyng/ctrlsf.vim'
@@ -148,7 +147,9 @@
             Plug 'spf13/vim-colors'
             Plug 'flazz/vim-colorschemes'
             Plug 'joshdick/onedark.vim'
-            Plug 'ryanoasis/vim-devicons'
+            if !TERMUX()
+                Plug 'ryanoasis/vim-devicons'
+            endif
         endif
     " }
 

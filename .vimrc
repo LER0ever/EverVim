@@ -16,6 +16,9 @@
         silent function! WINDOWS()
             return  (has('win32') || has('win64'))
         endfunction
+        silent function! TERMUX()
+            return isdirectory(expand('/data/data/com.termux')) " #FIXME: Dirty judge
+        endfunction
     " }
 
     " Basics {
