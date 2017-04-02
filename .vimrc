@@ -1151,11 +1151,8 @@
 
     " indentline {
         if isdirectory(expand("~/.vim/bundle/indentLine/"))
-            " let g:indent_guides_start_level = 2
-            " let g:indent_guides_guide_size = 1
-            " let g:indent_guides_enable_on_vim_startup = 1
             " Vim
-            let g:indentLine_color_term = 253
+            let g:indentLine_color_term = 156
 
             "GVim
             let g:indentLine_color_gui = '#A4E57E'
@@ -1164,6 +1161,15 @@
             let g:indentLine_color_tty_light = 7 " (default: 4)
             let g:indentLine_color_dark = 1 " (default: 2)
             let g:indentLine_enabled = 1
+            let g:indentLine_char = '│' " 
+        endif
+    " }
+
+    " vim-indent-guides {
+        if isdirectory(expand("~/.vim/bundle/vim-indent-guides/"))
+            let g:indent_guides_start_level = 1
+            let g:indent_guides_guide_size = 1
+            let g:indent_guides_enable_on_vim_startup = 1
         endif
     " }
 

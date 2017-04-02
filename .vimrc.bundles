@@ -127,7 +127,11 @@
             "Plug 'zhaocai/GoldenView.Vim'
             Plug 'dracula/vim' " Main theme for EverVim
             Plug 'mbbill/undotree'
-            Plug 'Yggdroot/indentLine'
+            if !exists('g:evervim_use_indentguides')
+                Plug 'Yggdroot/indentLine'
+            else
+                Plug 'nathanaelkane/vim-indent-guides'
+            endif
             if !exists('g:evervim_no_views')
                 Plug 'vim-scripts/restore_view.vim'
             endif

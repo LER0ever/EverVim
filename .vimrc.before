@@ -68,6 +68,9 @@
     " Disable  omni complete
     "   let g:evervim_no_omni_complete = 1
 
+    " Prefer indentline
+    "   let g:evervim_use_indentguides = 1
+
     " Don't create default mappings for multicursors
     " See :help multiple-cursors-mappings
     "   let g:multi_cursor_use_default_mapping=0
