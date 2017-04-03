@@ -95,12 +95,12 @@ PLEASE read the [Documentation](https://github.com/LER0ever/EverVim/blob/master/
 - Collaboration using CoVim
 
 ## ScreenShots
-##### Startup Screen
+##### Startup Screen (under NeoVim-Qt)
 ![evervimstartify](http://i.imgur.com/SHGHXfc.png)
 ##### Under NeoVim Terminal
-![evervimterm](http://i.imgur.com/KRvlDp3.png)
+![evervimterm](http://i.imgur.com/lQVWBTH.png)
 ##### Under GVim
-![evervimgui](http://i.imgur.com/8ICWEmw.png)
+![evervimgui](http://i.imgur.com/s8ga2Cv.png)
 ##### Older Shots
 ![evervimold](http://i.imgur.com/l8oK1Mj.png)
 
