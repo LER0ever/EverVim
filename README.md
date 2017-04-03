@@ -96,7 +96,7 @@ PLEASE read the [Documentation](https://github.com/LER0ever/EverVim/blob/master/
 
 ## ScreenShots
 ##### Startup Screen
-![evervimstartify](http://i.imgur.com/JdfjGdi.png)
+![evervimstartify](http://i.imgur.com/SHGHXfc.png)
 ##### Under NeoVim Terminal
 ![evervimterm](http://i.imgur.com/KRvlDp3.png)
 ##### Under GVim
