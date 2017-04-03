@@ -1318,6 +1318,10 @@
 
     if filereadable(expand('~/.gvimrc'))
         source ~/.gvimrc
+	else
+		if filereadable(expand('~/.vimrc.gui'))
+			source ~/.vimrc.gui
+		endif
     endif
 
 " }
