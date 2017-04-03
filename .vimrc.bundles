@@ -181,6 +181,7 @@
             Plug 'scrooloose/syntastic'
             Plug 'tpope/vim-fugitive'
             Plug 'jiangmiao/auto-pairs'
+            Plug 'sheerun/vim-polyglot'
             Plug 'mattn/webapi-vim'
             Plug 'mattn/gist-vim'
             Plug 'scrooloose/nerdcommenter'
