@@ -106,8 +106,10 @@
             Plug 'ctrlpvim/ctrlp.vim'
             Plug 'tacahiroy/ctrlp-funky'
             Plug 'dyng/ctrlsf.vim'
-            Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-            Plug 'Shougo/vimshell.vim'
+            if !NVIM()
+                Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+                Plug 'Shougo/vimshell.vim'
+            endif
             Plug 'vim-scripts/sessionman.vim'
             Plug 'matchit.zip'
             if (has("python") || has("python3")) && exists('g:evervim_use_powerline')
@@ -134,6 +136,9 @@
             endif
             if !exists('g:evervim_no_views')
                 Plug 'vim-scripts/restore_view.vim'
+            endif
+            if !exists('g:evervim_no_restore_cursor')
+                Plug 'farmergreg/vim-lastplace'
             endif
             Plug 'mhinz/vim-signify'
             Plug 'tpope/vim-abolish'

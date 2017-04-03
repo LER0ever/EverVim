@@ -19,6 +19,9 @@
         silent function! TERMUX()
             return isdirectory(expand('/data/data/com.termux')) " #FIXME: Dirty judge
         endfunction
+        silent function! NVIM()
+            return has('nvim')
+        endfunction
     " }
 
     " Basics {
@@ -126,19 +129,21 @@
     " This may cause NERDTree and tagbar's abnormal behavior
     " To disable this, add the following to your .vimrc.before.local file:
     "   let g:evervim_no_restore_cursor = 1
-    if !exists('g:evervim_no_restore_cursor')
-        function! ResCur()
-            if line("'\"") <= line("$")
-                silent! normal! g`"
-                return 1
-            endif
-        endfunction
+    " deprecated, replaced by vim-lastplace
 
-        augroup resCur
-            autocmd!
-            autocmd BufWinEnter * call ResCur()
-        augroup END
-    endif
+    "if !exists('g:evervim_no_restore_cursor')
+        "function! ResCur()
+            "if line("'\"") <= line("$")
+                "silent! normal! g`"
+                "return 1
+            "endif
+        "endfunction
+
+        "augroup resCur
+            "autocmd!
+            "autocmd BufWinEnter * call ResCur()
+        "augroup END
+    "endif
 
     " Setting up the directories {
         set backup                  " Backups are nice ...
@@ -539,6 +544,13 @@
         if isdirectory(expand("~/.vim/bundle/PIV"))
             let g:DisableAutoPHPFolding = 0
             let g:PIVAutoClose = 0
+        endif
+    " }
+
+    " lastplace {
+        if isdirectory(expand('~/.vim/bundle/vim-lastplace'))
+            let g:lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
+            let g:lastplace_ignore_buftype = "quickfix"
         endif
     " }
 
