@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
-echo 'Welcome to EverVim, a full featured vim configuration based on spf13-vim'
+echo 'Welcome to EverVim, a powerful & modern vim distribution'
 echo 'Booting EverVim ...'
 
 echo 'Soft-Linking Vim Config'
 ln -s "$(pwd)"/.vimrc ~/.vimrc
 ln -s "$(pwd)"/.vimrc.local ~/.vimrc.local
 ln -s "$(pwd)"/.vimrc.bundles ~/.vimrc.bundles
+ln -s "$(pwd)"/.vimrc.bundles.local ~/.vimrc.bundles.local
 ln -s "$(pwd)"/.vimrc.gui ~/.gvimrc
 ln -s "$(pwd)"/.vimrc.before ~/.vimrc.before
+ln -s "$(pwd)"/.vimrc.before.local ~/.vimrc.before.local
 
 echo 'Creating Directories ...'
 mkdir -p ~/.vim/bundle/
@@ -28,5 +30,4 @@ ln -s ~/.vim ~/.config/nvim
 ln -s ~/.vimrc ~/.config/nvim/init.vim
 ln -s ~/.gvimrc ~/.config/nvim/ginit.vim
 
-echo 'All done with this script, now run vim and execute ":BundleInstall"'
-echo 'You can use RunEverVim.bat to make vim for Windows portable .'
+echo 'All done with this script, now run vim/neovim and execute ":PlugInstall"'
