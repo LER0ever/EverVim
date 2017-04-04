@@ -7,7 +7,8 @@ rem 4. Double click on RunEverVim.bat and you're all set
 if "%1"=="h" goto begin 
 start mshta vbscript:createobject("wscript.shell").run("""%~nx0"" h",0)(window.close)&&exit 
 :begin
-set HOME=%~dp0\home\EverVim\
+SET HOME=%~dp0\home\EverVim\
+SET LOCALAPPDATA=%~dp0\home\EverVim\.config\
 SET PATH=%PATH%;%~dp0\tools\
 vim-x86\gvim.exe %*
 exit

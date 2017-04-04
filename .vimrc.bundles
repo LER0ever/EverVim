@@ -106,7 +106,7 @@
             Plug 'ctrlpvim/ctrlp.vim'
             Plug 'tacahiroy/ctrlp-funky'
             Plug 'dyng/ctrlsf.vim'
-            if !NVIM()
+            if !NVIM() && !WINDOWS()
                 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
                 Plug 'Shougo/vimshell.vim'
             endif

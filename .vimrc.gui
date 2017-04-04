@@ -22,7 +22,11 @@
 
     " NeoVim-Qt (here instead of ginit.vim)
     if exists('g:GuiLoaded')
-        Guifont Knack Nerd Font:h13
+        if !WINDOWS()
+            Guifont Knack Nerd Font:h13
+        else
+            Guifont Knack NF:h10
+        endif
     endif
 
 " }

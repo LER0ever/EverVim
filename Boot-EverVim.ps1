@@ -14,7 +14,7 @@ echo "Creating Directories ..."
 md $EVERHOME
 md $EVERHOME\.vim\autoload
 md $EVERHOME\.vim\bundle
-md $EVERHOME\.config\nvim\
+md $EVERHOME\.config
 
 echo "Downloading Vim-Plug ..."
 $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -27,9 +27,13 @@ cmd /c mklink .vimrc.bundles ..\..\.vimrc.bundles
 cmd /c mklink .vimrc.before ..\..\.vimrc.before
 cmd /c mklink .gvimrc ..\..\.vimrc.gui
 
-cmd /c mklink /J .config\nvim\ .vim\
-cmd /c mklink .config\nvim\init.vim .vimrc
-cmd /c mklink .config\nvim\ginit.vim .gvimrc
+Push-Location -Path .config\
+cmd /c mklink /J nvim\ ..\.vim\
+Push-Location -Path nvim\
+cmd /c mklink init.vim ..\..\.vimrc
+cmd /c mklink ginit.vim ..\..\.gvimrc
+Pop-Location
+Pop-Location
 
 Pop-Location
 

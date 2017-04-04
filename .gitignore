@@ -8,3 +8,6 @@
 _*
 .NERD*
 *.local
+home/
+neovim/
+vim-x86/
