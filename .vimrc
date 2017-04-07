@@ -854,6 +854,9 @@
             " enable completion from tags
             let g:ycm_collect_identifiers_from_tags_files = 1
 
+            " load ycm global config
+            let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
             " YcmCompleter GoTo keymap
             nnoremap <leader>gtd :YcmCompleter GoToDefinition<CR>
             nnoremap <leader>gtc :YcmCompleter GoToDeclaration<CR>
