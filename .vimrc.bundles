@@ -190,7 +190,11 @@
             Plug 'mattn/webapi-vim'
             Plug 'mattn/gist-vim'
             Plug 'scrooloose/nerdcommenter'
-            Plug 'Chiel92/vim-autoformat'
+            if !exists('g:evervim_use_neoformat')
+                Plug 'Chiel92/vim-autoformat'
+            else
+                Plug 'sbdchd/neoformat'
+            end
             Plug 'chrisyip/AuthorInfo'
             Plug 'tpope/vim-commentary'
             Plug 'godlygeek/tabular'

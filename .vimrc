@@ -714,6 +714,14 @@
         endif
     " }
 
+    " NeoFormat {
+        if isdirectory(expand("~/.vim/bundle/neoformat"))
+            augroup neofmt
+                autocmd BufWritePre * Neoformat
+            augroup END
+        end
+    " }
+
     " vim-markdown {
         let g:vim_markdown_toml_frontmatter = 1
         let g:vim_markdown_math = 1
