@@ -208,7 +208,12 @@
 
     set backspace=indent,eol,start  " Backspace for dummies
     set linespace=0                 " No extra spaces between rows
-    set number                      " Line numbers on
+    if !exists('g:evervim_hybrid_linenumber')
+        set number                      " Line numbers on
+    else
+        set relativenumber
+        set number
+    endif
     set showmatch                   " Show matching brackets/parenthesis
     set incsearch                   " Find as you type search
     set hlsearch                    " Highlight search terms
@@ -448,9 +453,6 @@
 
     " Easier formatting
     nnoremap <silent> <leader>q gwip
-
-    " LineNumberToggle
-    nnoremap <silent> <leader>ln :call ToggleLineNumbers()<CR>
 
     " FIXME: Revert this f70be548
     " fullscreen mode for GVIM and Terminal, need 'wmctrl' in you PATH
@@ -1407,28 +1409,6 @@
             NERDTreeMirror
             NERDTreeFind
             wincmd l
-        endif
-    endfunction
-    " }
-
-    " Line Number {
-    function! ToggleLineNumbers()
-        if !exists('g:evervim_linenumber_style') || g:evervim_linenumber_style == 0
-            let g:evervim_linenumber_style = 1
-            set norelativenumber
-            set number
-        elseif g:evervim_linenumber_style == 1
-            let g:evervim_linenumber_style = 2
-            set nonumber
-            set relativenumber
-        elseif g:evervim_linenumber_style == 2
-            let g:evervim_linenumber_style = 3
-            set relativenumber
-            set number
-        else
-            let g:evervim_linenumber_style = 0
-            set nonumber
-            set norelativenumber
         endif
     endfunction
     " }
