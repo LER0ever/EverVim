@@ -449,6 +449,9 @@
     " Easier formatting
     nnoremap <silent> <leader>q gwip
 
+    " LineNumberToggle
+    nnoremap <silent> <leader>ln :call ToggleLineNumbers()<CR>
+
     " FIXME: Revert this f70be548
     " fullscreen mode for GVIM and Terminal, need 'wmctrl' in you PATH
     map <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
@@ -1396,6 +1399,28 @@
             NERDTreeMirror
             NERDTreeFind
             wincmd l
+        endif
+    endfunction
+    " }
+
+    " Line Number {
+    function! ToggleLineNumbers()
+        if !exists('g:evervim_linenumber_style') || g:evervim_linenumber_style == 0
+            let g:evervim_linenumber_style = 1
+            set norelativenumber
+            set number
+        elseif g:evervim_linenumber_style == 1
+            let g:evervim_linenumber_style = 2
+            set nonumber
+            set relativenumber
+        elseif g:evervim_linenumber_style == 2
+            let g:evervim_linenumber_style = 3
+            set relativenumber
+            set number
+        else
+            let g:evervim_linenumber_style = 0
+            set nonumber
+            set norelativenumber
         endif
     endfunction
     " }
