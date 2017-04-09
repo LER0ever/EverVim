@@ -83,7 +83,7 @@
         if WINDOWS()
             let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'neocomplete', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'rust', 'cpp', 'lua']
         else
-            let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'youcompleteme', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'rust', 'cpp', 'lua', 'bash']
+            let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'youcompleteme', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'rust', 'cpp', 'lua']
         endif
     endif
 
