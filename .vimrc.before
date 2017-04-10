@@ -8,6 +8,7 @@
 " evervim options {
 
     " Prevent automatically changing to open file directory
+    " May cause airline to misbehave
     "   let g:evervim_no_autochdir = 1
 
     " Disable views

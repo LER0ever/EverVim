@@ -1226,11 +1226,12 @@
         " See `:echo g:airline_theme_map` for some more choices
         " Default in terminal vim is 'dark'
         if isdirectory(expand("~/.vim/bundle/vim-airline-themes/"))
+            set laststatus=2
             if !exists('g:airline_theme')
                 let g:airline_theme = 'dracula' " 'molokai' 'solarized'
             endif
             let g:airline#extensions#tabline#enabled = 1
-            let g:airline#extensions#bufferline#enabled = 1
+            "let g:airline#extensions#bufferline#enabled = 1
             if !exists('g:airline_powerline_fonts')
                 " Use the default set of separators with a few customizations
                 let g:airline_left_sep='›'  " Slightly fancier than '>'
@@ -1240,7 +1241,7 @@
     " }
 
     " vim-lightline {
-        if isdirectory(expand("~/.vim/bundle/lightline.vim"))
+        if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
             let g:lightline = {
                         \ 'colorscheme': 'Dracula',
                         \ 'enable': {
@@ -1328,7 +1329,7 @@
 
             function! LightlineMode()
                 let fname = expand('%:t')
-                return fname == '__Tagbar__' ? 'Tagbar' :
+                return fname =~ '__Tagbar__' ? 'Tagbar' :
                             \ fname == 'ControlP' ? 'CtrlP' :
                             \ fname == '__Gundo__' ? 'Gundo' :
                             \ fname == '__Gundo_Preview__' ? 'Gundo Preview' :
@@ -1338,6 +1339,7 @@
                             \ &ft == 'vimshell' ? 'VimShell' :
                             \ winwidth(0) > 60 ? lightline#mode() : ''
             endfunction
+
             function! LightlineFileencoding()
                 return winwidth(0) > 70 ? (&fenc !=# '' ? &fenc : &enc) : ''
             endfunction
