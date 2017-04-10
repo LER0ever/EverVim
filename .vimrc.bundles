@@ -258,6 +258,7 @@
             Plug 'briancollins/vim-jst'
             Plug 'kchmck/vim-coffee-script'
             Plug 'Quramy/tsuquyomi'
+            Plug 'Shougo/vimproc.vim', {'do' : 'make'}
             Plug 'HerringtonDarkholme/yats.vim'
         endif
     " }
