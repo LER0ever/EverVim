@@ -109,16 +109,16 @@
         " Always switch to the current file directory
     endif
 
-    "set autowrite                       " Automatically write a file when leaving a modified buffer
-    set shortmess+=filmnrxoOtT          " Abbrev. of messages (avoids 'hit enter')
-    set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
-    set virtualedit=onemore             " Allow for cursor beyond last character
-    set history=1000                    " Store a ton of history (default is 20)
-    set nospell                         " Switch off Spell checking by default
-    set hidden                          " Allow buffer switching without saving
-    set iskeyword-=.                    " '.' is an end of word designator
-    set iskeyword-=#                    " '#' is an end of word designator
-    set iskeyword-=-                    " '-' is an end of word designator
+    "set autowrite                                  "  Automatically write a file when leaving a modified buffer
+    set shortmess+=filmnrxoOtT                      "  Abbrev. of messages (avoids 'hit enter')
+    set viewoptions=folds,options,cursor,unix,slash "  Better Unix / Windows compatibility
+    set virtualedit=onemore                         "  Allow for cursor beyond last character
+    set history=1000                                "  Store a ton of history (default is 20)
+    set nospell                                     "  Switch off Spell checking by default
+    set hidden                                      "  Allow buffer switching without saving
+    set iskeyword-=.                                "  '.' is an end of word designator
+    set iskeyword-=#                                "  '#' is an end of word designator
+    set iskeyword-=-                                "  '-' is an end of word designator
 
     " Instead of reverting the cursor to the last position in the buffer, we
     " set it to the first line when editing a git commit message
@@ -176,40 +176,39 @@
         color dracula             " Load a colorscheme
     endif
 
-    set tabpagemax=15               " Only show 15 tabs
-    set showmode                    " Display the current mode
+    set tabpagemax=15                                      "  Only show 15 tabs
+    set showmode                                           "  Display the current mode
 
-    set cursorline                  " Highlight current line
+    set cursorline                                         "  Highlight current line
 
-    highlight clear SignColumn      " SignColumn should match background
-    highlight clear LineNr          " Current line number row will have same background color in relative mode
-    "highlight clear CursorLineNr    " Remove highlight color from current line number
+    highlight clear SignColumn                             "  SignColumn should match background
+    highlight clear LineNr                                 "  Current line number row will have same background color in relative mode
+    "highlight clear CursorLineNr                          "  Remove highlight color from current line number
 
     if has('cmdline_info')
-        set ruler                   " Show the ruler
-        set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " A ruler on steroids
-        set showcmd                 " Show partial commands in status line and
-                                    " Selected characters/lines in visual mode
+        set ruler                                          "  Show the ruler
+        set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) "  A ruler on steroids
+        set showcmd                                        "  Show partial commands in status line and Selected characters/lines in visual mode
     endif
 
     if has('statusline')
         set laststatus=2
 
         " Broken down into easily includeable segments
-        set statusline=%<%f\                     " Filename
-        set statusline+=%w%h%m%r                 " Options
+        set statusline=%<%f\                         " Filename
+        set statusline+=%w%h%m%r                     " Options
         if !exists('g:override_evervim_bundles')
             set statusline+=%{fugitive#statusline()} " Git Hotness
         endif
-        set statusline+=\ [%{&ff}/%Y]            " Filetype
-        set statusline+=\ [%{getcwd()}]          " Current dir
-        set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+        set statusline+=\ [%{&ff}/%Y]                " Filetype
+        set statusline+=\ [%{getcwd()}]              " Current dir
+        set statusline+=%=%-14.(%l,%c%V%)\ %p%%      " Right aligned file nav info
     endif
 
-    set backspace=indent,eol,start  " Backspace for dummies
-    set linespace=0                 " No extra spaces between rows
+    set backspace=indent,eol,start            " Backspace for dummies
+    set linespace=0                           " No extra spaces between rows
     if !exists('g:evervim_hybrid_linenumber')
-        set number                      " Line numbers on
+        set number                            " Line numbers on
     else
         set relativenumber
         set number
@@ -242,9 +241,9 @@
     set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
     set splitright                  " Puts new vsplit windows to the right of the current
     set splitbelow                  " Puts new split windows to the bottom of the current
-    "set matchpairs+=<:>             " Match, to be used with %
-    set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
-    "set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
+    "set matchpairs+=<:>            "  Match, to be used with %
+    set pastetoggle=<F12>           "  pastetoggle (sane indentation on pastes)
+    "set comments=sl:/*,mb:*,elx:*/ "  auto format comment blocks
     " Remove trailing whitespaces and ^M chars
     " To disable the stripping of whitespace, add the following to your
     " .vimrc.before.local file:
