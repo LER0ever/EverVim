@@ -119,8 +119,8 @@
                 Plug 'vim-airline/vim-airline-themes'
             else
                 Plug 'itchyny/lightline.vim'
+                Plug 'bling/vim-bufferline'
             endif
-            Plug 'bling/vim-bufferline'
             Plug 'jlanzarotta/bufexplorer'
             Plug 'easymotion/vim-easymotion'
             Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
