@@ -1229,6 +1229,8 @@
             if !exists('g:airline_theme')
                 let g:airline_theme = 'dracula' " 'molokai' 'solarized'
             endif
+            let g:airline#extensions#tabline#enabled = 1
+            let g:airline#extensions#bufferline#enabled = 1
             if !exists('g:airline_powerline_fonts')
                 " Use the default set of separators with a few customizations
                 let g:airline_left_sep='›'  " Slightly fancier than '>'
