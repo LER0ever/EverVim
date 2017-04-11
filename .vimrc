@@ -705,11 +705,9 @@
             au BufWrite *.c,*.cpp,*.h,*.hpp,*.cxx :Autoformat
             au BufWrite *.go :Autoformat
             au BufWrite *.rust,*.rs :Autoformat
-            au BufWrite *.js,*.ts,*.jsx :Autoformat
             au BufWrite *.cs :Autoformat
             au BufWrite *.java :Autoformat
             au BufWrite *.py :Autoformat
-            au Bufwrite *.html :Autoformat
             au BufWrite *.css :Autoformat
             au BufWrite *.ts :Autoformat
         endif
@@ -718,7 +716,14 @@
     " NeoFormat {
         if isdirectory(expand("~/.vim/bundle/neoformat"))
             augroup neofmt
-                autocmd BufWritePre * Neoformat
+                autocmd BufWritePre *.c,*.cpp,*.h,*.hpp,*.cxx Neoformat
+                autocmd BufWritePre *.go Neoformat
+                autocmd BufWritePre *.rust,*.rs Neoformat
+                autocmd BufWritePre *.cs Neoformat
+                autocmd BufWritePre *.java Neoformat
+                autocmd BufWritePre *.py Neoformat
+                autocmd BufWritePre *.css Neoformat
+                autocmd BufWritePre *.ts Neoformat
             augroup END
         end
     " }
@@ -838,7 +843,7 @@
 
     " Rainbow {
         if isdirectory(expand("~/.vim/bundle/rainbow/"))
-            let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+            let g:rainbow_active = 0 "1 if you want to enable it on vim start
         endif
     "}
 
