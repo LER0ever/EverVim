@@ -762,6 +762,12 @@
         endif
     " }
 
+    " vim-polyglot {
+        if isdirectory(expand("~/.vim/bundle/vim-polyglot"))
+            let g:polyglot_disabled = ['markdown', 'go', 'c/c++', 'css', 'html5', 'javascript', 'rust', 'toml']
+        endif
+    " }
+
     " Session List {
         set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
         if isdirectory(expand("~/.vim/bundle/sessionman.vim/"))

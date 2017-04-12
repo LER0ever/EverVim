@@ -164,6 +164,7 @@
 
     " Writing {
         if count(g:evervim_bundle_groups, 'writing')
+            Plug 'tpope/vim-markdown' ", {'for': 'markdown'}
             Plug 'reedes/vim-litecorrect'
             Plug 'reedes/vim-textobj-sentence'
             Plug 'reedes/vim-textobj-quote'
@@ -186,7 +187,8 @@
             Plug 'scrooloose/syntastic'
             Plug 'tpope/vim-fugitive'
             Plug 'jiangmiao/auto-pairs'
-            Plug 'sheerun/vim-polyglot'
+            " Plug 'sheerun/vim-polyglot' " disabled by default, conflicts
+            " with many plugins
             Plug 'mattn/webapi-vim'
             Plug 'mattn/gist-vim'
             Plug 'scrooloose/nerdcommenter'
@@ -354,7 +356,6 @@
 
     " Misc {
         if count(g:evervim_bundle_groups, 'misc')
-            Plug 'tpope/vim-markdown' ", {'for': 'markdown'}
             Plug 'vimwiki/vimwiki'
             Plug 'spf13/vim-preview'
             Plug 'tpope/vim-cucumber'
