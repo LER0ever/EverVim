@@ -100,7 +100,7 @@ PLEASE read the [Documentation](https://github.com/LER0ever/EverVim/blob/master/
 ##### NeoVim Terminal
 ![evervimterm](http://i.imgur.com/lQVWBTH.png)
 ##### VimR macOS
-![evervimvimr](http://i.imgur.com/lfalbzn.png)
+![evervimvimr](http://i.imgur.com/LGQv4F6.png)
 ##### GVim
 ![evervimgui](http://i.imgur.com/s8ga2Cv.png)
 ##### Older Shots
