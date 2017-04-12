@@ -29,7 +29,7 @@
 			return substitute(system('lsb_release -sdr'), '[\n]\+', '', 'g')
 		endfunction
 		silent function! OSXVERSION()
-			return substitute(system("echo -n $(sw_vers -productVersion)"), '[\n]\+', '', '')
+			return substitute(system("echo $(sw_vers -productVersion)"), '[\n]\+', '', 'g')
 		endfunction
 
     " }
@@ -542,7 +542,7 @@
             let startify_version_string = ""
             let startify_platform_string = WINDOWS() ? "Windows" :
                         \ LINUX() ? "Linux" . " [" . DISTROVERSION() . "]" :
-                        \ OSX() ? " macOS" . OSXVERSION() :
+                        \ OSX() ? " macOS " . OSXVERSION() :
                         \ TERMUX() ? "Android":
                         \ "Unix"
             if NVIM()

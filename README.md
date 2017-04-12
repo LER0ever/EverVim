@@ -97,9 +97,11 @@ PLEASE read the [Documentation](https://github.com/LER0ever/EverVim/blob/master/
 ## ScreenShots
 ##### Startup Screen (under NeoVim-Qt)
 ![evervimstartify](http://i.imgur.com/SHGHXfc.png)
-##### Under NeoVim Terminal
+##### NeoVim Terminal
 ![evervimterm](http://i.imgur.com/lQVWBTH.png)
-##### Under GVim
+##### VimR macOS
+![evervimvimr](http://i.imgur.com/lfalbzn.png)
+##### GVim
 ![evervimgui](http://i.imgur.com/s8ga2Cv.png)
 ##### Older Shots
 ![evervimold](http://i.imgur.com/l8oK1Mj.png)
