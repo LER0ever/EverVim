@@ -23,13 +23,13 @@
             return has('nvim')
         endfunction
 		silent function! DISTRO()
-			return substitute(system('lsb_release -si'), '[\s\n]\+', '', '')
+			return substitute(system('lsb_release -si'), '[\n]\+', '', '')
 		endfunction
 		silent function! DISTROVERSION()
-			return substitute(system('lsb_release -sdr'), '[\s\n]\+', '', '')
+			return substitute(system('lsb_release -sdr'), '[\n]\+', '', '')
 		endfunction
 		silent function! OSXVERSION()
-			return substitute(system("echo -n $(sw_vers -productVersion)"), '[\s\n]\+', '', '')
+			return substitute(system("echo -n $(sw_vers -productVersion)"), '[\n]\+', '', '')
 		endfunction
 
     " }
