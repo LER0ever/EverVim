@@ -273,6 +273,12 @@
         endif
     " }
 
+    " Dart {
+        if count(g:evervim_bundle_groups, 'dart')
+            Plug 'dart-lang/dart-vim-plugin'
+        endif
+    " }
+
     " Haskell {
         if count(g:evervim_bundle_groups, 'haskell')
             Plug 'travitch/hasksyn'
