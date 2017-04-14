@@ -22,15 +22,15 @@
         silent function! NVIM()
             return has('nvim')
         endfunction
-		silent function! DISTRO()
-			return substitute(system('lsb_release -si'), '[\n]\+', '', 'g')
-		endfunction
-		silent function! DISTROVERSION()
-			return substitute(system('lsb_release -sdr'), '[\n]\+', '', 'g')
-		endfunction
-		silent function! OSXVERSION()
-			return substitute(system("echo $(sw_vers -productVersion)"), '[\n]\+', '', 'g')
-		endfunction
+        silent function! DISTRO()
+            return substitute(system('lsb_release -si'), '[\n]\+', '', '')
+        endfunction
+        silent function! DISTROVERSION()
+            return substitute(system('lsb_release -sdr'), '[\n]\+', '', '')
+        endfunction
+        silent function! OSXVERSION()
+            return substitute(system("echo -n $(sw_vers -productVersion)"), '[\n]\+', '', '')
+        endfunction
 
     " }
 
@@ -267,8 +267,6 @@
 
     autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 
-    autocmd FileType vim set tabstop=4 shiftwidth=4 expandtab
-
     " Workaround vim-commentary for Haskell
     autocmd FileType haskell setlocal commentstring=--\ %s
     " Workaround broken colour highlighting in Haskell
@@ -327,6 +325,9 @@
 
     " Remove keybinding for Ex Mode
     nnoremap Q <nop>
+
+    " Remap ; to : in visual mode
+    nnoremap ; :
 
     " End/Start of line motion keys act relative to row/wrap width in the
     " presence of `:set wrap`, and relative to line for `:set nowrap`.
@@ -1390,10 +1391,10 @@
 
     if filereadable(expand('~/.gvimrc'))
         source ~/.gvimrc
-	else
-		if filereadable(expand('~/.vimrc.gui'))
-			source ~/.vimrc.gui
-		endif
+    else
+        if filereadable(expand('~/.vimrc.gui'))
+            source ~/.vimrc.gui
+        endif
     endif
 
 " }
