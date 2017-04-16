@@ -140,7 +140,6 @@ endfunction
 function! SourceConfigsIn(dir)
     let filelist = split(globpath(a:dir, '*.vim'), '\n')
     for vimconf in filelist
-        echo vimconf
         execute 'source' vimconf
     endfor
 endfunction

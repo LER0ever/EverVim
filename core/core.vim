@@ -21,8 +21,8 @@
 " }
 
 " Use before config if available {
-    if filereadable(expand("~/.vimrc.before"))
-        source ~/.vimrc.before
+    if filereadable(expand("~/.EverVim.vimrc"))
+        source ~/.EverVim.vimrc
     endif
 " }
 
