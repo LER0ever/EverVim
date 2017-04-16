@@ -1,8 +1,9 @@
 " Modeline and Notes {
-" EverVim is a vim distribution based on spf13-vim(Apache License)
-" EverVim is Licensed under either of
-" * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
-" * MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
+"   EverVim is a modern & powerful vim distribution
+"   Repo URL: https://github.com/LER0ever/EverVim
+"   Made by [LER0ever](https://github.com/LER0ever)
+"   Licensed under
+"       * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE.md) or http://www.apache.org/licenses/LICENSE-2.0)
 " }
 
 " Setup Vim-Plug Support {
