@@ -1,0 +1,34 @@
+" EverVim Programming Bundles
+" Pick one of the checksyntax, jslint, or syntastic
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive'
+Plug 'jiangmiao/auto-pairs'
+" Plug 'sheerun/vim-polyglot' " disabled by default, conflicts
+" with many plugins
+Plug 'mattn/webapi-vim'
+Plug 'mattn/gist-vim'
+Plug 'scrooloose/nerdcommenter'
+if !exists('g:evervim_use_neoformat')
+    Plug 'Chiel92/vim-autoformat'
+else
+    Plug 'sbdchd/neoformat'
+end
+Plug 'chrisyip/AuthorInfo'
+Plug 'tpope/vim-commentary'
+Plug 'godlygeek/tabular'
+Plug 'luochen1990/rainbow'
+Plug 'terryma/vim-multiple-cursors'
+if executable('ctags')
+    Plug 'majutsushi/tagbar'
+endif
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+if executable('ag')
+    Plug 'mileszs/ack.vim'
+    let g:ackprg = 'ag --nogroup --nocolor --column --smart-case'
+elseif executable('ack-grep')
+    let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+    Plug 'mileszs/ack.vim'
+elseif executable('ack')
+    Plug 'mileszs/ack.vim'
+endif

@@ -1,0 +1,53 @@
+" EverVim General Bundles
+Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
+Plug 'mhinz/vim-startify'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'simeji/winresizer'
+Plug 'Konfekt/FastFold'
+Plug 'rhysd/conflict-marker.vim'
+Plug 'lpenz/vimcommander'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tacahiroy/ctrlp-funky'
+Plug 'dyng/ctrlsf.vim'
+if !NVIM() && !WINDOWS()
+    Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+    Plug 'Shougo/vimshell.vim'
+endif
+Plug 'vim-scripts/sessionman.vim'
+Plug 'matchit.zip'
+if (has("python") || has("python3")) && exists('g:evervim_use_powerline')
+    Plug 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
+elseif exists('g:evervim_use_airline')
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+else
+    Plug 'itchyny/lightline.vim'
+    Plug 'bling/vim-bufferline'
+endif
+Plug 'jlanzarotta/bufexplorer'
+Plug 'easymotion/vim-easymotion'
+Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
+Plug 'kien/tabman.vim'
+Plug 'MattesGroeger/vim-bookmarks'
+"Plug 'zhaocai/GoldenView.Vim'
+Plug 'dracula/vim' " Main theme for EverVim
+Plug 'mbbill/undotree'
+if !exists('g:evervim_use_indentguides')
+    Plug 'Yggdroot/indentLine'
+else
+    Plug 'nathanaelkane/vim-indent-guides'
+endif
+if !exists('g:evervim_no_views')
+    Plug 'vim-scripts/restore_view.vim'
+endif
+if !exists('g:evervim_no_restore_cursor')
+    Plug 'farmergreg/vim-lastplace'
+endif
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-abolish'
+Plug 'osyo-manga/vim-over'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-indent'
+Plug 'gcmt/wildfire.vim'
+" Plug 'FredKSchott/CoVim'

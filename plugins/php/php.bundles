@@ -1,0 +1,4 @@
+" EverVim PHP Bundles
+Plug 'spf13/PIV'
+Plug 'arnaud-lb/vim-php-namespace'
+Plug 'beyondwords/vim-twig'

@@ -1,0 +1,10 @@
+" EverVim Javascript Bundles
+Plug 'elzr/vim-json'
+Plug 'groenewege/vim-less'
+Plug 'digitaltoad/vim-pug'
+Plug 'pangloss/vim-javascript'
+Plug 'briancollins/vim-jst'
+Plug 'kchmck/vim-coffee-script'
+Plug 'Quramy/tsuquyomi'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'HerringtonDarkholme/yats.vim'

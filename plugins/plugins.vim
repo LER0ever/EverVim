@@ -24,7 +24,6 @@
 
     if !exists('g:override_evervim_bundles')
         for $bundle_group in g:evervim_bundle_groups
-            echo $bundle_group
             source $evervim_root/plugins/$bundle_group/$bundle_group.bundles
         endfor
     endif
@@ -44,10 +43,4 @@
 
 " Vim-Plug Teardown {
     call plug#end()
-" }
-
-" Plugin Configuration {
-    for $bundle_group in g:evervim_bundle_groups
-        call SourceConfigsIn($evervim_root . "/plugins/" . $bundle_group)
-    endfor
 " }
