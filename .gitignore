@@ -11,3 +11,9 @@ _*
 home/
 neovim/
 vim-x86/
+autoload/
+bundle/
+tools/
+init.vim
+ginit.vim
+

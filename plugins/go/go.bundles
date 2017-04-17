@@ -1,0 +1,3 @@
+" EverVim Go Bundles
+"Plug 'Blackrush/vim-gocode'
+Plug 'fatih/vim-go', {'for': 'go'}

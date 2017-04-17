@@ -1,0 +1,10 @@
+" EverVim Haskell Bundles
+Plug 'travitch/hasksyn'
+Plug 'dag/vim2hs'
+Plug 'Twinside/vim-haskellConceal'
+Plug 'Twinside/vim-haskellFold'
+Plug 'lukerandall/haskellmode-vim'
+Plug 'eagletmt/neco-ghc'
+Plug 'eagletmt/ghcmod-vim'
+Plug 'adinapoli/cumino'
+Plug 'bitc/vim-hdevtools'

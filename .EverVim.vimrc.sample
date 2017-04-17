@@ -1,11 +1,17 @@
 " Modeline and Notes {
-" EverVim is a vim distribution based on spf13-vim(Apache License)
-" EverVim is Licensed under either of
-" * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
-" * MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
+"   EverVim is a modern & powerful vim distribution
+"   Repo URL: https://github.com/LER0ever/EverVim
+"   Made by [LER0ever](https://github.com/LER0ever)
+"   Licensed under
+"       * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE.md) or http://www.apache.org/licenses/LICENSE-2.0)
 " }
 
-" evervim options {
+" EverVim options {
+
+    " EverVim Bundle Groups
+    " Bundle Group name is just folders under ~/.EverVim/plugins
+    " Below is the default config, uncomment and make your own
+    "   let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'youcompleteme', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'rust', 'cpp', 'lua']
 
     " Prevent automatically changing to open file directory
     " May cause airline to misbehave
@@ -38,8 +44,8 @@
     " Disable whitespace stripping
     "   let g:evervim_keep_trailing_whitespace = 1
 
-    " Enable powerline symbols
-    "   let g:airline_powerline_fonts = 1
+    " Disable powerline symbols, default is 1
+    "   let g:airline_powerline_fonts = 0
 
     " vim files directory
     "   let g:evervim_consolidated_directory = <full path to desired directory>
@@ -69,7 +75,7 @@
     " Disable  omni complete
     "   let g:evervim_no_omni_complete = 1
 
-    " Prefer indentline
+    " Prefer indentguides
     "   let g:evervim_use_indentguides = 1
 
     " Prefer Neoformat
@@ -91,17 +97,5 @@
     " Mappings for editing/applying evervim config
     "   let g:evervim_edit_config_mapping='<leader>ev'
     "   let g:evervim_apply_config_mapping='<leader>sv'
-    
 " }
 
-" Use fork before if available {
-    if filereadable(expand("~/.vimrc.before.fork"))
-        source ~/.vimrc.before.fork
-    endif
-" }
-
-" Use local before if available {
-    if filereadable(expand("~/.vimrc.before.local"))
-        source ~/.vimrc.before.local
-    endif
-" }

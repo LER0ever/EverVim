@@ -1,0 +1,8 @@
+" EverVim Appearance Bundles
+Plug 'altercation/vim-colors-solarized'
+Plug 'spf13/vim-colors'
+Plug 'flazz/vim-colorschemes'
+Plug 'joshdick/onedark.vim'
+if !TERMUX()
+    Plug 'ryanoasis/vim-devicons'
+endif

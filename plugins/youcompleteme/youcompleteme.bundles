@@ -1,0 +1,4 @@
+" EverVim YouCompleteMe Bundles
+Plug 'Valloric/YouCompleteMe'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'

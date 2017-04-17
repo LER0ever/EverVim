@@ -1,0 +1,4 @@
+" EverVim Elixir Bundles
+Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}
+Plug 'carlosgaldino/elixir-snippets', {'for': 'elixir'}
+Plug 'mattreduce/vim-mix', {'for': 'elixir'}

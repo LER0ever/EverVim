@@ -3,18 +3,24 @@
 echo 'Welcome to EverVim, a powerful & modern vim distribution'
 echo 'Booting EverVim ...'
 
-echo 'Soft-Linking Vim Config'
-ln -s "$(pwd)"/.vimrc ~/.vimrc
-ln -s "$(pwd)"/.vimrc.local ~/.vimrc.local
-ln -s "$(pwd)"/.vimrc.bundles ~/.vimrc.bundles
-ln -s "$(pwd)"/.vimrc.bundles.local ~/.vimrc.bundles.local
-ln -s "$(pwd)"/.vimrc.gui ~/.gvimrc
-ln -s "$(pwd)"/.vimrc.before ~/.vimrc.before
-ln -s "$(pwd)"/.vimrc.before.local ~/.vimrc.before.local
+if [ ! -d "~/.EverVim" ]; then
+	echo "Cloning into ~/.EverVim ..."
+	git clone https://github.com/LER0ever/EverVim ~/.EverVim
+	cd ~/.EverVim
+fi
 
-echo 'Creating Directories ...'
-mkdir -p ~/.vim/bundle/
+# Ensure we have .config
 mkdir -p ~/.config/
+
+echo 'Soft-Linking Vim/NeoVim Config ...'
+ln -s ~/.EverVim ~/.vim
+ln -s ~/.EverVim/vimrc ~/.EverVim/init.vim
+ln -s ~/.EverVim/core/gui.vim ~/.EverVim/ginit.vim
+
+if [ ! -f "~/.EverVim.vimrc" ]; then
+    echo "Copied EverVim configuration sample to ~/.EverVim.vimrc"
+    cp ~/.EverVim/.EverVim.vimrc.sample ~/.EverVim.vimrc
+fi
 
 echo 'Downloading Vim-Plug'
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -25,10 +31,5 @@ curl -fLo ~/.vim/tools/markdown2ctags/markdown2ctags.py --create-dirs \
     https://raw.githubusercontent.com/jszakmeister/markdown2ctags/master/markdown2ctags.py
 sed -i '1 s/python/python2/' ~/.vim/tools/markdown2ctags/markdown2ctags.py
 chmod +x ~/.vim/tools/markdown2ctags/markdown2ctags.py
-
-echo 'Linking Neovim Config'
-ln -s ~/.vim ~/.config/nvim
-ln -s ~/.vimrc ~/.config/nvim/init.vim
-ln -s ~/.gvimrc ~/.config/nvim/ginit.vim
 
 echo 'All done with this script, now run vim/neovim and execute ":PlugInstall"'
