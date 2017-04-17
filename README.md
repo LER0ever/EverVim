@@ -6,7 +6,7 @@
 ## About
 EverVim is the ultimate vim distribution that supports **NeoVim**, Vim, GVim and MacVim. It ships with tons of powerful features through vim plugins, which makes it easy to get started for both newcomers and experienced users.
 
-The distribution is completely customizable using a ~/.vimrc.local, ~/.vimrc.bundles.local, and ~/.vimrc.before.local Vim config files.
+The distribution is completely customizable using a ~/.EverVim.vimrc Vim config files.
 
 EverVim started as a fork of spf13-vim, which is great but not actively maintained any more. Unlike spf13-vim, EverVim always keeps its modern features up-to-date. It uses [Vim-Plug](https://github.com/junegunn/vim-plug) as a plugin manager, which is async and is about 10x faster than Vundle. Keeping your plugins always up to date is just a command away. Vim-Plug uses a plugin bundle so that having lots of them won't mess up the folder structure.
 
@@ -14,7 +14,7 @@ The default config of EverVim is powerful and easy to use just out of the box, a
 
 ## Installation
 ##### Linux, BSD and macOS
-EverVim needs vim with `+python` support for YouCompleteMe 
+EverVim needs vim with `+python` support for YouCompleteMe  
 YouCompleteMe also requires `cmake` `gcc | clang` in `$PATH`
 
 ```bash
@@ -31,6 +31,7 @@ cd ~/.vim/bundle/YouCompleteMe/
 
 ##### Windows (Portable)
 EverVim needs vim with `+lua` support on Windows for NeoComplete  
+You can change to YouCompleteMe in ~/.EverVim.vimrc  
 git(with git-bash) and curl is also required for this config to setup and update.  
 The following commands should be executed in git bash.  
 
