@@ -5,7 +5,7 @@ if isdirectory(expand("~/.vim/bundle/tagbar/"))
     " Markdown Tags
     let g:tagbar_type_markdown = {
                 \ 'ctagstype': 'markdown',
-                \ 'ctagsbin' : '~/.vim/tools/markdown2ctags/markdown2ctags.py',
+                \ 'ctagsbin' : '~/.vim/tools/ctags/markdown2ctags.py',
                 \ 'ctagsargs' : '-f - --sort=yes',
                 \ 'kinds' : [
                 \ 's:sections',
