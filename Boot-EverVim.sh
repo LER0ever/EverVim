@@ -14,6 +14,7 @@ mkdir -p ~/.config/
 
 echo 'Soft-Linking Vim/NeoVim Config ...'
 ln -s ~/.EverVim ~/.vim
+ln -s ~/.EverVim ~/.config/nvim
 ln -s ~/.EverVim/vimrc ~/.EverVim/init.vim
 ln -s ~/.EverVim/core/gui.vim ~/.EverVim/ginit.vim
 
