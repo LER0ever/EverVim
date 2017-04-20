@@ -15,10 +15,11 @@ silent function! NVIM()
     return has('nvim')
 endfunction
 silent function! DISTRO()
-    return substitute(system('lsb_release -si'), '[\n]\+', '', '')
+    return substitute(system('lsb_release -si'), '[\n]\+', '', 'g')
 endfunction
 silent function! DISTROVERSION()
-    return substitute(system('lsb_release -sdr'), '[\n]\+', '', '')
+    return executable('dpkg') ? substitute(system('lsb_release -sd'), '[\n|\"]\+', '', 'g'):
+                \ substitute(system('lsb_release -sdr'), '[\n|\"]\+', '', 'g')
 endfunction
 silent function! OSXVERSION()
     return substitute(system("echo -n $(sw_vers -productVersion)"), '[\n]\+', '', '')
