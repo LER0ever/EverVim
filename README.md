@@ -17,6 +17,13 @@ The default config of EverVim is powerful and easy to use just out of the box, a
 EverVim needs vim with `+python` support for YouCompleteMe  
 YouCompleteMe also requires `cmake` `gcc | clang` in `$PATH`
 
+**Install the prerequisites under Ubuntu/Debian-based Distros:**
+```bash
+sudo apt install gcc cmake exuberant-ctags python3-pip
+sudo pip3 install neovim
+```
+
+**Install EverVim using the setup script:**
 ```bash
 git clone https://github.com/LER0ever/EverVim ~/.EverVim
 cd ~/.EverVim
