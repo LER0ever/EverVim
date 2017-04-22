@@ -1,6 +1,10 @@
 # EverVim: The Ultimate Vim Distribution
 ![EverVim](https://img.shields.io/badge/Coded%20with-EverVim-bd93f9.svg?style=flat-square)
 
+![evervim-header](http://i.imgur.com/yUVLKmB.png "EverVim with VimR on macOS")
+
+* * *
+
 ## | [About](https://github.com/LER0ever/EverVim/blob/master/README.md#about) | [Installation](https://github.com/LER0ever/EverVim/blob/master/README.md#installation) | [Features](https://github.com/LER0ever/EverVim/blob/master/README.md#features) | [ScreenShots](https://github.com/LER0ever/EverVim/blob/master/README.md#screenshots) | [Documentation](https://github.com/LER0ever/EverVim/blob/master/DOC.md) | [License](https://github.com/LER0ever/EverVim/blob/master/README.md#license) |
 
 ## About
@@ -107,8 +111,6 @@ PLEASE read the [Documentation](https://github.com/LER0ever/EverVim/blob/master/
 ![evervimstartify](http://i.imgur.com/SHu2yZv.png)
 ##### NeoVim Terminal
 ![evervimterm](http://i.imgur.com/lQVWBTH.png)
-##### VimR macOS
-![evervimvimr](http://i.imgur.com/LGQv4F6.png)
 ##### NeoVim GTK
 ![evervimnvimgtk](http://i.imgur.com/Kp2q00a.png)
 ##### GVim

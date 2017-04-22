@@ -22,5 +22,5 @@ silent function! DISTROVERSION()
                 \ substitute(system('lsb_release -sdr'), '[\n|\"]\+', '', 'g')
 endfunction
 silent function! OSXVERSION()
-    return substitute(system("echo -n $(sw_vers -productVersion)"), '[\n]\+', '', '')
+    return substitute(system("echo $(sw_vers -productVersion)"), '[\n]\+', '', '')
 endfunction
