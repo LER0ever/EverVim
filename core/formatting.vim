@@ -23,8 +23,8 @@ autocmd FileType haskell,puppet,ruby,yml setlocal expandtab shiftwidth=2 softtab
 " preceding line best in a plugin but here for now.
 
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
-
 autocmd BufNewFile,BufRead *.bundles set filetype=vim
+autocmd BufNewFile,BufRead wscript set filetype=python
 
 " Workaround vim-commentary for Haskell
 autocmd FileType haskell setlocal commentstring=--\ %s
