@@ -1,16 +1,50 @@
 if isdirectory(expand("~/.vim/bundle/vim-startify"))
+    function! PLATFORM_ICON_STRING()
+        let platform_icon = ""
+        let platform_string = ""
+        if WINDOWS()
+            let platform_icon = ""
+            let platform_string = "Windows"
+        elseif OSX()
+            let platform_icon = ""
+            let platform_string = "macOS" . OSXVERSION()
+        elseif BSD()
+            let platform_icon = ""
+            let platform_string = "BSD"
+        elseif LINUX()
+            let platform_icon = DISTRO() =~ "Arch" ? "" :
+                        \ DISTRO() =~ "CentOS" ? "" :
+                        \ DISTRO() =~ "Debian" ? "" :
+                        \ DISTRO() =~ "Fedora" ? "" :
+                        \ DISTRO() =~ "Mint" ? "" :
+                        \ DISTRO() =~ "SUSE" ? "" :
+                        \ DISTRO() =~ "Ubuntu" ? "" :
+                        \ DISTRO() =~ "Gentoo" ? "" :
+                        \ DISTRO() =~ "Elementary" ? "" :
+                        \ ""
+            if WSL()
+                let platform_string = "WSL [" . DISTROVERSION() . " on Windows 10]"
+            elseif CROS()
+                let platform_icon = ""
+                let platform_string = "Chrome OS [" . DISTROVERSION() . " with Chronos]"
+            elseif TERMUX()
+                let platform_icon = ""
+                let platform_string = "Android"
+            endif
+            let platform_string = "Linux [" . DISTROVERSION() . "]"
+        else
+            let platform_icon = ""
+            let platform_string = "UNIX"
+        endif
+        return platform_icon . " " . platform_string
+    endfunction
+
     let startify_version_string = ""
-    let startify_platform_string = WINDOWS() ? "Windows" :
-                \ WSL() ? "WSL" . " [" . DISTROVERSION() . " on Windows 10]" :
-                \ CROS() ? "Chrome OS" . " [" . DISTROVERSION() . " with Chronos]" :
-                \ LINUX() ? "Linux" . " [" . DISTROVERSION() . "]" :
-                \ OSX() ? " macOS " . OSXVERSION() :
-                \ TERMUX() ? "Android":
-                \ "Unix"
+    let startify_platform_string = PLATFORM_ICON_STRING()
     if NVIM()
         let startify_version_string = "NeoVim"
     else
-        let startify_version_string = "Vim " . v:version
+        let startify_version_string = " Vim " . substitute(v:version, '[\0]\+', '.', '')
     endif
 
     highlight StartifyHeader ctermfg=120 guifg=#87ff87

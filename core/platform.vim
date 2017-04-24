@@ -5,6 +5,9 @@ endfunction
 silent function! LINUX()
     return has('unix') && !has('macunix') && !has('win32unix')
 endfunction
+silent function! BSD()
+    return system('uname -s') =~ "BSD"
+endfunction
 silent function! WINDOWS()
     return  (has('win32') || has('win64'))
 endfunction
@@ -12,7 +15,7 @@ silent function! WSL()
     return LINUX() && system('uname -r') =~ 'Microsoft'
 endfunction
 silent function! CROS()
-return LINUX() && (system('cat /proc/version') =~ 'cros' || system('ls /dev') =~ 'cros')
+    return LINUX() && (system('cat /proc/version') =~ 'cros' || system('ls /dev') =~ 'cros')
 endfunction
 silent function! TERMUX()
     return isdirectory(expand('/data/data/com.termux')) " #FIXME: Dirty judge
