@@ -8,6 +8,9 @@ endfunction
 silent function! WINDOWS()
     return  (has('win32') || has('win64'))
 endfunction
+silent function! WSL()
+    return LINUX() && system('uname -r') =~ 'Microsoft'
+endfunction
 silent function! TERMUX()
     return isdirectory(expand('/data/data/com.termux')) " #FIXME: Dirty judge
 endfunction
