@@ -22,6 +22,7 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
                         \ DISTRO() =~ "Gentoo" ? "" :
                         \ DISTRO() =~ "Elementary" ? "" :
                         \ ""
+            let platform_string = "Linux [" . DISTROVERSION() . "]"
             if WSL()
                 let platform_string = "WSL [" . DISTROVERSION() . " on Windows 10]"
             elseif CROS()
@@ -31,7 +32,6 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
                 let platform_icon = ""
                 let platform_string = "Android"
             endif
-            let platform_string = "Linux [" . DISTROVERSION() . "]"
         else
             let platform_icon = ""
             let platform_string = "UNIX"
