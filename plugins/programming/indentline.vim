@@ -10,5 +10,5 @@ if isdirectory(expand("~/.vim/bundle/indentLine/"))
     let g:indentLine_color_dark = 1 " (default: 2)
     let g:indentLine_enabled = 1
     let g:indentLine_char = '│' " 
-    let g:indentLine_fileTypeExclude = ['startify']
+    let g:indentLine_fileTypeExclude = ['startify', '']
 endif

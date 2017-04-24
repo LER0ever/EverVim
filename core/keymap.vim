@@ -196,3 +196,6 @@ nnoremap <silent> <leader>q gwip
 " fullscreen mode for GVIM and Terminal, need 'wmctrl' in you PATH
 map <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
 
+if has('nvim')
+    tnoremap <Esc> <C-\><C-n>
+endif
