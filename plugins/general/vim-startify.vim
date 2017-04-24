@@ -44,7 +44,7 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
     if NVIM()
         let startify_version_string = "NeoVim"
     else
-        let startify_version_string = " Vim " . substitute(v:version, '[\0]\+', '.', '')
+        let startify_version_string = " Vim " . substitute(v:version, '[\0]', '.', '')
     endif
 
     highlight StartifyHeader ctermfg=120 guifg=#87ff87

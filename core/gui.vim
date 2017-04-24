@@ -23,7 +23,7 @@
     " NeoVim-Qt (here instead of ginit.vim)
     if exists('g:GuiLoaded')
         if !WINDOWS()
-            Guifont Knack Nerd Font:h10
+            Guifont Knack Nerd Font:h12
             "call rpcnotify(1, 'Gui', 'Font', 'Knack Nerd Font 20')
         else
             Guifont Knack NF:h10
