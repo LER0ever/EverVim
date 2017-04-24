@@ -2,6 +2,7 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
     let startify_version_string = ""
     let startify_platform_string = WINDOWS() ? "Windows" :
                 \ WSL() ? "WSL" . " [" . DISTROVERSION() . " on Windows 10]" :
+                \ CROS() ? "Chrome OS" . " [" . DISTROVERSION() . " with Chronos]" :
                 \ LINUX() ? "Linux" . " [" . DISTROVERSION() . "]" :
                 \ OSX() ? " macOS " . OSXVERSION() :
                 \ TERMUX() ? "Android":

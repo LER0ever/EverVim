@@ -11,6 +11,9 @@ endfunction
 silent function! WSL()
     return LINUX() && system('uname -r') =~ 'Microsoft'
 endfunction
+silent function! CROS()
+return LINUX() && (system('cat /proc/version') =~ 'cros' || system('ls /dev') =~ 'cros')
+endfunction
 silent function! TERMUX()
     return isdirectory(expand('/data/data/com.termux')) " #FIXME: Dirty judge
 endfunction
