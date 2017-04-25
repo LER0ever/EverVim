@@ -14,11 +14,11 @@ The distribution is completely customizable using a ~/.EverVim.vimrc Vim config 
 
 EverVim started as a fork of spf13-vim, which is great but not actively maintained any more. Unlike spf13-vim, EverVim always keeps its modern features up-to-date. It uses [Vim-Plug](https://github.com/junegunn/vim-plug) as a plugin manager, which is async and is about 10x faster than Vundle. Keeping your plugins always up to date is just a command away. Vim-Plug uses a plugin bundle so that having lots of them won't mess up the folder structure.
 
-The default config of EverVim is powerful and easy to use just out of the box, and is suitable for most vim users. Customization is easy as well. With `.local` files, you can customize the whole collection without modify the original files. That means you're still able to update the EverVim config using `git pull` without compromizing your own modification.
+The default config of EverVim is powerful and easy to use just out of the box, and is suitable for most vim users. Customization is easy as well. With `.EverVim.vimrc` file, you can customize the whole collection without modify the original files. That means you're still able to update the EverVim config using `git pull` without compromizing your own modification.
 
 ## Installation
-#### Detailed installation instruction
-##### | [Linux](https://github.com/LER0ever/EverVim/wiki/Installation-on-Linux) | [macOS](https://github.com/LER0ever/EverVim/wiki/Installation-on-macOS) | [Windows](https://github.com/LER0ever/EverVim/wiki/Installation-on-Windows) |
+### Detailed installation instruction
+### | [Linux](https://github.com/LER0ever/EverVim/wiki/Installation-on-Linux) | [macOS](https://github.com/LER0ever/EverVim/wiki/Installation-on-macOS) | [Windows](https://github.com/LER0ever/EverVim/wiki/Installation-on-Windows) |
 Finished the installation above?  
 Before you started, please read the [Plugins Documentation](https://github.com/LER0ever/EverVim/wiki/Plugins) to have an overview about some of EverVim's essential plugins.
 
@@ -27,38 +27,35 @@ Before you started, please read the [Plugins Documentation](https://github.com/L
 ##### tl;dr. A brief how-to
 <details>
 <summary>0. Still</summary>
-**You are strongly encouraged to use the full instruction on your first installation of EverVim.**
+<b>You are strongly encouraged to use the full instruction on your first installation of EverVim.</b>
 </details>
 <details>
 <summary>1. Install prerequisites and patched font</summary>
-- Download and install the [Knack Nerd Font](https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Regular/complete/Knack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)
-- Make **git, curl** is on your system.
+<li>Download and install the [Knack Nerd Font](https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Regular/complete/Knack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)</li>
+<li>Make **git, curl** is on your system.</li>
 </details>
+
 <details>
-<summary>2. Clone and Boot</summary>
-- `git clone https://github.com/LER0ever/EverVim ~/.EverVim`
-- `cd .EverVim`
-- `sh Boot-EverVim.sh` or `.\Boot-EverVim.ps1`
+<summary>2. Clone and Boot</summary>  
+<li>git clone https://github.com/LER0ever/EverVim ~/.EverVim</li>
+<li>cd .EverVim</li>
+<li>sh Boot-EverVim.sh or .\Boot-EverVim.ps1</li>
 </details>
 <details>
 <summary>3. Install the plugins</summary>
-- Fire up your vim
-- Type `:PlugInstall`
-- Wait for it to finish
-- Restart Vim.
+<li>Fire up your vim</li>
+<li>Type `:PlugInstall`</li>
+<li>Wait for it to finish</li>
+<li>Restart Vim.</li>
 </details>
-
-#### Before you get started !
-
 
 # Features
 ### Cross Platform
 - Support Vim 7.4.x, Vim 8, MacVim and of course Neovim
-- Portable under windows
 - Tested under all platforms
-	- Windows (gvim, vim)
-	- Linux (neovim, neovim-qt, vim, gvim)
-	- macOS (MacVim, neovim)
+	- Windows (gvim, vim, neovim-qt, Oni)
+	- Linux (neovim, neovim-qt, vim, gvim, neovim-gtk, Oni)
+	- macOS (MacVim, VimR, Oni)
 	- BSD (vim)
 	- Android (neovim, vim under Termux)
 
@@ -88,6 +85,7 @@ Before you started, please read the [Plugins Documentation](https://github.com/L
 - Collaboration using CoVim
 
 ## ScreenShots
+#### Updated screenshots at [Wiki/Gallery](https://github.com/LER0ever/EverVim/wiki/Gallery)
 ##### Startup Screen (under NeoVim-Qt)
 ![evervimstartify](http://i.imgur.com/SHu2yZv.png)
 ##### NeoVim Terminal
