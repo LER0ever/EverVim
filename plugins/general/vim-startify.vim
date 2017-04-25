@@ -42,7 +42,9 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
 
     let startify_version_string = ""
     let startify_platform_string = PLATFORM_ICON_STRING()
-    if NVIM()
+    if ONI()
+        let startify_version_string = "Oni"
+    elseif NVIM()
         let startify_version_string = "NeoVim"
     else
         let startify_version_string = " Vim " . substitute(v:version, '[\0]', '.', '')
