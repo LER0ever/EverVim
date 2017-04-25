@@ -17,58 +17,39 @@ EverVim started as a fork of spf13-vim, which is great but not actively maintain
 The default config of EverVim is powerful and easy to use just out of the box, and is suitable for most vim users. Customization is easy as well. With `.local` files, you can customize the whole collection without modify the original files. That means you're still able to update the EverVim config using `git pull` without compromizing your own modification.
 
 ## Installation
-##### Linux, BSD and macOS
-EverVim needs vim with `+python` support for YouCompleteMe  
-YouCompleteMe also requires `cmake` `gcc | clang` in `$PATH`
+#### Detailed installation instruction
+##### | [Linux](https://github.com/LER0ever/EverVim/wiki/Installation-on-Linux) | [macOS](https://github.com/LER0ever/EverVim/wiki/Installation-on-macOS) | [Windows](https://github.com/LER0ever/EverVim/wiki/Installation-on-Windows) |
+Finished the installation above?  
+Before you started, please read the [Plugins Documentation](https://github.com/LER0ever/EverVim/wiki/Plugins) to have an overview about some of EverVim's essential plugins.
 
-**Install the prerequisites under Ubuntu/Debian-based Distros:**
-```bash
-sudo apt install gcc cmake exuberant-ctags python3-pip
-sudo pip3 install neovim
-```
+* * *
 
-**Install EverVim using the setup script:**
-```bash
-git clone https://github.com/LER0ever/EverVim ~/.EverVim
-cd ~/.EverVim
-sh Boot-EverVim.sh
-nvim +PlugInstall
-# or open vim, gvim, nvim, nvim-qt, MacVim and type :PlugInstall
-
-# steps below are for YouCompleteMe
-cd ~/.vim/bundle/YouCompleteMe/
-./install.py
-```
-
-##### Windows (Portable)
-EverVim needs vim with `+lua` support on Windows for NeoComplete  
-You can change to YouCompleteMe in ~/.EverVim.vimrc  
-git(with git-bash) and curl is also required for this config to setup and update.  
-The following commands should be executed in git bash.  
-
-```bash
-cd some-temporary-empty-foler
-mkdir home tools vim-x86
-cd home
-git clone https://github.com/LER0ever/EverVim
-export HOME=$(pwd)/EverVim
-sh Boot-EverVim.sh
-mv EverVim/RunEverVim.bat ..
-```
-And then:
-
-- Download the vim x86 to folder vim-x86
-- Double Click the RunEverVim.bat
-- Type `:PlugInstall` in the gvim and wait for it to finish installing
-
-Tools folder is for the executables required by vim, e.g. ctags, uncrustify  
-After the setup, you can move the whole folder to wherever you want and code anywhere.
-##### Fonts
-For lightline to work properly, you need to install the patched nerd fonts for Hack: [Knack Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Regular/complete/Knack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)
+##### tl;dr. A brief how-to
+<details>
+<summary>0. Still</summary>
+**You are strongly encouraged to use the full instruction on your first installation of EverVim.**
+</details>
+<details>
+<summary>1. Install prerequisites and patched font</summary>
+- Download and install the [Knack Nerd Font](https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Regular/complete/Knack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)
+- Make **git, curl** is on your system.
+</details>
+<details>
+<summary>2. Clone and Boot</summary>
+- `git clone https://github.com/LER0ever/EverVim ~/.EverVim`
+- `cd .EverVim`
+- `sh Boot-EverVim.sh` or `.\Boot-EverVim.ps1`
+</details>
+<details>
+<summary>3. Install the plugins</summary>
+- Fire up your vim
+- Type `:PlugInstall`
+- Wait for it to finish
+- Restart Vim.
+</details>
 
 #### Before you get started !
-Finished the installation above?  
-PLEASE read the [Documentation](https://github.com/LER0ever/EverVim/blob/master/DOC.md) to have an overview about some of EverVim's essential plugins.
+
 
 # Features
 ### Cross Platform
