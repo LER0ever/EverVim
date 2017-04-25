@@ -20,9 +20,6 @@ endfunction
 silent function! TERMUX()
     return isdirectory(expand('/data/data/com.termux')) " #FIXME: Dirty judge
 endfunction
-silent function! NVIM()
-    return has('nvim')
-endfunction
 silent function! DISTRO()
     return substitute(system('lsb_release -si'), '[\n]\+', '', 'g')
 endfunction
@@ -32,4 +29,16 @@ silent function! DISTROVERSION()
 endfunction
 silent function! OSXVERSION()
     return substitute(system("echo $(sw_vers -productVersion)"), '[\n]\+', '', '')
+endfunction
+silent function! NVIM()
+    return has('nvim')
+endfunction
+silent function! GVIM()
+    return has('gui_running')
+endfunction
+silent function! NVIMQT()
+    return exists('g:GuiLoaded')
+endfunction
+silent function! ONI()
+    return exists('g:gui_oni')
 endfunction
