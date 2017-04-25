@@ -24,6 +24,7 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
                         \ ""
             let platform_string = "Linux [" . DISTROVERSION() . "]"
             if WSL()
+                let platform_icon = ""
                 let platform_string = "WSL [" . DISTROVERSION() . " on Windows 10]"
             elseif CROS()
                 let platform_icon = ""
