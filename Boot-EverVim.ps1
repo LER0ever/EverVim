@@ -6,36 +6,37 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
     exit
 }
 
-$invocation = (Get-Variable MyInvocation).Value
-$currentdir = Split-Path $invocation.MyCommand.Path
-$EVERHOME = $currentdir + "\home\EverVim\"
+Push-Location ~
 
-echo "Creating Directories ..."
-md $EVERHOME
-md $EVERHOME\.vim\autoload
-md $EVERHOME\.vim\bundle
-md $EVERHOME\.config
+if (!(Test-Path "~\.EverVim")) {
+    echo "Cloning into ~\.EverVim ..."
+    git clone https://github.com/LER0ever/EverVim ~\.EverVim
+}
+
+echo "Processing files and directories ..."
+mkdir -Path ~\.EverVim\autoload -Force
+mkdir -Path ~\.EverVim\bundle -Force
+cmd /c rmdir %LOCALAPPDATA%\nvim\
+cmd /c rmdir %USERPROFILE%\vimfiles\
+Remove-Item -Path ~\.EverVim\init.vim -Force -Recurse
+Remove-Item -Path ~\.EverVim\ginit.vim -Force -Recurse
+
+echo "Soft-Linking Vim/NeoVim Config ..."
+cmd /c mklink /D %USERPROFILE%\vimfiles\ %USERPROFILE%\.EverVim\
+cmd /c mklink /D %LOCALAPPDATA%\nvim\ %USERPROFILE%\.EverVim\
+cmd /c mklink %USERPROFILE%\.EverVim\init.vim %USERPROFILE%\.EverVim\vimrc
+cmd /c mklink %USERPROFILE%\.EverVim\ginit.vim %USERPROFILE%\.EverVim\core\gui.vim
+
+if (!(Test-Path "~\.EverVim.vimrc")) {
+    echo "Copied EverVim configuration sample to ~\.EverVim.vimrc"
+    Copy-Item -Path ~\.EverVim\.EverVim.vimrc.sample -Destination ~\.EverVim.vimrc -Force
+}
 
 echo "Downloading Vim-Plug ..."
 $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-(New-Object Net.WebClient).DownloadFile($uri, $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($EVERHOME + "\.vim\autoload\plug.vim"))
-
-echo "Soft-Linking Vim/NeoVim Config ..."
-Push-Location -Path $EVERHOME
-cmd /c mklink .vimrc ..\..\.vimrc
-cmd /c mklink .vimrc.bundles ..\..\.vimrc.bundles
-cmd /c mklink .vimrc.before ..\..\.vimrc.before
-cmd /c mklink .gvimrc ..\..\.vimrc.gui
-
-Push-Location -Path .config\
-cmd /c mklink /J nvim\ ..\.vim\
-Push-Location -Path nvim\
-cmd /c mklink init.vim ..\..\.vimrc
-cmd /c mklink ginit.vim ..\..\.gvimrc
-Pop-Location
-Pop-Location
+(New-Object Net.WebClient).DownloadFile($uri, $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath("~\.EverVim\autoload\plug.vim"))
 
 Pop-Location
 
-echo "All done with the setup. Now put your vim in the right place and click on the bat."
-echo "Type :PlugInstall in your vim to complete the plugin installation"
+echo "All done with the setup. "
+echo "Now please open up your vim and Type :PlugInstall in your vim to complete the plugin installation"
