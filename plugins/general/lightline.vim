@@ -74,7 +74,7 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
     function! LightlineFilename()
         let fname = expand('%:t')
         return fname == 'ControlP' && has_key(g:lightline, 'ctrlp_item') ? g:lightline.ctrlp_item :
-                    \ fname == '__Tagbar__' ? g:lightline.fname :
+                    \ fname =~ '__Tagbar__' ? "" :
                     \ fname =~ '__Gundo\|NERD_tree' ? '' :
                     \ &ft == 'vimfiler' ? vimfiler#get_status_string() :
                     \ &ft == 'unite' ? unite#get_status_string() :
@@ -99,5 +99,12 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
 
     function! LightlineFileencoding()
         return winwidth(0) > 70 ? (&fenc !=# '' ? &fenc : &enc) : ''
+    endfunction
+
+    let g:tagbar_status_func = 'TagbarStatusFunc'
+
+    function! TagbarStatusFunc(current, sort, fname, ...) abort
+        let g:lightline.fname = a:fname
+        return lightline#statusline(0)
     endfunction
 endif

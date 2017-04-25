@@ -17,6 +17,10 @@
     " May cause airline to misbehave
     "   let g:evervim_no_autochdir = 1
 
+    " Default statusline is lightline.vim
+    " You can change to the popular vim-airline by uncomment the following
+    "   let g:evervim_use_airline = 1
+
     " Disable views
     "   let g:evervim_no_views = 1
 
