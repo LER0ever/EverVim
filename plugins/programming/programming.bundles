@@ -32,3 +32,4 @@ elseif executable('ack-grep')
 elseif executable('ack')
     Plug 'mileszs/ack.vim'
 endif
+Plug 'tpope/vim-dispatch'
