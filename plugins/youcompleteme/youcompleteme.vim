@@ -13,7 +13,7 @@ if count(g:evervim_bundle_groups, 'youcompleteme')
     nnoremap <leader>gto :YcmCompleter GoTo<CR>
 
     " remap Ultisnips for compatibility for YCM
-    let g:UltiSnipsExpandTrigger = '<C-j>'
+    let g:UltiSnipsExpandTrigger = '<leader><tab>'
     let g:UltiSnipsJumpForwardTrigger = '<C-j>'
     let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 
