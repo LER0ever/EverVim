@@ -20,6 +20,7 @@ autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,pe
 autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
 autocmd BufNewFile,BufRead *.lumos set filetype=html
 autocmd FileType haskell,puppet,ruby,yml setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType html,xml setlocal expandtab shiftwidth=2 softtabstop=2
 " preceding line best in a plugin but here for now.
 
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
