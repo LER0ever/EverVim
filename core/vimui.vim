@@ -7,19 +7,20 @@ if !exists('g:override_evervim_bundles') && filereadable(expand("~/.vim/bundle/v
     color dracula             " Load a colorscheme
 endif
 
-set tabpagemax=15                                      "  Only show 15 tabs
-set showmode                                           "  Display the current mode
+set tabpagemax=15                                      " Only show 15 tabs
+set showmode                                           " Display the current mode
 
-set cursorline                                         "  Highlight current line
+set cursorline                                         " Highlight current line
+"set cursorcolumn                                      " Highlight current column
 
-highlight clear SignColumn                             "  SignColumn should match background
-highlight clear LineNr                                 "  Current line number row will have same background color in relative mode
-"highlight clear CursorLineNr                          "  Remove highlight color from current line number
+highlight clear SignColumn                             " SignColumn should match background
+highlight clear LineNr                                 " Current line number row will have same background color in relative mode
+"highlight clear CursorLineNr                          " Remove highlight color from current line number
 
 if has('cmdline_info')
-    set ruler                                          "  Show the ruler
-    set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) "  A ruler on steroids
-    set showcmd                                        "  Show partial commands in status line and Selected characters/lines in visual mode
+    set ruler                                          " Show the ruler
+    set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " A ruler on steroids
+    set showcmd                                        " Show partial commands in status line and Selected characters/lines in visual mode
 endif
 
 if has('statusline')
