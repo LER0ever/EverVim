@@ -54,7 +54,10 @@ set wildmenu                    " Show list instead of just completing
 set wildmode=list:longest,full  " Command <Tab> completion, list matches, then longest common part, then all.
 set whichwrap=b,s,h,l,<,>,[,]   " Backspace and cursor keys wrap too
 set scrolljump=5                " Lines to scroll when cursor leaves screen
-set scrolloff=3                 " Minimum lines to keep above and below cursor
+" Workaround for oni issue #395
+if !ONI()
+    set scrolloff=3             " Minimum lines to keep above and below cursor
+endif
 set foldenable                  " Auto fold code
 set list
 set listchars=tab:\│\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace, tab: ›
