@@ -39,16 +39,16 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
     " show tabline by default
     set showtabline=2
     function! DeviconsFileType()
-        return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+        return winwidth(0) > 75 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
     endfunction
 
     function! DeviconsFileFormat()
-        return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+        return winwidth(0) > 75 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
     endfunction
 
     " Functions from lightline author
     function! LightlineFugitive()
-        if winwidth(0) < 70
+        if winwidth(0) < 75
             return ''
         endif
         if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
@@ -98,7 +98,7 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
     endfunction
 
     function! LightlineFileencoding()
-        return winwidth(0) > 70 ? (&fenc !=# '' ? &fenc : &enc) : ''
+        return winwidth(0) > 75 ? (&fenc !=# '' ? &fenc : &enc) : ''
     endfunction
 
     let g:tagbar_status_func = 'TagbarStatusFunc'
