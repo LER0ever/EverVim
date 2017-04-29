@@ -21,6 +21,7 @@ autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
 autocmd BufNewFile,BufRead *.lumos set filetype=html
 autocmd FileType haskell,puppet,ruby,yml setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType html,xml setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType typescript setlocal expandtab shiftwidth=4 softtabstop=4
 " preceding line best in a plugin but here for now.
 
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
