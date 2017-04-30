@@ -41,7 +41,7 @@ endif
 if !exists('g:evervim_no_views')
     Plug 'vim-scripts/restore_view.vim'
 endif
-if exists('g:evervim_restore_cursor')
+if !exists('g:evervim_no_restore_cursor')
     Plug 'farmergreg/vim-lastplace'
 endif
 Plug 'mhinz/vim-signify'

@@ -30,7 +30,8 @@
 
     " Restore cursor
     " Automatically restore your cursor to the place you left
-    "   let g:evervim_restore_cursor=1
+    " Disable by uncomment the following line.
+    "   let g:evervim_no_restore_cursor=1
 
     " Disable easier moving in tabs and windows
     "   let g:evervim_no_easyWindows = 1
