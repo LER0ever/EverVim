@@ -45,7 +45,7 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
     if ONI()
         let startify_version_string = "Oni"
     elseif NVIM()
-        let startify_version_string = "NeoVim"
+        let startify_version_string = "NeoVim " . matchstr(execute('version'), 'NVIM \zs[^\n]*')
     else
         let startify_version_string = " Vim " . substitute(v:version, '[\0]', '.', '')
     endif
