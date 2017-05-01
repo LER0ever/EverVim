@@ -17,9 +17,9 @@
     " list only the plugin groups you will use
     if !exists('g:evervim_bundle_groups')
         if WINDOWS()
-            let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'neocomplete', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'rust', 'cpp', 'lua']
+            let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'neocomplete', 'programming', 'python', 'javascript', 'typescript', 'html', 'css', 'misc', 'go', 'rust', 'cpp', 'lua']
         else
-            let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'youcompleteme', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'rust', 'cpp', 'lua']
+            let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'youcompleteme', 'programming', 'python', 'javascript', 'typescript', 'html', 'css', 'misc', 'go', 'rust', 'cpp', 'lua']
         endif
     endif
 

@@ -1,0 +1,4 @@
+" EverVim Typescript Bundles
+Plug 'Quramy/tsuquyomi'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
