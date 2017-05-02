@@ -33,6 +33,11 @@
     " Disable by uncomment the following line.
     "   let g:evervim_no_restore_cursor=1
 
+    " Enable smooth scrolling
+    " Use physics-based smooth scrolling for half-page/full-page scrolling
+    " Friction and air-drag can be override here
+    "   let g:evervim_smooth_scrolling=1
+
     " Disable easier moving in tabs and windows
     "   let g:evervim_no_easyWindows = 1
 
