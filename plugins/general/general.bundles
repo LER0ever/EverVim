@@ -14,7 +14,8 @@ if !NVIM() && !WINDOWS()
     Plug 'Shougo/vimshell.vim'
 endif
 Plug 'vim-scripts/sessionman.vim'
-Plug 'matchit.zip'
+"Plug 'matchit.zip' " no longer use vim-scripts
+Plug 'tmhedberg/matchit'
 if (has("python") || has("python3")) && exists('g:evervim_use_powerline')
     Plug 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
 elseif exists('g:evervim_use_airline')
