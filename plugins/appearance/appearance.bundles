@@ -6,3 +6,6 @@ Plug 'joshdick/onedark.vim'
 if !TERMUX()
     Plug 'ryanoasis/vim-devicons'
 endif
+if exists('g:evervim_transparent_bg')
+    Plug 'miyakogi/seiya.vim'
+endif
