@@ -44,4 +44,18 @@ if count(g:evervim_bundle_groups, 'youcompleteme')
     " When enabled, there can be too much visual noise
     " especially when splits are used.
     set completeopt-=preview
+
+    " Enable markdown autocomplete and snippet
+    " by removing it from default blacklist
+    let g:ycm_filetype_blacklist = {
+                \ 'tagbar' : 1,
+                \ 'qf' : 1,
+                \ 'notes' : 1,
+                \ 'unite' : 1,
+                \ 'text' : 1,
+                \ 'vimwiki' : 1,
+                \ 'pandoc' : 1,
+                \ 'infolog' : 1,
+                \ 'mail' : 1
+                \}
 endif
