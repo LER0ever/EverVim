@@ -17,8 +17,8 @@ endfunction
 silent function! CROS()
     return LINUX() && (system('cat /proc/version') =~ 'cros' || system('ls /dev') =~ 'cros')
 endfunction
-silent function! TERMUX()
-    return isdirectory(expand('/data/data/com.termux')) " #FIXME: Dirty judge
+silent function! ANDROID()
+    return isdirectory(expand('/system/priv-app'))
 endfunction
 silent function! DISTRO()
     return substitute(system('lsb_release -si'), '[\n]\+', '', 'g')
@@ -41,4 +41,7 @@ silent function! NVIMQT()
 endfunction
 silent function! ONI()
     return exists('g:gui_oni')
+endfunction
+silent function! TERMUX()
+    return isdirectory(expand('/data/data/com.termux')) " #FIXME: Dirty judge
 endfunction
