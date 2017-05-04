@@ -1,5 +1,7 @@
 " EverVim General Bundles
 Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
+Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
 Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -27,7 +29,6 @@ else
 endif
 Plug 'jlanzarotta/bufexplorer'
 Plug 'easymotion/vim-easymotion'
-Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
 Plug 'kien/tabman.vim'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'zhaocai/GoldenView.Vim'
