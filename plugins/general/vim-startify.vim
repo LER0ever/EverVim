@@ -29,7 +29,7 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
             elseif CROS()
                 let platform_icon = ""
                 let platform_string = "Chrome OS [" . DISTROVERSION() . " with Chronos]"
-            elseif TERMUX()
+            elseif ANDROID()
                 let platform_icon = ""
                 let platform_string = "Android"
             endif
