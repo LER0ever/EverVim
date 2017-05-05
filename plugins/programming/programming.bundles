@@ -1,6 +1,6 @@
 " EverVim Programming Bundles
 " Pick one of the checksyntax, jslint, or syntastic
-Plug 'scrooloose/syntastic'
+Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 " Plug 'sheerun/vim-polyglot' " disabled by default, conflicts
