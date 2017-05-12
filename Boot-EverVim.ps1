@@ -18,7 +18,7 @@ mkdir -Path ~\.EverVim\autoload -Force
 mkdir -Path ~\.EverVim\bundle -Force
 cmd /c rmdir %LOCALAPPDATA%\nvim\
 cmd /c rmdir %USERPROFILE%\vimfiles\
-if (!(Test-Path "~\.EverVim\init.vim" -PathType Leaf)){
+if (Test-Path "~\.EverVim\init.vim" -PathType Leaf){
     Remove-Item -Path ~\.EverVim\init.vim -Force -Recurse
     Remove-Item -Path ~\.EverVim\ginit.vim -Force -Recurse
 }
