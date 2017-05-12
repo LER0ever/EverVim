@@ -18,8 +18,10 @@ mkdir -Path ~\.EverVim\autoload -Force
 mkdir -Path ~\.EverVim\bundle -Force
 cmd /c rmdir %LOCALAPPDATA%\nvim\
 cmd /c rmdir %USERPROFILE%\vimfiles\
-Remove-Item -Path ~\.EverVim\init.vim -Force -Recurse
-Remove-Item -Path ~\.EverVim\ginit.vim -Force -Recurse
+if (!(Test-Path "~\.EverVim\init.vim" -PathType Leaf)){
+    Remove-Item -Path ~\.EverVim\init.vim -Force -Recurse
+    Remove-Item -Path ~\.EverVim\ginit.vim -Force -Recurse
+}
 
 echo "Soft-Linking Vim/NeoVim Config ..."
 cmd /c mklink /D %USERPROFILE%\vimfiles\ %USERPROFILE%\.EverVim\
