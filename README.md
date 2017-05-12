@@ -2,6 +2,7 @@
 ![EverVim](https://img.shields.io/badge/Coded%20with-EverVim-bd93f9.svg?style=flat-square)
 
 ![evervim-header](http://i.imgur.com/yUVLKmB.png "EverVim with VimR on macOS")
+![evervim-vimr-windows](http://i.imgur.com/V7PHc7C.png "EverVim with Oni on Windows")
 
 * * *
 
