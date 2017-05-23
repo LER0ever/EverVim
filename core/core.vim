@@ -20,7 +20,7 @@
     source $evervim_root/core/functions.vim
 " }
 
-" Use before config if available {
+" Use config if available {
     if filereadable(expand("~/.EverVim.vimrc"))
         source ~/.EverVim.vimrc
     endif
@@ -42,6 +42,10 @@
 
 " Formatting {
     source $evervim_root/core/formatting.vim
+" }
+
+" Session {
+    source $evervim_root/core/session.vim
 " }
 
 " Key (re)Mappings {
