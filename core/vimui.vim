@@ -62,4 +62,7 @@ endif
 set foldenable                  " Auto fold code
 set list
 set listchars=tab:\│\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace, tab: ›
-
+if exists('g:evervim_80_column_warning')
+    highlight ColorColumn ctermbg=magenta
+    call matchadd('ColorColumn', '\%81v', 100)
+endif

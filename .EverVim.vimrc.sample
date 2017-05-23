@@ -105,6 +105,10 @@
     " Hybrid Linenumber
     "   let g:evervim_hybrid_linenumber = 1
 
+    " 80 Column Warning
+    " Shows a magenta line at column 81 only for those lines that exceeds 80
+    "   let g:evervim_80_column_warning = 1
+
     " Don't create default mappings for multicursors
     " See :help multiple-cursors-mappings
     "   let g:multi_cursor_use_default_mapping=0
