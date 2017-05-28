@@ -42,6 +42,9 @@ endfunction
 silent function! ONI()
     return exists('g:gui_oni')
 endfunction
+silent function! VIMR()
+    return has('gui_vimr')
+endfunction
 silent function! TERMUX()
     return isdirectory(expand('/data/data/com.termux')) " #FIXME: Dirty judge
 endfunction
