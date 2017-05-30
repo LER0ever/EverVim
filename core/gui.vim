@@ -8,7 +8,7 @@
             if LINUX() && has("gui_running")
                 set guifont=Knack\ Nerd\ Font\ Regular\ 11,Noto\ Mono\ Regular\ 12,Menlo\ Regular\ 11,Consolas\ Regular\ 12,Courier\ New\ Regular\ 14
             elseif OSX() && has("gui_running")
-                set guifont=Knack\ Nerd\ Font\ Regular:h12,Menlo\ Regular:h11,Consolas\ Regular:h12,Courier\ New\ Regular:h14
+                set guifont=Knack\ Nerd\ Font:h14,Menlo\ Regular:h11,Consolas\ Regular:h12,Courier\ New\ Regular:h14
             elseif WINDOWS() && has("gui_running")
                 set guifont=Knack_NF:h11,Andale_Mono:h10,Menlo:h10,Consolas:h10,Courier_New:h10
             endif
