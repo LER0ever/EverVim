@@ -13,9 +13,9 @@
     " Below is the default config, uncomment and make your own
     "   let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'youcompleteme', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'rust', 'cpp', 'lua']
 
-    " Prevent automatically changing to open file directory
+    " Automatically changing to open file directory
     " May cause airline to misbehave
-    "   let g:evervim_no_autochdir = 1
+    "   let g:evervim_autochdir = 1
 
     " Default statusline is lightline.vim
     " You can change to the popular vim-airline by uncomment the following

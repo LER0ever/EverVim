@@ -17,7 +17,7 @@ that get loaded *before* the EverVim `.vimrc`.
 
 For example, to prevent autocd into a file directory:
 ```bash
-    echo let g:evervim_no_autochdir = 1 >> ~/.EverVim.vimrc
+    echo let g:evervim_autochdir = 1 >> ~/.EverVim.vimrc
 ```
 For a list of available EverVim specific customization options, look at the `~/.EverVim.vimrc` file.
 
