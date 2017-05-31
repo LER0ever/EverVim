@@ -4,7 +4,7 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
         let platform_string = ""
         if WINDOWS()
             let platform_icon = ""
-            let platform_string = "Windows"
+            let platform_string = WINVERSION()
         elseif OSX()
             let platform_icon = ""
             let platform_string = "macOS " . OSXVERSION()
@@ -12,15 +12,16 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
             let platform_icon = ""
             let platform_string = "BSD"
         elseif LINUX()
-            let platform_icon = DISTRO() =~ "Arch" ? "" :
-                        \ DISTRO() =~ "CentOS" ? "" :
-                        \ DISTRO() =~ "Debian" ? "" :
-                        \ DISTRO() =~ "Fedora" ? "" :
-                        \ DISTRO() =~ "Mint" ? "" :
-                        \ DISTRO() =~ "SUSE" ? "" :
-                        \ DISTRO() =~ "Ubuntu" ? "" :
-                        \ DISTRO() =~ "Gentoo" ? "" :
-                        \ DISTRO() =~ "Elementary" ? "" :
+            let distro = DISTRO()
+            let platform_icon = distro =~ "Arch" ? "" :
+                        \ distro =~ "CentOS" ? "" :
+                        \ distro =~ "Debian" ? "" :
+                        \ distro =~ "Fedora" ? "" :
+                        \ distro =~ "Mint" ? "" :
+                        \ distro =~ "SUSE" ? "" :
+                        \ distro =~ "Ubuntu" ? "" :
+                        \ distro =~ "Gentoo" ? "" :
+                        \ distro =~ "Elementary" ? "" :
                         \ ""
             let platform_string = "Linux " . KERNELVERSION() . " [" . DISTROVERSION() . "]"
             if WSL()
@@ -58,8 +59,7 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
                 \ (has('python') == 1 ? "+Python" : "-Python") . "|" .
                 \ (has('lua') == 1 ? "+Lua" : "-Lua") .
                 \ "}"
-    let startify_evervim_lastupdated = " EverVim Updated " . substitute(system('git -C ~/.EverVim show --format="%ar" --quiet'), '[\n]\+', '', 'g')
-
+    let startify_evervim_lastupdated = " EverVim Updated " . (WINDOWS()?substitute(system('git -C %HOMEPATH%\.EverVim show --format="%ar" --quiet'), '[\n]\+', '', 'g'):substitute(system('git -C ~/.EverVim show --format="%ar" --quiet'), '[\n]\+', '', 'g'))
     if NVIM()
         if ONI()
             let startify_vim_version = " Oni (NeoVim " . matchstr(execute('version'), 'NVIM \zs[^\n]*') . ")"

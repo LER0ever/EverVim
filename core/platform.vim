@@ -33,6 +33,22 @@ endfunction
 silent function! OSXVERSION()
     return substitute(system("echo $(sw_vers -productVersion)"), '[\n]\+', '', '')
 endfunction
+silent function! NTVERSION()
+    return substitute(system('ver'), '[\n]\+', '', 'g')
+endfunction
+silent function! WINVERSION()
+    let ntversion = NTVERSION()
+    return ntversion =~ "4.10" ? "Windows 98" :
+                \ ntversion =~ "5.0" ? "Windows 2000" :
+                \ ntversion =~ "5.1" ? "Windows XP" :
+                \ ntversion =~ "5.2" ? "Windows XP x64" :
+                \ ntversion =~ "6.0" ? "Windows Vista" :
+                \ ntversion =~ "6.1" ? "Windows 7" :
+                \ ntversion =~ "6.2" ? "Windows 8" :
+                \ ntversion =~ "6.3" ? "Windows 8.1" :
+                \ ntversion =~ "10.0" ? "Windows 10" :
+                \ "Windows (version unknown)"
+endfunction
 silent function! NVIM()
     return has('nvim')
 endfunction
