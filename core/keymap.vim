@@ -21,26 +21,26 @@ endif
 "   let g:evervim_edit_config_mapping='<leader>ec'
 "   let g:evervim_apply_config_mapping='<leader>sc'
 if !exists('g:evervim_edit_config_mapping')
-    let s:evervim_edit_config_mapping = '<leader>ev'
+    let s:evervim_edit_config_mapping = '<leader>ec'
 else
     let s:evervim_edit_config_mapping = g:evervim_edit_config_mapping
 endif
 if !exists('g:evervim_apply_config_mapping')
-    let s:evervim_apply_config_mapping = '<leader>sv'
+    let s:evervim_apply_config_mapping = '<leader>ac'
 else
     let s:evervim_apply_config_mapping = g:evervim_apply_config_mapping
 endif
 
 " TODO: edit config not working yet
-execute "noremap " . s:evervim_edit_config_mapping " :call EditevervimConfig()<CR>"
-execute "noremap " . s:evervim_apply_config_mapping . " :source ~/.vimrc<CR>"
+execute "noremap " . s:evervim_edit_config_mapping " :call EditEverVimConfig()<CR>"
+execute "noremap " . s:evervim_apply_config_mapping . " :source ~/.EverVim/vimrc<CR>"
 
 " Easier moving in tabs and windows
 " The lines conflict with the default digraph mapping of <C-K>
 " If you prefer that functionality, add the following to your
 " .vimrc.before.local file:
-"   let g:evervim_no_easyWindows = 1
-if !exists('g:evervim_no_easyWindows')
+"   let g:evervim_easyWindows = 1
+if exists('g:evervim_easyWindows')
     map <C-J> <C-W>j<C-W>_
     map <C-K> <C-W>k<C-W>_
     map <C-L> <C-W>l<C-W>_

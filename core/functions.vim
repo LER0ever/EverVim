@@ -94,48 +94,13 @@ command! -complete=file -nargs=+ Shell call s:RunShellCommand(<q-args>)
 " e.g. Grep current file for <search_term>: Shell grep -Hn <search_term> %
 " }
 
-function! s:IsevervimFork()
-    let s:is_fork = 0
-    let s:fork_files = ["~/.vimrc.fork", "~/.vimrc.before.fork", "~/.vimrc.bundles.fork"]
-    for fork_file in s:fork_files
-        if filereadable(expand(fork_file, ":p"))
-            let s:is_fork = 1
-            break
-        endif
-    endfor
-    return s:is_fork
-endfunction
-
 function! s:ExpandFilenameAndExecute(command, file)
     execute a:command . " " . expand(a:file, ":p")
 endfunction
 
-function! s:EditevervimConfig()
-    call <SID>ExpandFilenameAndExecute("tabedit", "~/.vimrc")
-    call <SID>ExpandFilenameAndExecute("vsplit", "~/.vimrc.before")
-    call <SID>ExpandFilenameAndExecute("vsplit", "~/.vimrc.bundles")
-
-    execute bufwinnr(".vimrc") . "wincmd w"
-    call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.local")
-    wincmd l
-    call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.before.local")
-    wincmd l
-    call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.bundles.local")
-
-    if <SID>IsevervimFork()
-        execute bufwinnr(".vimrc") . "wincmd w"
-        call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.fork")
-        wincmd l
-        call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.before.fork")
-        wincmd l
-        call <SID>ExpandFilenameAndExecute("split", "~/.vimrc.bundles.fork")
-    endif
-
-    execute bufwinnr(".vimrc.local") . "wincmd w"
+function! EditEverVimConfig()
+    call <SID>ExpandFilenameAndExecute("tabedit", "~/.EverVim.vimrc")
 endfunction
-
-"execute "noremap " . s:evervim_edit_config_mapping " :call <SID>EditevervimConfig()<CR>"
-"execute "noremap " . s:evervim_apply_config_mapping . " :source ~/.vimrc<CR>"
 
 function! SourceConfigsIn(dir)
     let filelist = split(globpath(a:dir, '*.vim'), '\n')

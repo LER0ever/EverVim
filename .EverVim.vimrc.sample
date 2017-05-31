@@ -38,8 +38,8 @@
     " Friction and air-drag can be override here
     "   let g:evervim_smooth_scrolling = 1
 
-    " Disable easier moving in tabs and windows
-    "   let g:evervim_no_easyWindows = 1
+    " Enable easier moving in tabs and windows
+    "   let g:evervim_easyWindows = 1
 
     " Disable wrap relative motion for start/end line motions
     "   let g:evervim_no_wrapRelMotion = 1
