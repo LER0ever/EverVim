@@ -20,6 +20,9 @@ endfunction
 silent function! ANDROID()
     return isdirectory(expand('/system/priv-app'))
 endfunction
+silent function! KERNELVERSION()
+    return substitute(system('uname -r'), '[\n]\+', '', 'g')
+endfunction
 silent function! DISTRO()
     return substitute(system('lsb_release -si'), '[\n]\+', '', 'g')
 endfunction
