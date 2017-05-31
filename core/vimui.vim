@@ -66,3 +66,9 @@ if exists('g:evervim_80_column_warning')
     highlight ColorColumn ctermbg=magenta
     call matchadd('ColorColumn', '\%81v', 100)
 endif
+
+" Auto height for quickfix
+au FileType qf call AdjustWindowHeight(3, 8)
+function! AdjustWindowHeight(minheight, maxheight)
+  exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
+endfunction
