@@ -70,5 +70,6 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
                 \'     || Github Repository: https://github.com/LER0ever/EverVim                ||',
                 \'     ||=======================================================================||',
                 \'        ' . startify_version_string . ' on ' . startify_platform_string . ' | ' . strftime("%y/%m/%d %H:%M", localtime())]
+    let g:startify_files_number = 5
     autocmd FileType startify normal zR
 endif
