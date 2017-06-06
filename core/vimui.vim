@@ -1,10 +1,12 @@
 " Vim UI
-if !exists('g:override_evervim_bundles') && filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
-    let g:solarized_termcolors=256
-    let g:solarized_termtrans=1
-    let g:solarized_contrast="normal"
-    let g:solarized_visibility="normal"
+if !exists('g:evervim_color_theme') && filereadable(expand("~/.vim/bundle/vim/colors/dracula.vim"))
+    "let g:solarized_termcolors=256
+    "let g:solarized_termtrans=1
+    "let g:solarized_contrast="normal"
+    "let g:solarized_visibility="normal"
     color dracula             " Load a colorscheme
+else
+    execute 'color ' . g:evervim_color_theme
 endif
 
 set tabpagemax=15                                      " Only show 15 tabs

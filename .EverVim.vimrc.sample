@@ -13,6 +13,10 @@
     " Below is the default config, uncomment and make your own
     "   let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'youcompleteme', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'rust', 'cpp', 'lua']
 
+    " Color Theme
+    "   let g:evervim_color_theme="dracula"
+    "   let g:evervim_airline_theme="dracula"
+
     " Automatically changing to open file directory
     " May cause airline to misbehave
     "   let g:evervim_autochdir = 1

@@ -1,6 +1,11 @@
 if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
+    if !exists('g:evervim_airline_theme')
+        let g:lightline_theme = 'Dracula'
+    else
+        let g:lightline_theme = g:evervim_airline_theme
+    endif
     let g:lightline = {
-                \ 'colorscheme': 'Dracula',
+                \ 'colorscheme': g:lightline_theme,
                 \ 'enable': {
                 \   'statusline': 1,
                 \   'tabline': 1,
