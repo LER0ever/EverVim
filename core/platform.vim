@@ -34,7 +34,7 @@ silent function! OSXVERSION()
     return substitute(system("echo $(sw_vers -productVersion)"), '[\n]\+', '', '')
 endfunction
 silent function! NTVERSION()
-    return substitute(system('ver'), '[\n]\+', '', 'g')
+    return substitute(system('ver'), '[^0-9|\.]\+', '', 'g')
 endfunction
 silent function! WINVERSION()
     let ntversion = NTVERSION()

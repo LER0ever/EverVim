@@ -4,7 +4,7 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
         let platform_string = ""
         if WINDOWS()
             let platform_icon = ""
-            let platform_string = WINVERSION() . " (" . NTVERSION() . ")"
+            let platform_string = WINVERSION() . " (NT " . NTVERSION() . ")"
         elseif OSX()
             let platform_icon = ""
             let platform_string = "macOS " . OSXVERSION() . " (Darwin " . KERNELVERSION() . ")"
