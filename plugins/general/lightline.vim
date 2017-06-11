@@ -58,14 +58,19 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
     let g:lightline_buffer_modified_icon = '✭'
     let g:lightline_buffer_git_icon = ' '
     let g:lightline_buffer_ellipsis_icon = '..'
-    let g:lightline_buffer_expand_left_icon = '◀ '
-    let g:lightline_buffer_expand_right_icon = ' ▶'
+    let g:lightline_buffer_expand_left_icon = ''
+    let g:lightline_buffer_expand_right_icon = ''
     let g:lightline_buffer_active_buffer_left_icon = ''
     let g:lightline_buffer_active_buffer_right_icon = ''
     let g:lightline_buffer_separator_icon = ''
 
     " show tabline by default
     set showtabline=2
+    " show tabline even in GVIM
+    if has('gui_running')
+        set guioptions-=e
+    endif
+
     function! DeviconsFileType()
         return winwidth(0) > 75 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
     endfunction
