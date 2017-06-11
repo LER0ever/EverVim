@@ -26,20 +26,43 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
                 \   'mode': 'LightlineMode',
                 \   'fileencoding': 'LightlineFileencoding',
                 \   'filename': 'LightlineFilename',
+                \   'bufferbefore': 'lightline#buffer#bufferbefore',
+                \   'bufferafter': 'lightline#buffer#bufferafter',
+                \   'bufferinfo': 'lightline#buffer#bufferinfo',
                 \ },
                 \ 'tabline': {
-                \   'left': [ ['tabs'] ],
-                \   'right': [ ['bufferline'] ]
+                \   'left': [ ['bufferinfo'], ['tabs'] ],
+                \   'right': [ ['bufferbefore', 'buffercurrent', 'bufferafter'] ]
+                \ },
+                \ 'tab': {
+                \   'active': ['tabnum', 'filename', 'modified'],
+                \   'inactive': ['tabnum', 'modified'],
                 \ },
                 \ 'component_expand': {
-                \   'bufferline': 'LightlineBufferline',
+                \   'buffercurrent': 'lightline#buffer#buffercurrent2',
                 \ },
                 \ 'component_type': {
-                \   'bufferline': 'tabsel',
+                \   'buffercurrent': 'tabsel',
                 \ },
                 \ 'separator': { 'left': '', 'right': '' },
-                \ 'subseparator': { 'left': '', 'right': '' }
+                \ 'subseparator': { 'left': '', 'right': '' },
+                \ 'tabline_separator': { 'left': '', 'right': '' },
+                \ 'tabline_subseparator': { 'left': '', 'right': '' }
                 \}
+
+    let g:lightline_buffer_show_bufnr = 1
+    let g:lightline_buffer_rotate = 1
+
+    let g:lightline_buffer_logo = ' '
+    let g:lightline_buffer_readonly_icon = ''
+    let g:lightline_buffer_modified_icon = '✭'
+    let g:lightline_buffer_git_icon = ' '
+    let g:lightline_buffer_ellipsis_icon = '..'
+    let g:lightline_buffer_expand_left_icon = '◀ '
+    let g:lightline_buffer_expand_right_icon = ' ▶'
+    let g:lightline_buffer_active_buffer_left_icon = ''
+    let g:lightline_buffer_active_buffer_right_icon = ''
+    let g:lightline_buffer_separator_icon = ''
 
     " show tabline by default
     set showtabline=2

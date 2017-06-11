@@ -25,7 +25,7 @@ elseif exists('g:evervim_use_airline')
     Plug 'vim-airline/vim-airline-themes'
 else
     Plug 'itchyny/lightline.vim'
-    Plug 'bling/vim-bufferline'
+    Plug 'taohex/lightline-buffer'
 endif
 Plug 'jlanzarotta/bufexplorer'
 Plug 'easymotion/vim-easymotion'
