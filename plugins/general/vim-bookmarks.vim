@@ -1,5 +1,7 @@
 if isdirectory(expand("~/.vim/bundle/vim-bookmarks"))
     let g:bookmark_no_default_key_mappings = 1
+    let g:bookmark_highlight_lines=1
+    let g:bookmark_manage_per_buffer = 1
     nmap <Leader>bb <Plug>BookmarkToggle
     nmap <Leader>bi <Plug>BookmarkAnnotate
     nmap <Leader>ba <Plug>BookmarkShowAll
