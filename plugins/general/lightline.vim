@@ -18,6 +18,7 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
                 \ 'component': {
                 \   'readonly': '%{&readonly?"":""}',
                 \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+                \   'buffericon': '',
                 \ },
                 \ 'component_function': {
                 \   'filetype': 'DeviconsFileType',
@@ -32,7 +33,7 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
                 \ },
                 \ 'tabline': {
                 \   'left': [ ['bufferinfo'], ['tabs'] ],
-                \   'right': [ ['bufferbefore', 'buffercurrent', 'bufferafter'] ]
+                \   'right': [ ['buffericon'], ['bufferbefore', 'buffercurrent', 'bufferafter'] ]
                 \ },
                 \ 'tab': {
                 \   'active': ['tabnum', 'filename', 'modified'],
