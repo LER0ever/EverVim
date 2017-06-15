@@ -57,7 +57,8 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
     let startify_vim_components = "{" .
                 \ (has('python3') == 1 ? "+Python3" : "-Python3") . "|" .
                 \ (has('python') == 1 ? "+Python" : "-Python") . "|" .
-                \ (has('lua') == 1 ? "+Lua" : "-Lua") .
+                \ (has('lua') == 1 ? "+Lua" : "-Lua") . "|" .
+                \ (has('clipboard') == 1 ? "+Clip" : "-Clip") .
                 \ "}"
     let startify_evervim_lastupdated = " EverVim Updated " . (WINDOWS()?substitute(system('git -C %HOMEPATH%\.EverVim show --format="%ar" --quiet'), '[\n]\+', '', 'g'):substitute(system('git -C ~/.EverVim show --format="%ar" --quiet'), '[\n]\+', '', 'g'))
     if NVIM()
