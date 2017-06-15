@@ -198,5 +198,5 @@ map <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscr
 
 if has('nvim')
     tnoremap <Esc> <C-\><C-n>
-    nnoremap <Leader>te :tabe term://$SHELL<CR>
+    nnoremap <Leader>te :tabe term://$SHELL<CR>i
 endif
