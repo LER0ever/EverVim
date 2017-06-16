@@ -67,6 +67,7 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
     let g:lightline_buffer_reservelen = 40
     let g:lightline_buffer_maxflen = 20
     let g:lightline_buffer_minflen = 10
+    let g:lightline_buffer_excludes = ['vimfiler', 'No Name']
 
     " show tabline by default
     set showtabline=2
