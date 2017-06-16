@@ -13,6 +13,7 @@ syntax on
 set foldmethod=indent       " Syntax highlighting | using indentation as foldmethod to speed up vim
 set mouse=a                 " Automatically enable mouse usage
 set mousehide               " Hide the mouse cursor while typing
+set guicursor=              " Do not modify the cursor shape
 scriptencoding utf-8
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936 " support for open multi-byte encoded file
 set encoding=utf-8

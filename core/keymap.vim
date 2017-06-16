@@ -183,7 +183,7 @@ map <Leader>= <C-w>=
 
 " Map <Leader>ff to display all lines with keyword under cursor
 " and ask which one to jump to
-nmap <Leader>ff [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
+nmap <Leader>ff [I:let nr = input("Which one to jump to: ")<Bar>exe "normal " . nr ."[\t"<CR>
 
 " Easier horizontal scrolling
 map zl zL
@@ -192,7 +192,6 @@ map zh zH
 " Easier formatting
 nnoremap <silent> <leader>q gwip
 
-" FIXME: Revert this f70be548
 " fullscreen mode for GVIM and Terminal, need 'wmctrl' in you PATH
 map <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
 
