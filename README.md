@@ -50,6 +50,14 @@ Before you started, please read the [Plugins Documentation](https://github.com/L
 <li>Restart Vim.</li>
 </details>
 
+### Keep EverVim up-to-date
+```bash
+cd .EverVim
+git pull
+# nvim +PlugUpdate
+```
+Then open up your vim and type `:PlugUpdate`
+
 # Features
 ### Cross Platform
 - Support Vim 7.4.x, Vim 8, MacVim and of course Neovim
