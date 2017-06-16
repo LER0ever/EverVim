@@ -21,7 +21,7 @@ The default config of EverVim is powerful and easy to use just out of the box, a
 ### Detailed installation instruction
 ### | [Linux](https://github.com/LER0ever/EverVim/wiki/Installation-on-Linux) | [macOS](https://github.com/LER0ever/EverVim/wiki/Installation-on-macOS) | [Windows](https://github.com/LER0ever/EverVim/wiki/Installation-on-Windows) |
 Finished the installation above?  
-Before you started, please read the [Plugins Documentation](https://github.com/LER0ever/EverVim/wiki/Plugins) to have an overview about some of EverVim's essential plugins.
+Before you started, please read the [Wiki](https://github.com/LER0ever/EverVim/wiki) to have an overview about some of EverVim's essential keybindings and plugins.
 
 * * *
 
