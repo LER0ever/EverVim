@@ -53,6 +53,10 @@
     " Disable fast tab navigation
     "   let g:evervim_no_fastTabs = 1
 
+    " Enable NerdTree Sync across tabs
+    " Synchronize view and focus between different tabs
+    "   let g:evervim_nerdtree_tabs_sync = 1
+
     " Clear search highlighting
     "   let g:evervim_clear_search_highlight = 1
 

@@ -14,5 +14,9 @@ if isdirectory(expand("~/.vim/bundle/nerdtree"))
     let NERDTreeShowHidden=1
     let NERDTreeKeepTreeInNewTab=1
     let g:nerdtree_tabs_open_on_gui_startup=0
+    if !exists('g:evervim_nerdtree_tabs_sync')
+        let g:nerdtree_tabs_open_on_new_tab=0
+        let g:nerdtree_tabs_synchronize_view=0
+    endif
     let NERDTreeMapOpenRecursively='<C-O>'
 endif
