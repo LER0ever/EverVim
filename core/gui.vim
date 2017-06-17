@@ -29,8 +29,9 @@
         endif
     endif
 
-    if NVIMGTK() || GONVIM()
+    if NVIMGTK()
         call rpcnotify(1, 'Gui', 'Font', 'Knack Nerd Font 14')
+        call rpcnotify(1, 'Gui', 'Option', 'Tabline', 0)
     endif
 
     if NVIM()
