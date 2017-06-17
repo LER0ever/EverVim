@@ -58,6 +58,12 @@ endfunction
 silent function! NVIMQT()
     return exists('g:GuiLoaded')
 endfunction
+silent function! NVIMGTK()
+    return exists('g:GtkGuiLoaded')
+endfunction
+silent function! GONVIM()
+    return exists('g:gonvim_running')
+endfunction
 silent function! ONI()
     return exists('g:gui_oni')
 endfunction

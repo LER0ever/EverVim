@@ -24,10 +24,13 @@
     if exists('g:GuiLoaded')
         if !WINDOWS()
             Guifont Knack Nerd Font:h12
-            "call rpcnotify(1, 'Gui', 'Font', 'Knack Nerd Font 20')
         else
             Guifont Knack NF:h11
         endif
+    endif
+
+    if NVIMGTK() || GONVIM()
+        call rpcnotify(1, 'Gui', 'Font', 'Knack Nerd Font 14')
     endif
 
     if NVIM()
