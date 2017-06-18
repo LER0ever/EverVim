@@ -92,5 +92,5 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
                 \'     ' . s:boxed_header(startify_evervim_lastupdated . " |  ". strftime("%y/%m/%d %H:%M", localtime())),
                 \'     ||=======================================================================||']
     let g:startify_files_number = 5
-    autocmd FileType startify normal zR
+    autocmd Filetype startify setlocal nofoldenable
 endif
