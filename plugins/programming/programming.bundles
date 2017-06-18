@@ -18,6 +18,8 @@ Plug 'tpope/vim-commentary'
 Plug 'godlygeek/tabular'
 Plug 'luochen1990/rainbow'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
+Plug 'cohama/agit.vim'
 if executable('ctags')
     Plug 'majutsushi/tagbar'
 endif
