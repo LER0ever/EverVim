@@ -203,4 +203,6 @@ nnoremap <Leader>tn :tabnew +Startify<CR>
 if has('nvim')
     tnoremap <Esc> <C-\><C-n>
     nnoremap <Leader>te :tabe term://$SHELL<CR>i
+    nnoremap <Leader>tv :vsp term://$SHELL<CR>i
+    nnoremap <Leader>ts :sp term://$SHELL<CR>i
 endif
