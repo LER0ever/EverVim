@@ -102,6 +102,28 @@ function! EditEverVimConfig()
     call <SID>ExpandFilenameAndExecute("tabedit", "~/.EverVim.vimrc")
 endfunction
 
+function! EverVimUpdateConfig()
+    execute '!git -C ~/.EverVim pull'
+endfunction
+
+function! EverVimUpdatePlugins()
+    execute 'PlugUpgrade'
+    execute 'PlugClean!'
+    execute 'PlugUpdate'
+endfunction
+
+function! EverVimFullUpgrade()
+    echo 'Running EverVim Full Upgrade ...'
+    call EverVimUpdateConfig()
+    call EverVimUpdatePlugins()
+endfunction
+
+function! EverVimInitPlugins()
+    if !isdirectory(expand('~/.EverVim/bundle'))
+        execute 'PlugInstall'
+    endif
+endfunction
+
 function! SourceConfigsIn(dir)
     let filelist = split(globpath(a:dir, '*.vim'), '\n')
     for vimconf in filelist
