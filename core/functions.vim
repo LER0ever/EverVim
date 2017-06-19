@@ -107,9 +107,7 @@ function! EverVimUpdateConfig()
 endfunction
 
 function! EverVimUpdatePlugins()
-    execute 'PlugUpgrade'
-    execute 'PlugClean!'
-    execute 'PlugUpdate'
+    execute 'PlugUpgrade | PlugClean! | PlugUpdate'
 endfunction
 
 function! EverVimFullUpgrade()
