@@ -103,7 +103,11 @@ function! EditEverVimConfig()
 endfunction
 
 function! EverVimUpdateConfig()
-    execute '!git -C ~/.EverVim pull'
+    if WINDOWS()
+        execute '!git -C \%HOMEPATH\%/.EverVim pull'
+    else
+        execute '!git -C ~/.EverVim pull'
+    endif
 endfunction
 
 function! EverVimUpdatePlugins()
