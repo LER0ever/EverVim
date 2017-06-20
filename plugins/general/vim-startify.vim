@@ -23,7 +23,7 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
                         \ distro =~ "Gentoo" ? "" :
                         \ distro =~ "Elementary" ? "" :
                         \ ""
-            let platform_string = "Linux " . KERNELVERSION() . " [" . DISTROVERSION() . "]"
+            let platform_string = "Linux " . "[" . DISTROVERSION() . "] (" . KERNELVERSION() . ")"
             if WSL()
                 let platform_icon = ""
                 let platform_string = "WSL [" . DISTROVERSION() . " on Windows 10]"
