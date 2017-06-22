@@ -102,6 +102,14 @@ function! EditEverVimConfig()
     call <SID>ExpandFilenameAndExecute("tabedit", "~/.EverVim.vimrc")
 endfunction
 
+function! ReplaceInFile(file, regexmatch, replace)
+    execute 'args ' . a:file | execute 'argdo %s/' . a:regexmatch . '/' . a:replace . '/gce' | execute 'argdo wq'
+endfunction
+
+function! DeleteLinesInFile(file, regexmatch)
+    execute 'args ' . a:file . ' | argdo g/' . a:regexmatch . '/d | argdo wq'
+endfunction
+
 function! EverVimUpdateConfig()
     if WINDOWS()
         execute '!git -C \%HOMEPATH\%/.EverVim pull'

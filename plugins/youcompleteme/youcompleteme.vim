@@ -7,10 +7,13 @@ if count(g:evervim_bundle_groups, 'youcompleteme')
     " load ycm global config
     let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
+    " YouCompleteMe keymap
+    let g:ycm_key_detailed_diagnostics = '<leader>yd'
+
     " YcmCompleter GoTo keymap
-    nnoremap <leader>gtd :YcmCompleter GoToDefinition<CR>
-    nnoremap <leader>gtc :YcmCompleter GoToDeclaration<CR>
-    nnoremap <leader>gto :YcmCompleter GoTo<CR>
+    nnoremap <leader>ygd :YcmCompleter GoToDefinition<CR>
+    nnoremap <leader>ydc :YcmCompleter GoToDeclaration<CR>
+    nnoremap <leader>ygt :YcmCompleter GoTo<CR>
 
     " remap Ultisnips for compatibility for YCM
     let g:UltiSnipsExpandTrigger = '<leader><tab>'

@@ -45,8 +45,8 @@ if !exists('g:evervim_no_easyWindows')
     map <C-K> <C-W>k<C-W>_
     map <C-L> <C-W>l<C-W>_
     map <C-H> <C-W>h<C-W>_
-    nnoremap <Leader>hh 1<C-W>w
-    nnoremap <Leader>ll 1<C-W>b
+    nnoremap <Leader>jh 1<C-W>w
+    nnoremap <Leader>jl 1<C-W>b
 endif
 
 " Wrapped lines goes down/up to next row, rather than next line in file.

@@ -2,7 +2,7 @@ if isdirectory(expand("~/.vim/bundle/nerdtree"))
     let g:NERDShutUp=1
     " map <C-e> <plug>NERDTreeTabsToggle<CR>
     map <F3> :NERDTreeToggle<CR>
-    map <leader>e :NERDTreeFind<CR>
+    map <leader>nf :NERDTreeFind<CR>
     nmap <leader>nt :NERDTreeToggle<CR>
 
     let g:NERDTreeWinSize=30

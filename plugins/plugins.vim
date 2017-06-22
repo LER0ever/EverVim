@@ -7,7 +7,6 @@
 " }
 
 " Setup Vim-Plug Support {
-    filetype off
     call plug#begin('~/.vim/bundle')
 " }
 
