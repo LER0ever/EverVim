@@ -110,6 +110,30 @@ function! DeleteLinesInFile(file, regexmatch)
     execute 'args ' . a:file . ' | argdo g/' . a:regexmatch . '/d | argdo wq'
 endfunction
 
+function! EverVimUpdateConfig()
+    if WINDOWS()
+        execute '!git -C \%HOMEPATH\%/.EverVim pull'
+    else
+        execute '!git -C ~/.EverVim pull'
+    endif
+endfunction
+
+function! EverVimUpdatePlugins()
+    execute 'PlugUpgrade | PlugClean! | PlugUpdate'
+endfunction
+
+function! EverVimFullUpgrade()
+    echo 'Running EverVim Full Upgrade ...'
+    call EverVimUpdateConfig()
+    call EverVimUpdatePlugins()
+endfunction
+
+function! EverVimInitPlugins()
+    if !isdirectory(expand('~/.EverVim/bundle'))
+        execute 'PlugInstall'
+    endif
+endfunction
+
 function! SourceConfigsIn(dir)
     let filelist = split(globpath(a:dir, '*.vim'), '\n')
     for vimconf in filelist

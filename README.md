@@ -1,8 +1,8 @@
 # EverVim: The Ultimate Vim Distribution
 ![EverVim](https://img.shields.io/badge/Coded%20with-EverVim-bd93f9.svg?style=flat-square)
 
-![evervim-header](https://i.imgur.com/y3H4g1k.png "EverVim with VimR on macOS")
-![evervim-nvim-qt-manjaro](https://i.imgur.com/vkY4CYO.png "EverVim with Neovim-Qt on Linux")
+![evervim-header](https://i.imgur.com/f9LlbbD.png "EverVim with VimR on macOS")
+![evervim-nvim-qt-manjaro](https://i.imgur.com/voearQH.png "EverVim with Neovim-Qt on Linux")
 
 * * *
 
@@ -51,12 +51,7 @@ Before you started, please read the [Wiki](https://github.com/LER0ever/EverVim/w
 </details>
 
 ### Keep EverVim up-to-date
-```bash
-cd .EverVim
-git pull
-# nvim +PlugUpdate
-```
-Then open up your vim and type `:PlugUpdate`
+Press **`u`** at EverVim start screen. Configuration and plugins will be automatically updated.
 
 # Features
 ### Cross Platform

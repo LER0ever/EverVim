@@ -23,7 +23,7 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
                         \ distro =~ "Gentoo" ? "" :
                         \ distro =~ "Elementary" ? "" :
                         \ ""
-            let platform_string = "Linux " . KERNELVERSION() . " [" . DISTROVERSION() . "]"
+            let platform_string = "Linux " . "[" . DISTROVERSION() . "] (" . KERNELVERSION() . ")"
             if WSL()
                 let platform_icon = ""
                 let platform_string = "WSL [" . DISTROVERSION() . " on Windows 10]"
@@ -92,5 +92,24 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
                 \'     ' . s:boxed_header(startify_evervim_lastupdated . " |  ". strftime("%y/%m/%d %H:%M", localtime())),
                 \'     ||=======================================================================||']
     let g:startify_files_number = 5
+    let g:startify_list_order = [
+                \ ['   [MRU] Most recently used files'],
+                \ 'files',
+                \ ['   [MRU] Most recently used files in current directory:'],
+                \ 'dir',
+                \ ['   [CMD] Common Commands:'],
+                \ 'commands',
+                \ ['   Sessions:'],
+                \ 'sessions',
+                \ ['   Bookmarks:'],
+                \ 'bookmarks',
+                \ ]
+    let g:startify_commands = [
+                \ {'c': ['Edit EverVim Config', 'call EditEverVimConfig()']},
+                \ {'u': ['Update EverVim', 'call EverVimFullUpgrade()']},
+                \ ]
+    if NVIM()
+        let g:startify_commands = g:startify_commands + [{'t': ['Open Terminal', 'edit term://$SHELL | normal! i']}]
+    endif
     autocmd Filetype startify setlocal nofoldenable
 endif
