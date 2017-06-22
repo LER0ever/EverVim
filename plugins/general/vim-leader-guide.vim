@@ -35,6 +35,7 @@ if isdirectory(expand('~/.vim/bundle/vim-leader-guide'))
         let g:leaderGuide#displayname = substitute(g:leaderGuide#displayname, '\c<cr>$', '', '')
         let g:leaderGuide#displayname = substitute(g:leaderGuide#displayname, '^<SID>', '', '')
         let g:leaderGuide#displayname = substitute(g:leaderGuide#displayname, '^<Plug>', '', '')
+        let g:leaderGuide#displayname = substitute(g:leaderGuide#displayname, ':call ', '', '')
     endfunction
     if exists('g:leaderGuide_displayfunc')
         call add(g:leaderGuide_displayfunc, function('s:evervim_leaderguide_displayfunc'))
