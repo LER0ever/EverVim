@@ -89,7 +89,8 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
                 \'     ||-----------------------------------------------------------------------||',
                 \'     ' . s:boxed_header(startify_vim_version . " " . startify_vim_components),
                 \'     ' . s:boxed_header(startify_platform_string),
-                \'     ' . s:boxed_header(startify_evervim_lastupdated . " |  ". strftime("%y/%m/%d %H:%M", localtime())),
+                \'     ' . s:boxed_header(startify_evervim_lastupdated . " |  Now: ". strftime("%y/%m/%d %H:%M", localtime())),
+                \'     ' . s:boxed_header(" Leader Key: `" . mapleader . "` | Leader Guide: <Space>"),
                 \'     ||=======================================================================||']
     let g:startify_files_number = 5
     let g:startify_list_order = [
