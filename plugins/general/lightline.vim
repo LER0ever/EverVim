@@ -116,6 +116,7 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
                     \ fname =~ '__Gundo\|NERD_tree' ? '' :
                     \ &ft == 'vimfiler' ? vimfiler#get_status_string() :
                     \ &ft == 'unite' ? unite#get_status_string() :
+                    \ &ft == 'leaderGuide' ? 'Guide' :
                     \ &ft == 'vimshell' ? vimshell#get_status_string() :
                     \ ('' != LightlineReadonly() ? LightlineReadonly() . '  ' : '') .
                     \ ('' != fname ? fname . '  ' : '[No Name] ' ) .
@@ -131,6 +132,7 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
                     \ fname =~ 'NERD_tree' ? 'NERDTree' :
                     \ &ft == 'unite' ? 'Unite' :
                     \ &ft == 'vimfiler' ? 'VimFiler' :
+                    \ &ft == 'leaderGuide' ? 'Leader' :
                     \ &ft == 'vimshell' ? 'VimShell' :
                     \ winwidth(0) > 60 ? lightline#mode() : ''
     endfunction

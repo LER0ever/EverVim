@@ -1,4 +1,4 @@
 if isdirectory(expand('~/.vim/bundle/vim-dispatch'))
-    nnoremap <leader>d :Dispatch<CR>
-    nnoremap <leader>m :Make<CR>
+    nnoremap <leader>dd :Dispatch<CR>
+    nnoremap <leader>dm :Make<CR>
 endif
