@@ -8,6 +8,9 @@ cd ~
 if [ ! -d ".EverVim" ]; then
     echo "Cloning into ~/.EverVim ..."
     git clone https://github.com/LER0ever/EverVim ~/.EverVim
+else
+    echo "Updating EverVim Config ..."
+    git -C ~/.EverVim pull
 fi
 
 # Ensure we have .config
