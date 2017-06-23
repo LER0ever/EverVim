@@ -1,5 +1,5 @@
 if isdirectory(expand("~/.vim/bundle/tagbar/"))
-    nnoremap <silent> <leader>tt :TagbarToggle<CR>
+    nnoremap <leader>tt :TagbarToggle<CR>
     let g:tagbar_width = 30
 
     " Markdown Tags

@@ -19,7 +19,7 @@ if isdirectory(expand('~/.vim/bundle/vim-leader-guide'))
                 \       'n': { 'name' : 'NerdTree' },
                 \       'r': { 'name' : 'Resize/Rainbow' },
                 \       's': { 'name' : 'Search/Session' },
-                \       't': { 'name' : 'Tab/Terminal' },
+                \       't': { 'name' : 'Tab/Terminal/Tagbar' },
                 \       'u': { 'name' : 'UndoTree' },
                 \       'w': { 'name' : 'VimWiki' },
                 \       'y': { 'name' : 'YouCompleteMe' },
