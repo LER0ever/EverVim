@@ -77,7 +77,7 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
     endif
 
     function! DeviconsFileType()
-        return winwidth(0) > 75 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+        return winwidth(0) > 65 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
     endfunction
 
     function! DeviconsFileFormat()
@@ -86,7 +86,7 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
 
     " Functions from lightline author
     function! LightlineFugitive()
-        if winwidth(0) < 75
+        if winwidth(0) < 65
             return ''
         endif
         if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
@@ -125,6 +125,7 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
 
     function! LightlineMode()
         let fname = expand('%:t')
+        let longmode = lightline#mode()
         return fname =~ '__Tagbar__' ? 'Tagbar' :
                     \ fname == 'ControlP' ? 'CtrlP' :
                     \ fname == '__Gundo__' ? 'Gundo' :
@@ -134,11 +135,16 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
                     \ &ft == 'vimfiler' ? 'VimFiler' :
                     \ &ft == 'leaderGuide' ? 'Leader' :
                     \ &ft == 'vimshell' ? 'VimShell' :
-                    \ winwidth(0) > 60 ? lightline#mode() : ''
+                    \ winwidth(0) > 75 ? longmode :
+                    \ longmode == 'NORMAL' ? 'N' :
+                    \ longmode == 'INSERT' ? 'I' :
+                    \ longmode == 'VISUAL' ? 'V' :
+                    \ longmode == 'V-BLOCK' ? 'B' :
+                    \ longmode
     endfunction
 
     function! LightlineFileencoding()
-        return winwidth(0) > 75 ? (&fenc !=# '' ? &fenc : &enc) : ''
+        return winwidth(0) > 70 ? (&fenc !=# '' ? &fenc : &enc) : ''
     endfunction
 
     let g:tagbar_status_func = 'TagbarStatusFunc'
