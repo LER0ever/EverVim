@@ -27,6 +27,9 @@
             source $evervim_root/plugins/$bundle_group/$bundle_group.bundles
         endfor
     endif
+
+    " Run PlugInstall if bundle does not exists
+    autocmd VimEnter * call EverVimInitPlugins()
 " }
 
 " Use fork bundles config if available {
