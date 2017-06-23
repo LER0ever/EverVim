@@ -25,7 +25,7 @@ Before you started, please read the [Wiki](https://github.com/LER0ever/EverVim/w
 
 * * *
 
-##### tl;dr. A brief how-to
+##### tl;dr. A brief how-to-install
 <details>
 <summary>0. Still</summary>
 <b>You are strongly encouraged to use the full instruction on your first installation of EverVim.</b>
@@ -33,7 +33,7 @@ Before you started, please read the [Wiki](https://github.com/LER0ever/EverVim/w
 <details>
 <summary>1. Install prerequisites and patched font</summary>
 <li>Download and install the [Knack Nerd Font](https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Regular/complete/Knack%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)</li>
-<li>Make **git, curl** is on your system.</li>
+<li>Make **git, curl** is on your system. Python is also needed for Linux. Ctags is optional but highly recommended.</li>
 </details>
 
 <details>
@@ -45,8 +45,7 @@ Before you started, please read the [Wiki](https://github.com/LER0ever/EverVim/w
 <details>
 <summary>3. Install the plugins</summary>
 <li>Fire up your vim</li>
-<li>Type `:PlugInstall`</li>
-<li>Wait for it to finish</li>
+<li>Wait for Plugin Initiation to finish</li>
 <li>Restart Vim.</li>
 </details>
 
