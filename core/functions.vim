@@ -73,7 +73,9 @@ endfunction
 
 " Unix Dos Conversion {
 function! Dos2Unix()
-    execute 'update | e ++ff=dos | setlocal ff=unix | %s/\\r//g | w'
+    execute 'update | e ++ff=dos | setlocal ff=unix'
+    silent %s/\r//ge
+    execute 'w'
 endfunction
 
 function! Unix2Dos()
