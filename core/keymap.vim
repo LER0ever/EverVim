@@ -154,7 +154,8 @@ endif
 map <C-s> :w<CR>
 
 " Find merge conflict markers
-map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
+noremap <SID>FindMergeConflictMarker /\v^[<\|=>]{7}( .*\|$)<CR>
+map <leader>fx <SID>FindMergeConflictMarker
 
 " Shortcuts
 " Change Working Directory to that of the current file
@@ -172,6 +173,10 @@ vnoremap . :normal .<CR>
 " For when you forget to sudo.. Really Write the file.
 cmap w!! w !sudo tee % >/dev/null
 
+" Dos Unix FF Conversion
+nnoremap <Leader>fcu :call Dos2Unix()<CR>
+nnoremap <Leader>fcd :call Unix2Dos()<CR>
+
 " Some helpers to edit mode
 " http://vimcasts.org/e/14
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
@@ -185,7 +190,8 @@ map <Leader>= <C-w>=
 
 " Map <Leader>ff to display all lines with keyword under cursor
 " and ask which one to jump to
-nmap <Leader>ff [I:let nr = input("Which one to jump to: ")<Bar>exe "normal " . nr ."[\t"<CR>
+nnoremap <SID>FindTextUnderCursor [I:let nr = input("Which one to jump to: ")<Bar>exe "normal " . nr ."[\t"<CR>
+nmap <Leader>ff <SID>FindTextUnderCursor
 
 " Easier horizontal scrolling
 map zl zL

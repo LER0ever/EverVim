@@ -71,6 +71,16 @@ function! StripTrailingWhitespace()
 endfunction
 " }
 
+" Unix Dos Conversion {
+function! Dos2Unix()
+    execute 'update | e ++ff=dos | setlocal ff=unix | %s/\\r//g | w'
+endfunction
+
+function! Unix2Dos()
+    execute 'update | e ++ff=dos | w'
+endfunction
+" }
+
 " Shell command {
 function! s:RunShellCommand(cmdline)
     botright new
