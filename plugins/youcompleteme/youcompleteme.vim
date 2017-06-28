@@ -16,9 +16,9 @@ if count(g:evervim_bundle_groups, 'youcompleteme')
     nnoremap <leader>ygt :YcmCompleter GoTo<CR>
 
     " remap Ultisnips for compatibility for YCM
-    let g:UltiSnipsExpandTrigger = '<leader><tab>'
-    let g:UltiSnipsJumpForwardTrigger = '<C-j>'
-    let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+    let g:UltiSnipsExpandTrigger = "<Leader><Tab>"
+    let g:UltiSnipsJumpForwardTrigger = "<Tab>"
+    let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
 
     " Enable omni completion.
     autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
