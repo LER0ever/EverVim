@@ -32,15 +32,9 @@
     autocmd VimEnter * call EverVimInitPlugins()
 " }
 
-" Use fork bundles config if available {
-    if filereadable(expand("~/.vimrc.bundles.fork"))
-        source ~/.vimrc.bundles.fork
-    endif
-" }
-
 " Use local bundles config if available {
-    if filereadable(expand("~/.vimrc.bundles.local"))
-        source ~/.vimrc.bundles.local
+    if filereadable(expand("~/.EverVim.bundles"))
+        source ~/.EverVim.bundles
     endif
 " }
 
