@@ -1,8 +1,11 @@
 " EverVim Writing Bundles
 Plug 'tpope/vim-markdown' ", {'for': 'markdown'}
+Plug 'vimwiki/vimwiki'
 Plug 'reedes/vim-litecorrect'
 Plug 'reedes/vim-textobj-sentence'
 Plug 'reedes/vim-textobj-quote'
 Plug 'reedes/vim-wordy'
 Plug 'tyru/open-browser.vim'
 Plug 'kannokanno/previm'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
