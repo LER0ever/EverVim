@@ -2,13 +2,14 @@ if isdirectory(expand('~/.vim/bundle/vim-leader-guide'))
     let g:vim_leader_guide_map = {
                 \   mapleader: {
                 \       'name': '<leader>',
+                \       ' ': { 'name' : 'FZF' },
                 \       ',': ['call feedkeys("\<Plug>(easymotion-prefix)")', 'EasyMotion Prefix'],
                 \       'a': { 'name' : 'Tabularize' },
                 \       'b': { 'name' : 'Buffer/Bookmark' },
                 \       'c': { 'name' : 'Comments' },
                 \       'd': { 'name' : 'Dispatch' },
                 \       'e': { 'name' : 'Edit' },
-                \       'f': { 'name' : 'File/Format/Find' },
+                \       'f': { 'name' : 'Find/Format' },
                 \       'g': { 'name' : 'Git' },
                 \       'i': { 'name' : 'Alternate File Switch' },
                 \       'j': {
@@ -17,6 +18,7 @@ if isdirectory(expand('~/.vim/bundle/vim-leader-guide'))
                 \           'h': { 'name' : 'Jump to Leftmost' },
                 \       },
                 \       'n': { 'name' : 'NerdTree' },
+                \       'o': { 'name' : 'Fold' },
                 \       'r': { 'name' : 'Resize/Rainbow' },
                 \       's': { 'name' : 'Search/Session' },
                 \       't': { 'name' : 'Tab/Terminal/Tagbar' },

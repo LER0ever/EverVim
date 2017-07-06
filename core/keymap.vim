@@ -129,16 +129,16 @@ endif
 nnoremap Y y$
 
 " Code folding options
-nmap <leader>f0 :set foldlevel=0<CR>
-nmap <leader>f1 :set foldlevel=1<CR>
-nmap <leader>f2 :set foldlevel=2<CR>
-nmap <leader>f3 :set foldlevel=3<CR>
-nmap <leader>f4 :set foldlevel=4<CR>
-nmap <leader>f5 :set foldlevel=5<CR>
-nmap <leader>f6 :set foldlevel=6<CR>
-nmap <leader>f7 :set foldlevel=7<CR>
-nmap <leader>f8 :set foldlevel=8<CR>
-nmap <leader>f9 :set foldlevel=9<CR>
+nmap <leader>o0 :set foldlevel=0<CR>
+nmap <leader>o1 :set foldlevel=1<CR>
+nmap <leader>o2 :set foldlevel=2<CR>
+nmap <leader>o3 :set foldlevel=3<CR>
+nmap <leader>o4 :set foldlevel=4<CR>
+nmap <leader>o5 :set foldlevel=5<CR>
+nmap <leader>o6 :set foldlevel=6<CR>
+nmap <leader>o7 :set foldlevel=7<CR>
+nmap <leader>o8 :set foldlevel=8<CR>
+nmap <leader>o9 :set foldlevel=9<CR>
 
 " Most prefer to toggle search highlighting rather than clear the current
 " search results. To clear search highlighting rather than toggle it on

@@ -37,6 +37,11 @@
     " Disable by uncomment the following line.
     "   let g:evervim_no_restore_cursor = 1
 
+    " Fuzzy Finder
+    " By default, CtrlP is used on Windows and FZF.vim on Unix
+    " Fall back to CtrlP by uncommenting the following line (Unix only)
+    "   let g:evervim_use_ctrlp = 1
+
     " Enable smooth scrolling
     " Use physics-based smooth scrolling for half-page/full-page scrolling
     " Friction and air-drag can be override here
