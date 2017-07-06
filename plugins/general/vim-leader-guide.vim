@@ -46,7 +46,7 @@ if isdirectory(expand('~/.vim/bundle/vim-leader-guide'))
 
     nnoremap <silent> <space> :<C-u>LeaderGuide mapleader<CR>
     vnoremap <silent> <space> :<C-u>LeaderGuideVisual mapleader<CR>
-    map <space>. <Plug>leaderguide-global
+    map <space>m <Plug>leaderguide-global
     nnoremap <localleader> :<C-u>LeaderGuide maplocalleader<CR>
     vnoremap <localleader> :<C-u>LeaderGuideVisual maplocalleader<CR>
     map <localleader>. <Plug>leaderguide-buffer
