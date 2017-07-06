@@ -1,5 +1,4 @@
 " EverVim Misc Bundles
-Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-cucumber'
 Plug 'cespare/vim-toml', {'for': 'toml'}
 Plug 'quentindecock/vim-cucumber-align-pipes'
