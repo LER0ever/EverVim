@@ -28,6 +28,10 @@ if isdirectory(expand('~/.vim/bundle/fzf.vim'))
 
     nmap <Leader>z <Leader>.
 
+    if isdirectory(expand('~/.vim/bundle/lightline.vim'))
+        autocmd! User FzfStatusLine call lightline#update_once()
+    endif
+
     " Command override (with preview)
     command! -bang -nargs=? -complete=dir Files
                 \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)

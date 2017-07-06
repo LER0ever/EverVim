@@ -114,6 +114,7 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
         return fname == 'ControlP' && has_key(g:lightline, 'ctrlp_item') ? g:lightline.ctrlp_item :
                     \ fname =~ '__Tagbar__' ? "" :
                     \ fname =~ '__Gundo\|NERD_tree' ? '' :
+                    \ fname =~ 'FZF' ? 'Fuzzy Finder' :
                     \ &ft == 'vimfiler' ? vimfiler#get_status_string() :
                     \ &ft == 'unite' ? unite#get_status_string() :
                     \ &ft == 'leaderGuide' ? 'Guide' :
@@ -131,6 +132,7 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
                     \ fname == '__Gundo__' ? 'Gundo' :
                     \ fname == '__Gundo_Preview__' ? 'Gundo Preview' :
                     \ fname =~ 'NERD_tree' ? 'NERDTree' :
+                    \ fname =~ 'FZF' ? ' FZF' :
                     \ &ft == 'unite' ? 'Unite' :
                     \ &ft == 'vimfiler' ? 'VimFiler' :
                     \ &ft == 'leaderGuide' ? 'Leader' :
