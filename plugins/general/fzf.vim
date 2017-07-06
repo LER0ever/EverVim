@@ -10,6 +10,7 @@ if isdirectory(expand('~/.vim/bundle/fzf.vim'))
     nnoremap <Leader><Space>b :Buffers<CR>
     nnoremap <Leader><Space>c :Commands<CR>
     nnoremap <Leader><Space>w :Windows<CR>
+    nnoremap <Leader><Space>a :Ag<CR>
     nnoremap <Leader><Space>o :Locate<Space>
     nnoremap <Leader><Space>m :Maps<CR>
     nnoremap <Leader><Space>h :History<CR>
@@ -23,4 +24,12 @@ if isdirectory(expand('~/.vim/bundle/fzf.vim'))
 
     nmap <Leader>z <Leader><Space>
 
+    " Command override (with preview)
+    command! -bang -nargs=? -complete=dir Files
+                \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+    command! -bang -nargs=* Ag
+                \ call fzf#vim#ag(<q-args>,
+                \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+                \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+                \                 <bang>0)
 endif

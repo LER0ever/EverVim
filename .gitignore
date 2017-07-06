@@ -16,3 +16,5 @@ bundle/
 init.vim
 ginit.vim
 .netrwhist
+UltiSnips/
+
