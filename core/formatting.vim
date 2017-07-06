@@ -26,7 +26,7 @@ autocmd FileType typescript setlocal expandtab shiftwidth=4 softtabstop=4
 " preceding line best in a plugin but here for now.
 
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
-autocmd BufNewFile,BufRead *.bundles set filetype=vim
+autocmd BufNewFile,BufRead *.bundles,*.EverVim.local,*.EverVim.project set filetype=vim
 autocmd BufNewFile,BufRead wscript set filetype=python
 
 " Workaround vim-commentary for Haskell
