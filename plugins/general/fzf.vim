@@ -4,25 +4,29 @@ if isdirectory(expand('~/.vim/bundle/fzf.vim'))
     let g:fzf_layout = { 'down': '~40%' }
 
     " fzf mappings
-    nnoremap <Leader><Space>f :Files<CR>
-    nnoremap <Leader><Space>l :Lines<CR>
-    nnoremap <Leader><Space>t :Tags<CR>
-    nnoremap <Leader><Space>b :Buffers<CR>
-    nnoremap <Leader><Space>c :Commands<CR>
-    nnoremap <Leader><Space>w :Windows<CR>
-    nnoremap <Leader><Space>a :Ag<CR>
-    nnoremap <Leader><Space>o :Locate<Space>
-    nnoremap <Leader><Space>m :Maps<CR>
-    nnoremap <Leader><Space>h :History<CR>
-    nnoremap <Leader><Space>s :Snippets<CR>
-    nnoremap <Leader><Space>i :Commits<CR>
-    nnoremap <Leader><Space>r :Colors<CR>
-    nnoremap <Leader><Space>e :HelpTags<CR>
+    nnoremap <Leader>.f :Files<CR>
+    nnoremap <Leader>.l :Lines<CR>
+    nnoremap <Leader>.t :Tags<CR>
+    nnoremap <Leader>.b :Buffers<CR>
+    nnoremap <Leader>.c :Commands<CR>
+    nnoremap <Leader>.w :Windows<CR>
+    nnoremap <Leader>.a :Ag<CR>
+    nnoremap <Leader>.g :GitFiles<CR>
+    nnoremap <Leader>.o :Locate<Space>
+    nnoremap <Leader>.m :Maps<CR>
+    nnoremap <Leader>.h :History<CR>
+    nnoremap <Leader>.s :Snippets<CR>
+    nnoremap <Leader>.i :Commits<CR>
+    nnoremap <Leader>.r :Colors<CR>
+    nnoremap <Leader>.e :Helptags<CR>
+    nnoremap <Leader>..c :BCommits<CR>
+    nnoremap <Leader>..t :BTags<CR>
+    nnoremap <Leader>..l :BLines<CR>
 
     " CtrlP compatibility
     nnoremap <C-P> :Files<CR>
 
-    nmap <Leader>z <Leader><Space>
+    nmap <Leader>z <Leader>.
 
     " Command override (with preview)
     command! -bang -nargs=? -complete=dir Files
