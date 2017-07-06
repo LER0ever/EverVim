@@ -21,7 +21,8 @@ if isdirectory(expand('~/.vim/bundle/vim-leader-guide'))
                 \       's': { 'name' : 'Search/Session' },
                 \       't': { 'name' : 'Tab/Terminal/Tagbar' },
                 \       'u': { 'name' : 'UndoTree' },
-                \       'w': { 'name' : 'VimWiki' },
+                \       'v': { 'name' : 'VimWiki' },
+                \       'w': { 'name' : 'Writing' },
                 \       'y': { 'name' : 'YouCompleteMe' },
                 \   },
                 \   maplocalleader: {

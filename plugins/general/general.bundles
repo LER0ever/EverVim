@@ -31,6 +31,7 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'easymotion/vim-easymotion'
 Plug 'kien/tabman.vim'
 Plug 'MattesGroeger/vim-bookmarks'
+Plug 'embear/vim-localvimrc'
 Plug 'zhaocai/GoldenView.Vim'
 "Plug 'justincampbell/vim-eighties'
 Plug 'dracula/vim' " Main theme for EverVim
