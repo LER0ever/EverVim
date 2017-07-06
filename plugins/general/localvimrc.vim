@@ -5,4 +5,5 @@ if isdirectory(expand('~/.vim/bundle/vim-localvimrc'))
                 \".EverVim.exrc"
                 \]
     let g:localvimrc_persistent = 1
+    let g:localvimrc_sandbox = 0
 endif
