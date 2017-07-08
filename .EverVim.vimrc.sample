@@ -25,6 +25,10 @@
     " You can change to the popular vim-airline by uncomment the following
     "   let g:evervim_use_airline = 1
 
+    " Header constants for generating and updating the comment header
+    "   let g:header_field_author = 'YOUR_NAME'
+    "   let g:header_field_author_email = 'YOUR_EMAIL_ADDRESS'
+
     " Disable views
     "   let g:evervim_no_views = 1
 
