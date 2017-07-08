@@ -1,5 +1,6 @@
 " EverVim Writing Bundles
 Plug 'plasticboy/vim-markdown' ", {'for': 'markdown'}
+Plug 'cespare/vim-toml'
 Plug 'vimwiki/vimwiki'
 Plug 'reedes/vim-litecorrect'
 Plug 'reedes/vim-textobj-sentence'
