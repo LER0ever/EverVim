@@ -5,6 +5,7 @@ Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'simeji/winresizer'
+Plug 'wesQ3/vim-windowswap'
 Plug 'Konfekt/FastFold'
 Plug 'rhysd/conflict-marker.vim'
 
