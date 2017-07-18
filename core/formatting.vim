@@ -11,6 +11,9 @@ set splitbelow                  " Puts new split windows to the bottom of the cu
 "set matchpairs+=<:>            "  Match, to be used with %
 set pastetoggle=<F12>           "  pastetoggle (sane indentation on pastes)
 set autoread                    " Automatically reload if file is changed externally
+if OSX()
+    set nofsync                 " Disable fsync under macOS, for it wont work on NTFS
+endif
 "set comments=sl:/*,mb:*,elx:*/ "  auto format comment blocks
 " Remove trailing whitespaces and ^M chars
 " To disable the stripping of whitespace, add the following to your
