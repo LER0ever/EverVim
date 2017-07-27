@@ -15,6 +15,7 @@ if isdirectory(expand('~/.vim/bundle/vim-leader-guide'))
                 \       'g': { 'name' : 'Git' },
                 \       'i': { 'name' : 'Alternate File Switch' },
                 \       'j': { 'name' : 'Jump' },
+                \       'l': { 'name' : 'Language Specific' },
                 \       'n': { 'name' : 'NerdTree' },
                 \       'o': { 'name' : 'Fold' },
                 \       'r': { 'name' : 'Resize/Rainbow' },
