@@ -1,0 +1,12 @@
+" EverVim Project Specific Settings
+" Configuration in this file will override your global vim config.
+" EverVim: https://github.com/LER0ever/EverVim
+
+" Formatting
+"
+"   setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+"   au BufWrite *.h,*.cpp,*.c :Autoformat
+
+" Dispatch
+"
+"   autocmd FileType c,cpp let b:dispatch = 'cd build; cmake ..; make'

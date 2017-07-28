@@ -29,11 +29,13 @@ autocmd FileType typescript setlocal expandtab shiftwidth=4 softtabstop=4
 " preceding line best in a plugin but here for now.
 
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
-autocmd BufNewFile,BufRead *.bundles,*.EverVim.local,*.EverVim.project set filetype=vim
+autocmd BufNewFile,BufRead *.bundles,*.EverVim.local,*.EverVim.project,*.EverVim.Project set filetype=vim
+autocmd BufNewFile *.EverVim.project,*.EverVim.Project,*.EverVim.local 0r $evervim_root/.EverVim.project.sample
 autocmd BufNewFile,BufRead wscript set filetype=python
 
 " Workaround vim-commentary for Haskell
 autocmd FileType haskell setlocal commentstring=--\ %s
 " Workaround broken colour highlighting in Haskell
 autocmd FileType haskell,rust setlocal nospell
+
 
