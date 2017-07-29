@@ -128,6 +128,7 @@ function! EverVimUpdateConfig()
     else
         execute '!git -C ~/.EverVim pull'
     endif
+    execute "source ~/.EverVim/vimrc"
 endfunction
 
 function! EverVimUpdatePlugins()
