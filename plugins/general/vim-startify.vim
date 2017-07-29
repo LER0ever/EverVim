@@ -10,7 +10,7 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
             let platform_string = "macOS " . OSXVERSION() . " (Darwin " . KERNELVERSION() . ")"
         elseif BSD()
             let platform_icon = ""
-            let platform_string = "BSD"
+            let platform_string = BSDDistro() . " (" . KERNELVERSION() . ")"
         elseif LINUX()
             let distro = DISTRO()
             let platform_icon = distro =~ "Arch" ? "" :
@@ -94,9 +94,9 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
                 \'     ||=======================================================================||']
     let g:startify_files_number = 5
     let g:startify_list_order = [
-                \ ['   [MRU] Most recently used files'],
+                \ ['   [MRU] Most Recently Used files:'],
                 \ 'files',
-                \ ['   [MRU] Most recently used files in current directory:'],
+                \ ['   [MRU] in current directory:'],
                 \ 'dir',
                 \ ['   [CMD] Common Commands:'],
                 \ 'commands',

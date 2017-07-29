@@ -30,6 +30,9 @@ silent function! DISTROVERSION()
     return executable('dpkg') ? substitute(system('lsb_release -sd'), '[\n|\"]\+', '', 'g'):
                 \ substitute(system('lsb_release -sdr'), '[\n|\"]\+', '', 'g')
 endfunction
+silent function! BSDDistro()
+    return substitute(system('uname -s'), '[\n]\+', '', 'g')
+endfunction
 silent function! OSXVERSION()
     return substitute(system("echo $(sw_vers -productVersion)"), '[\n]\+', '', '')
 endfunction
