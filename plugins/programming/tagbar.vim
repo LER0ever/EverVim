@@ -47,5 +47,15 @@ if isdirectory(expand("~/.vim/bundle/tagbar/"))
                 \ 'e:enums',
                 \ ]
                 \ }
+
+    " TXT Novel tags for English and Chinese
+    let g:tagbar_type_text = {
+                \ 'ctagstype': 'text',
+                \ 'kinds': [
+                \ 'E:EnglishChapter',
+                \ 'C:ChineseChapter',
+                \ ],
+                \ 'sort': 0,
+                \ }
 endif
 
