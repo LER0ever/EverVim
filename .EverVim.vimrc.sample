@@ -17,6 +17,9 @@
     "   let g:evervim_color_theme="dracula"
     "   let g:evervim_airline_theme="dracula"
 
+    " Patched Font
+    "   let g:evervim_no_patched_fonts = 1
+
     " Automatically changing to open file directory
     " May cause airline to misbehave
     "   let g:evervim_autochdir = 1

@@ -38,6 +38,9 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
             let platform_icon = ""
             let platform_string = "UNIX"
         endif
+        if exists('g:evervim_no_patched_fonts')
+            let platform_icon = ''
+        endif
         return platform_icon . " " . platform_string
     endfunction
 
@@ -52,6 +55,23 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
         return boxed_header
     endfunction
 
+    function! s:tic(icon)
+        if !exists('g:evervim_no_patched_fonts')
+            return a:icon
+        else
+            return ''
+        endif
+    endfunction
+
+    let startify_icon_vim = s:tic('')
+    let startify_icon_update = s:tic('')
+    let startify_icon_vulkan = s:tic('')
+    let startify_icon_love = s:tic('')
+    let startify_icon_link = s:tic('')
+    let startify_icon_github = s:tic('')
+    let startify_icon_key = s:tic('')
+    let startify_icon_watch = s:tic('')
+
     let startify_vim_version = ""
     let startify_platform_string = PLATFORM_ICON_STRING()
     let startify_vim_components = "{" .
@@ -60,17 +80,17 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
                 \ (has('lua') == 1 ? "+Lua" : "-Lua") . "|" .
                 \ (has('clipboard') == 1 ? "+Clip" : "-Clip") .
                 \ "}"
-    let startify_evervim_lastupdated = " EverVim Updated " . (WINDOWS()?substitute(system('git -C %HOMEPATH%\.EverVim show --format="%ar" --quiet'), '[\n]\+', '', 'g'):substitute(system('git -C ~/.EverVim show --format="%ar" --quiet'), '[\n]\+', '', 'g'))
+    let startify_evervim_lastupdated = startify_icon_update . " EverVim Updated " . (WINDOWS()?substitute(system('git -C %HOMEPATH%\.EverVim show --format="%ar" --quiet'), '[\n]\+', '', 'g'):substitute(system('git -C ~/.EverVim show --format="%ar" --quiet'), '[\n]\+', '', 'g'))
     if NVIM()
         if ONI()
-            let startify_vim_version = " Oni (NeoVim " . matchstr(execute('version'), 'NVIM \zs[^\n]*') . ")"
+            let startify_vim_version = startify_icon_vim . " Oni (NeoVim " . matchstr(execute('version'), 'NVIM \zs[^\n]*') . ")"
         elseif VIMR()
-            let startify_vim_version = " VimR (NeoVim " . matchstr(execute('version'), 'NVIM \zs[^\n]*') . ")"
+            let startify_vim_version = startify_icon_vim . " VimR (NeoVim " . matchstr(execute('version'), 'NVIM \zs[^\n]*') . ")"
         else
-            let startify_vim_version = " NeoVim " . matchstr(execute('version'), 'NVIM \zs[^\n]*')
+            let startify_vim_version = startify_icon_vim . " NeoVim " . matchstr(execute('version'), 'NVIM \zs[^\n]*')
         endif
     else
-        let startify_vim_version = " Vim " . substitute(v:version, '[\0]', '.', '')
+        let startify_vim_version = startify_icon_vim . " Vim " . substitute(v:version, '[\0]', '.', '')
     endif
 
     highlight StartifyHeader ctermfg=120 guifg=#87ff87
@@ -83,14 +103,14 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
                 \'   \ \_______\ \__/ /     \ \_______\ \__\\ _\\ \__/ /     \ \__\ \__\    \ \__\',
                 \'    \|_______|\|__|/       \|_______|\|__|\|__|\|__|/       \|__|\|__|     \|__|',
                 \'     ||=======================================================================||',
-                \'     ' . s:boxed_header(' Welcome to EverVim. The Ultimate Vim Distribution for everyone.'),
-                \'     ' . s:boxed_header(' Made with <3 by LER0ever |  https://i.yirong.ml'),
-                \'     ' . s:boxed_header(' Github Repository: https://github.com/LER0ever/EverVim'),
+                \'     ' . s:boxed_header(startify_icon_vulkan . ' Welcome to EverVim. The Ultimate Vim Distribution for everyone.'),
+                \'     ' . s:boxed_header(startify_icon_love . ' Made with <3 by LER0ever | ' . startify_icon_link . ' https://i.yirong.ml'),
+                \'     ' . s:boxed_header(startify_icon_github . ' Github Repository: https://github.com/LER0ever/EverVim'),
                 \'     ||-----------------------------------------------------------------------||',
                 \'     ' . s:boxed_header(startify_vim_version . " " . startify_vim_components),
                 \'     ' . s:boxed_header(startify_platform_string),
-                \'     ' . s:boxed_header(startify_evervim_lastupdated . " |  Now: ". strftime("%y/%m/%d %H:%M", localtime())),
-                \'     ' . s:boxed_header(" Leader Key: `" . mapleader . "` | Leader Guide: <Space>"),
+                \'     ' . s:boxed_header(startify_evervim_lastupdated . ' | ' . startify_icon_watch . ' Now: ' . strftime("%y/%m/%d %H:%M", localtime())),
+                \'     ' . s:boxed_header(startify_icon_key . " Leader Key: `" . mapleader . "` | Leader Guide: <Space>"),
                 \'     ||=======================================================================||']
     let g:startify_files_number = 5
     let g:startify_list_order = [

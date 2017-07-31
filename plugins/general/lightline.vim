@@ -57,7 +57,7 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
     let g:lightline_buffer_logo = ' '
     let g:lightline_buffer_readonly_icon = ''
     let g:lightline_buffer_modified_icon = '✭'
-    let g:lightline_buffer_git_icon = ' '
+    let g:lightline_buffer_git_icon = ''
     let g:lightline_buffer_ellipsis_icon = '..'
     let g:lightline_buffer_expand_left_icon = ''
     let g:lightline_buffer_expand_right_icon = ''
@@ -68,6 +68,19 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
     let g:lightline_buffer_maxflen = 20
     let g:lightline_buffer_minflen = 10
     let g:lightline_buffer_excludes = ['vimfiler', 'No Name']
+    let g:lightline_right_arrow = '  '
+
+    if exists('g:evervim_no_patched_fonts')
+        let g:lightline.separator = {}
+        let g:lightline.subseparator = {}
+        let g:lightline.tabline_separator = {}
+        let g:lightline.tabline_subseparator = {}
+        let g:lightline_buffer_logo = ' '
+        let g:lightline_buffer_readonly_icon = ''
+        let g:lightline_buffer_modified_icon = ''
+        let g:lightline_buffer_git_icon = ' '
+        let g:lightline_right_arrow = ' | '
+    endif
 
     " show tabline by default
     set showtabline=2
@@ -77,11 +90,19 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
     endif
 
     function! DeviconsFileType()
-        return winwidth(0) > 65 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+	if !exists('g:evervim_no_patched_fonts')
+            return winwidth(0) > 65 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+	else
+	    return winwidth(0) > 65 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
+	endif
     endfunction
 
     function! DeviconsFileFormat()
-        return winwidth(0) > 75 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+	if !exists('g:evervim_no_patched_fonts')
+	    return winwidth(0) > 75 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+	else
+	    return winwidth(0) > 75 ? &fileformat : ''
+	endif
     endfunction
 
     " Functions from lightline author
@@ -91,7 +112,7 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
         endif
         if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
             let branch = fugitive#head()
-            return branch !=# '' ? ''.branch : ''
+            return branch !=# '' ? g:lightline_buffer_git_icon . branch : ''
         endif
         return ''
     endfunction
@@ -106,7 +127,7 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
     endfunction
 
     function! LightlineReadonly()
-        return &ft !~? 'help' && &readonly ? '' : ''
+        return &ft !~? 'help' && &readonly ? g:lightline_buffer_readonly_icon : ''
     endfunction
 
     function! LightlineFilename()
@@ -119,8 +140,8 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
                     \ &ft == 'unite' ? unite#get_status_string() :
                     \ &ft == 'leaderGuide' ? 'Guide' :
                     \ &ft == 'vimshell' ? vimshell#get_status_string() :
-                    \ ('' != LightlineReadonly() ? LightlineReadonly() . '  ' : '') .
-                    \ ('' != fname ? fname . '  ' : '[No Name] ' ) .
+                    \ ('' != LightlineReadonly() ? LightlineReadonly() . g:lightline_right_arrow: '') .
+                    \ ('' != fname ? fname . g:lightline_right_arrow : '[No Name]' . g:lightline_right_arrow ) .
                     \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
     endfunction
 
