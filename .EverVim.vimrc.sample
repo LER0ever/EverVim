@@ -80,9 +80,6 @@
     " Disable whitespace stripping
     "   let g:evervim_keep_trailing_whitespace = 1
 
-    " Disable powerline symbols, default is 1
-    "   let g:airline_powerline_fonts = 0
-
     " vim files directory
     "   let g:evervim_consolidated_directory = <full path to desired directory>
     "   eg: let g:evervim_consolidated_directory = $HOME . '/.vim/'

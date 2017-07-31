@@ -6,3 +6,11 @@ Plug 'joshdick/onedark.vim'
 if !TERMUX() && !exists('g:evervim_no_patched_fonts')
     Plug 'ryanoasis/vim-devicons'
 endif
+if exists('g:evervim_use_airline')
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+else
+    Plug 'itchyny/lightline.vim'
+    Plug 'taohex/lightline-buffer'
+endif
+Plug 'mhinz/vim-startify'

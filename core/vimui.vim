@@ -31,9 +31,6 @@ if has('statusline')
     " Broken down into easily includeable segments
     set statusline=%<%f\                         " Filename
     set statusline+=%w%h%m%r                     " Options
-    if !exists('g:override_evervim_bundles')
-        set statusline+=%{fugitive#statusline()} " Git Hotness
-    endif
     set statusline+=\ [%{&ff}/%Y]                " Filetype
     set statusline+=\ [%{getcwd()}]              " Current dir
     set statusline+=%=%-14.(%l,%c%V%)\ %p%%      " Right aligned file nav info

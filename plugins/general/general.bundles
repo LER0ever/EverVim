@@ -1,7 +1,6 @@
 " EverVim General Bundles
 Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
 Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
-Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'simeji/winresizer'
@@ -27,15 +26,6 @@ endif
 Plug 'vim-scripts/sessionman.vim'
 "Plug 'matchit.zip' " no longer use vim-scripts
 Plug 'tmhedberg/matchit'
-if (has("python") || has("python3")) && exists('g:evervim_use_powerline')
-    Plug 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
-elseif exists('g:evervim_use_airline')
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-else
-    Plug 'itchyny/lightline.vim'
-    Plug 'taohex/lightline-buffer'
-endif
 Plug 'jlanzarotta/bufexplorer'
 Plug 'easymotion/vim-easymotion'
 Plug 'kien/tabman.vim'
