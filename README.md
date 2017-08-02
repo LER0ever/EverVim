@@ -13,7 +13,7 @@ EverVim is the ultimate vim distribution that supports **NeoVim**, Vim, GVim and
 
 The distribution is completely customizable using a ~/.EverVim.vimrc Vim config files.
 
-EverVim started as a fork of spf13-vim, which is great but not actively maintained any more. Unlike spf13-vim, EverVim always keeps its modern features up-to-date. It uses [Vim-Plug](https://github.com/junegunn/vim-plug) as a plugin manager, which is async and is about 10x faster than Vundle. Keeping your plugins always up to date is just a command away. Vim-Plug uses a plugin bundle so that having lots of them won't mess up the folder structure.
+Unlike other vim configuration such as spf13-vim, EverVim always keeps its modern features up-to-date. It uses [Vim-Plug](https://github.com/junegunn/vim-plug) as a plugin manager, which is async and is about 10x faster than Vundle. Keeping your plugins always up to date is just a command away. Vim-Plug uses a plugin bundle so that having lots of them won't mess up the folder structure.
 
 The default config of EverVim is powerful and easy to use just out of the box, and is suitable for most vim users. Customization is easy as well. With `.EverVim.vimrc` file, you can customize the whole collection without modify the original files. That means you're still able to update the EverVim config using `git pull` without compromizing your own modification.
 
@@ -59,7 +59,7 @@ Press **`u`** at EverVim start screen. Configuration and plugins will be automat
 	- Windows (gvim, vim, neovim-qt, Oni)
 	- Linux (neovim, neovim-qt, vim, gvim, neovim-gtk, Oni)
 	- macOS (MacVim, VimR, Oni)
-	- BSD (vim)
+	- FreeBSD (GVim, NeoVim)
 	- Android (neovim, vim under Termux)
 
 ### Powerful & Easy to use
@@ -83,27 +83,20 @@ Press **`u`** at EverVim start screen. Configuration and plugins will be automat
 - Use Vim-Plug as vim plugin manager
 	- Parallel installation
 	- 10x faster initial PlugInstall
+- FZF as Fuzzy Finder
+    - Support fuzzy search for Files, Code, Git history, Help tags and much more.
 
 ### Other Awesomeness
 - Collaboration using CoVim
+- AGit for detailed git log
 
 ## ScreenShots
 #### Updated screenshots at [Wiki/Gallery](https://github.com/LER0ever/EverVim/wiki/Gallery)
-##### Startup Screen (under NeoVim-Qt)
-![evervimstartify](http://i.imgur.com/SHu2yZv.png)
-##### NeoVim Terminal
-![evervimterm](http://i.imgur.com/lQVWBTH.png)
-##### NeoVim GTK
-![evervimnvimgtk](http://i.imgur.com/Kp2q00a.png)
-##### GVim
-![evervimgui](http://i.imgur.com/s8ga2Cv.png)
-##### Older Shots
-![evervimold](http://i.imgur.com/l8oK1Mj.png)
 
-## [Documentation](https://github.com/LER0ever/EverVim/blob/master/DOC.md)
+## [Documentation](https://github.com/LER0ever/EverVim/wiki)
 
 ## License
-EverVim is licensed under **Apache 2.0**
+EverVim is licensed under **Apache 2.0**. See [LICENSE.md](https://github.com/LER0ever/EverVim/blob/master/LICENSE.md) for details.
 
 This repo contains part of code from [spf13-vim](https://github.com/spf13/spf13-vim), 
 which is also licensed under [Apache 2.0](https://github.com/spf13/spf13-vim/blob/3.0/LICENSE.txt)
