@@ -104,7 +104,7 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
                 \'    \|_______|\|__|/       \|_______|\|__|\|__|\|__|/       \|__|\|__|     \|__|',
                 \'     ||=======================================================================||',
                 \'     ' . s:boxed_header(startify_icon_vulkan . ' Welcome to EverVim. The Ultimate Vim Distribution for everyone.'),
-                \'     ' . s:boxed_header(startify_icon_love . ' Made with <3 by LER0ever | ' . startify_icon_link . ' https://i.yirong.ml'),
+                \'     ' . s:boxed_header(startify_icon_love . ' Made with <3 by LER0ever | ' . startify_icon_link . ' Freenode IRC: #EverVim'),
                 \'     ' . s:boxed_header(startify_icon_github . ' Github Repository: https://github.com/LER0ever/EverVim'),
                 \'     ||-----------------------------------------------------------------------||',
                 \'     ' . s:boxed_header(startify_vim_version . " " . startify_vim_components),
