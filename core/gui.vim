@@ -17,7 +17,7 @@
             elseif OSX() && has("gui_running")
                 execute 'set guifont=' . fnameescape(g:evervim_font) . ':h' . g:evervim_font_size . ',Menlo\ Regular:h11,Consolas\ Regular:h12,Courier\ New\ Regular:h14'
             elseif WINDOWS() && has("gui_running")
-                execute 'set guifont=' . g:evervim_font . ':h' . g:evervim_font_size . ',Consolas:h10,Courier_New:h10'
+                execute 'set guifont=' . substitute(g:evervim_font, ' ', '_', 'g') . ':h' . g:evervim_font_size . ',Consolas:h10,Courier_New:h10'
             endif
         endif
     else
