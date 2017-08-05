@@ -17,7 +17,13 @@
     "   let g:evervim_color_theme="dracula"
     "   let g:evervim_airline_theme="dracula"
 
-    " Patched Font
+    " Customize Patched Font
+    " Pick one at https://github.com/ryanoasis/nerd-fonts
+    " By default it's "Knack Nerd Font" on Unix and "Knack NF" on Windows
+    "   let g:evervim_font="Knack Nerd Font"
+    "   let g:evervim_font_size="12"
+
+    " Disable Patched Font
     "   let g:evervim_no_patched_fonts = 1
 
     " Automatically changing to open file directory

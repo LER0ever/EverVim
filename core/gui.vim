@@ -1,16 +1,23 @@
 " GUI Settings {
 
+    if !exists('g:evervim_font')
+        let g:evervim_font = WINDOWS() ? (NVIM() ? "Knack NF" : "Knack_NF") : "Knack Nerd Font"
+    endif
+    if !exists('g:evervim_font_size')
+        let g:evervim_font_size = WINDOWS() ? "11" : "12"
+    endif
+
     " GVIM (here instead of .gvimrc)
     if has('gui_running')
         set guioptions-=T           " Remove the toolbar
         set lines=40                " 40 lines of text instead of 24
         if !exists("g:evervim_no_big_font")
             if LINUX() && has("gui_running")
-                set guifont=Knack\ Nerd\ Font\ Regular\ 11,Noto\ Mono\ Regular\ 12,Menlo\ Regular\ 11,Consolas\ Regular\ 12,Courier\ New\ Regular\ 14
+                execute 'set guifont=' . fnameescape(g:evervim_font . ' ') . g:evervim_font_size . ',Noto\ Mono\ Regular\ 12,Menlo\ Regular\ 11,Consolas\ Regular\ 12,Courier\ New\ Regular\ 14'
             elseif OSX() && has("gui_running")
-                set guifont=Knack\ Nerd\ Font:h14,Menlo\ Regular:h11,Consolas\ Regular:h12,Courier\ New\ Regular:h14
+                execute 'set guifont=' . fnameescape(g:evervim_font) . ':h' . g:evervim_font_size . ',Menlo\ Regular:h11,Consolas\ Regular:h12,Courier\ New\ Regular:h14'
             elseif WINDOWS() && has("gui_running")
-                set guifont=Knack_NF:h11,Andale_Mono:h10,Menlo:h10,Consolas:h10,Courier_New:h10
+                execute 'set guifont=' . g:evervim_font . ':h' . g:evervim_font_size . ',Consolas:h10,Courier_New:h10'
             endif
         endif
     else
@@ -23,14 +30,14 @@
     " NeoVim-Qt (here instead of ginit.vim)
     if exists('g:GuiLoaded')
         if !WINDOWS()
-            Guifont Knack Nerd Font:h12
+            execute 'Guifont ' . g:evervim_font . ':h' . g:evervim_font_size
         else
-            Guifont Knack NF:h11
+            execute 'Guifont ' . g:evervim_font . ':h' . g:evervim_font_size
         endif
     endif
 
     if NVIMGTK()
-        call rpcnotify(1, 'Gui', 'Font', 'Knack Nerd Font 14')
+        call rpcnotify(1, 'Gui', 'Font', g:evervim_font . ' ' . g:evervim_font_size)
         call rpcnotify(1, 'Gui', 'Option', 'Tabline', 0)
     endif
 
