@@ -211,4 +211,5 @@ if has('nvim')
     nnoremap <Leader>te :tabe term://$SHELL<CR>i
     nnoremap <Leader>tv :vsp term://$SHELL<CR>i
     nnoremap <Leader>ts :sp term://$SHELL<CR>i
+    nnoremap <C-\><C-q> :call GuiClose()<CR>
 endif
