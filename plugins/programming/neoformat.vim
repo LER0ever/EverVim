@@ -3,7 +3,6 @@ if isdirectory(expand("~/.vim/bundle/neoformat"))
     if !exists('g:evervim_no_autoformat')
         augroup neofmt
             autocmd BufWritePre *.c,*.cpp,*.h,*.hpp,*.cxx Neoformat
-            autocmd BufWritePre *.go Neoformat
             autocmd BufWritePre *.rust,*.rs Neoformat
             autocmd BufWritePre *.cs Neoformat
             autocmd BufWritePre *.java Neoformat
