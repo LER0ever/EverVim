@@ -11,7 +11,9 @@ if isdirectory(expand('~/.vim/bundle/vim-leader-guide'))
                 \       'c': { 'name' : 'Comments' },
                 \       'd': { 'name' : 'Dispatch' },
                 \       'e': { 'name' : 'Edit' },
-                \       'f': { 'name' : 'Find/Format' },
+                \       'f': { 'name' : 'Find/Format',
+                \           'c': { 'name': "Change FileFormat" }
+                \       },
                 \       'g': { 'name' : 'Git' },
                 \       'i': { 'name' : 'Alternate File Switch' },
                 \       'j': { 'name' : 'Jump' },

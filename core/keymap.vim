@@ -198,7 +198,10 @@ map zl zL
 map zh zH
 
 " Easier formatting
-nnoremap <silent> <leader>q gwip
+nnoremap <silent> <leader>fq gwip
+nnoremap <silent> <leader>fQ ggVGgq
+nnoremap <silent> <leader>fk vipJ
+nnoremap <silent> <leader>fK :%norm vipJ<cr>
 
 " fullscreen mode for GVIM and Terminal, need 'wmctrl' in you PATH
 map <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
