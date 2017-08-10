@@ -132,13 +132,32 @@ function! EverVimUpdateConfig()
 endfunction
 
 function! EverVimUpdatePlugins()
-    execute 'PlugUpgrade | PlugClean! | PlugUpdate'
+    execute 'PlugUpgrade'
+    execute 'PlugClean!'
+    execute 'PlugUpdate'
+    echo 'Update Completed!'
+endfunction
+
+function! EverVimShowLog()
+    if exists(':Agit')
+        echo 'Showing git log for EverVim, press `q` to exit.'
+        sleep 500m
+        execute 'Agit --dir=~/.EverVim'
+    endif
+    " TODO: Log without AGit
 endfunction
 
 function! EverVimFullUpgrade()
-    echo 'Running EverVim Full Upgrade ...'
-    call EverVimUpdateConfig()
-    call EverVimUpdatePlugins()
+    copen
+    cexpr "Running EverVim Full Upgrade ...\n".
+                \ "This will take about 2-5 minutes, depending on your network condition.\n" .
+                \ "After finish updating, you can try:\n".
+                \ "    - press `D` to see the changes for plugins.\n" .
+                \ "    - run `:call EverVimShowLog()` to view the git log for EverVim in Agit\n" .
+                \ "A restart is **required** after the updating process is finished.\n" . "Enjoy!"
+    sleep 1000m
+    silent! call EverVimUpdateConfig()
+    silent! call EverVimUpdatePlugins()
 endfunction
 
 function! EverVimInitPlugins()
