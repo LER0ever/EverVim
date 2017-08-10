@@ -126,8 +126,8 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
                 \ 'bookmarks',
                 \ ]
     let g:startify_commands = [
-                \ {'c': ['Edit EverVim Config', 'call EditEverVimConfig()']},
                 \ {'u': ['Update EverVim', 'call EverVimFullUpgrade()']},
+                \ {'c': ['Edit EverVim Config', 'call EditEverVimConfig()']},
                 \ ]
     if NVIM()
         let g:startify_commands = g:startify_commands + [{'t': ['Open Terminal', 'edit term://$SHELL | normal! i']}]

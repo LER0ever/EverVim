@@ -124,7 +124,7 @@ endfunction
 
 function! EverVimUpdateConfig()
     if WINDOWS()
-        execute '!git -C \%HOMEPATH\%/.EverVim pull'
+        execute '!git -C \%USERPROFILE\%/.EverVim pull'
     else
         execute '!git -C ~/.EverVim pull'
     endif
