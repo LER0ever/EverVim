@@ -35,4 +35,6 @@ elseif executable('ack')
     Plug 'mileszs/ack.vim'
 endif
 Plug 'tpope/vim-dispatch'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'} " needed by vim-vebugger
+Plug 'idanarye/vim-vebugger'
 Plug 'alpertuna/vim-header'
