@@ -80,7 +80,7 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
                 \ (has('lua') == 1 ? "+Lua" : "-Lua") . "|" .
                 \ (has('clipboard') == 1 ? "+Clip" : "-Clip") .
                 \ "}"
-    let startify_evervim_lastupdated = startify_icon_update . " EverVim Updated " . (WINDOWS()?substitute(system('git -C %HOMEPATH%\.EverVim show --format="%ar" --quiet'), '[\n]\+', '', 'g'):substitute(system('git -C ~/.EverVim show --format="%ar" --quiet'), '[\n]\+', '', 'g'))
+    let startify_evervim_lastupdated = startify_icon_update . " EverVim Updated " . (WINDOWS()?substitute(system('git -C %USERPROFILE%\.EverVim show --format="%ar" --quiet'), '[\n]\+', '', 'g'):substitute(system('git -C ~/.EverVim show --format="%ar" --quiet'), '[\n]\+', '', 'g'))
     if NVIM()
         if ONI()
             let startify_vim_version = startify_icon_vim . " Oni (NeoVim " . matchstr(execute('version'), 'NVIM \zs[^\n]*') . ")"
