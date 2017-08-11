@@ -19,4 +19,19 @@ if isdirectory(expand("~/.vim/bundle/nerdtree"))
         let g:nerdtree_tabs_synchronize_view=0
     endif
     let NERDTreeMapOpenRecursively='<C-O>'
+
+    " NerdTree git integration
+    let g:NERDTreeIndicatorMapCustom = {
+                \ "Modified"  : "±",
+                \ "Staged"    : "⊕",
+                \ "Untracked" : "⊱",
+                \ "Renamed"   : "➜",
+                \ "Unmerged"  : "═",
+                \ "Deleted"   : "⋈",
+                \ "Dirty"     : "✗",
+                \ "Clean"     : "✓",
+                \ 'Ignored'   : '∅',
+                \ "Unknown"   : "?"
+                \ }
+    let g:NERDTreeShowIgnoredStatus = 1
 endif
