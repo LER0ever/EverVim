@@ -3,6 +3,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'spf13/vim-colors'
 Plug 'flazz/vim-colorschemes'
 Plug 'joshdick/onedark.vim'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 if !TERMUX() && !exists('g:evervim_no_patched_fonts')
     Plug 'ryanoasis/vim-devicons'
 endif
