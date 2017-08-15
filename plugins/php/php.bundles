@@ -4,6 +4,7 @@ Plug '2072/PHP-Indenting-for-VIm'
 Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 Plug 'StanAngeloff/php.vim'
 Plug 'tobyS/pdv'
+Plug 'hhvm/vim-hack'
 
 " Outdate Plugins:
 " Plug 'beyondwords/vim-twig'
