@@ -11,7 +11,7 @@
     " EverVim Bundle Groups
     " Bundle Group name is just folders under ~/.EverVim/plugins
     " Below is the default config, uncomment and make your own
-    "   let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'youcompleteme', 'programming', 'python', 'javascript', 'html', 'misc', 'go', 'rust', 'cpp', 'lua']
+    "   let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'youcompleteme', 'programming', 'python', 'javascript', 'typescript', 'html', 'css', 'misc', 'go', 'rust', 'cpp', 'lua']
 
     " Color Theme
     "   let g:evervim_color_theme="dracula"
