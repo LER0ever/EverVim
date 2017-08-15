@@ -1,6 +1,6 @@
 " EverVim Python Bundles
 " Pick either python-mode or pyflakes & pydoc
-Plug 'python-mode/python-mode'
+Plug 'python-mode/python-mode', {'branch': 'develop'}
 Plug 'yssource/python.vim'
 "Plug 'python_match.vim' " no longer use vim-scripts
 Plug 'vim-scripts/python_match.vim'
