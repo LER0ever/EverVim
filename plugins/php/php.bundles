@@ -1,4 +1,10 @@
 " EverVim PHP Bundles
-Plug 'spf13/PIV'
 Plug 'arnaud-lb/vim-php-namespace'
-Plug 'beyondwords/vim-twig'
+Plug '2072/PHP-Indenting-for-VIm'
+Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+Plug 'StanAngeloff/php.vim'
+Plug 'tobyS/pdv'
+
+" Outdate Plugins:
+" Plug 'beyondwords/vim-twig'
+" Plug 'spf13/PIV'
