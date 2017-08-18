@@ -8,7 +8,8 @@ if count(g:evervim_bundle_groups, 'go')
     let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
     let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
     au FileType go nmap <Leader>ls <Plug>(go-implements)
-    au FileType go nmap <Leader>li <Plug>(go-info)
+    au FileType go nmap <Leader>ln <Plug>(go-info)
+    au FileType go nmap <Leader>li <Plug>(go-install)
     au FileType go nmap <Leader>le <Plug>(go-rename)
     au FileType go nmap <leader>lr <Plug>(go-run)
     au FileType go nmap <leader>lb <Plug>(go-build)
