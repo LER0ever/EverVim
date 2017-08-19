@@ -151,7 +151,13 @@ else
 endif
 
 " Helper for saving file
-map <C-s> :w<CR>
+noremap <C-S> :update<CR>
+vnoremap <C-S> <C-C>:update<CR>
+inoremap <C-S> <C-O>:update<CR>
+
+" Helper for sync scrolling and Diffing
+noremap <Leader>wv :set scb<CR> " Mark current buffer for syncing view
+noremap <Leader>wd :diffthis<CR> " Mark current buffer for diffing
 
 " Find merge conflict markers
 noremap <SID>FindMergeConflictMarker /\v^[<\|=>]{7}( .*\|$)<CR>
