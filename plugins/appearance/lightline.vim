@@ -1,5 +1,5 @@
 if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
-    if !exists('g:evervim_airline_theme')
+    if !exists('g:evervim_airline_theme') || g:evervim_airline_theme == "dracula"
         let g:lightline_theme = 'Dracula'
     else
         let g:lightline_theme = g:evervim_airline_theme

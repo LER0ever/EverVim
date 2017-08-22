@@ -1,12 +1,5 @@
 " GUI Settings {
 
-    if !exists('g:evervim_font')
-        let g:evervim_font = WINDOWS() ? (NVIM() ? "Knack NF" : "Knack_NF") : "Knack Nerd Font"
-    endif
-    if !exists('g:evervim_font_size')
-        let g:evervim_font_size = WINDOWS() ? "11" : "12"
-    endif
-
     " GVIM (here instead of .gvimrc)
     if has('gui_running')
         set guioptions-=T           " Remove the toolbar

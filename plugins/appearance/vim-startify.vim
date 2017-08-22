@@ -71,6 +71,10 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
     let startify_icon_github = s:tic('')
     let startify_icon_key = s:tic('')
     let startify_icon_watch = s:tic('')
+    let startify_icon_color = s:tic('')
+    let startify_icon_airline = s:tic('')
+    let startify_icon_font = s:tic('')
+    let startify_icon_fontsize = s:tic('')
 
     let startify_vim_version = ""
     let startify_platform_string = PLATFORM_ICON_STRING()
@@ -109,8 +113,10 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
                 \'     ||-----------------------------------------------------------------------||',
                 \'     ' . s:boxed_header(startify_vim_version . " " . startify_vim_components),
                 \'     ' . s:boxed_header(startify_platform_string),
-                \'     ' . s:boxed_header(startify_evervim_lastupdated . ' | ' . startify_icon_watch . ' Now: ' . strftime("%y/%m/%d %H:%M", localtime())),
+                \'     ' . s:boxed_header(startify_icon_color . " Color Scheme: " .g:evervim_color_theme . " | " . startify_icon_airline . " Airline Theme: " . g:evervim_airline_theme),
+                \'     ' . s:boxed_header(startify_icon_font . " Gui Font: " . g:evervim_font . " " . startify_icon_fontsize . " Size: " . g:evervim_font_size),
                 \'     ' . s:boxed_header(startify_icon_key . " Leader Key: `" . mapleader . "` | Leader Guide: <Space>"),
+                \'     ' . s:boxed_header(startify_evervim_lastupdated . ' | ' . startify_icon_watch . ' Now: ' . strftime("%y/%m/%d %H:%M", localtime())),
                 \'     ||=======================================================================||']
     let g:startify_files_number = 5
     let g:startify_list_order = [

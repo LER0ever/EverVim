@@ -4,9 +4,22 @@ if !exists('g:evervim_color_theme') && filereadable(expand("~/.vim/bundle/vim/co
     "let g:solarized_termtrans=1
     "let g:solarized_contrast="normal"
     "let g:solarized_visibility="normal"
-    color dracula             " Load a colorscheme
-else
-    execute 'color ' . g:evervim_color_theme
+    let g:evervim_color_theme = "dracula"
+endif
+
+if !exists('g:evervim_airline_theme')
+    " Default to dracula, "Dracula" for lightline.
+    let g:evervim_airline_theme = "dracula"
+endif
+
+execute 'color ' . g:evervim_color_theme
+
+" Default Font setting
+if !exists('g:evervim_font')
+    let g:evervim_font = WINDOWS() ? (NVIM() ? "Knack NF" : "Knack_NF") : "Knack Nerd Font"
+endif
+if !exists('g:evervim_font_size')
+    let g:evervim_font_size = WINDOWS() ? "11" : "12"
 endif
 
 set tabpagemax=15                                      " Only show 15 tabs
