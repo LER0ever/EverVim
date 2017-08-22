@@ -6,6 +6,7 @@ if isdirectory(expand('~/.vim/bundle/vim-leader-guide'))
                 \           '.': { 'name': 'Current Buffer' }
                 \       },
                 \       ',': ['call feedkeys("\<Plug>(easymotion-prefix)")', 'EasyMotion Prefix'],
+                \       '<C-I>': ['call UltiSnips#ExpandSnippets()', 'Expand Snippets'],
                 \       'a': { 'name' : 'Tabularize' },
                 \       'b': { 'name' : 'Buffer/Bookmark' },
                 \       'c': { 'name' : 'Comments' },
