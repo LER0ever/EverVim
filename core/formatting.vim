@@ -23,6 +23,7 @@ autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,pe
 "autocmd FileType go autocmd BufWritePre <buffer> Fmt
 autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
 autocmd BufNewFile,BufRead *.lumos set filetype=html
+autocmd BufNewFile,BufRead *.csv,*.dat set filetype=csv
 autocmd FileType haskell,puppet,ruby,yml setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType html,xml setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType typescript setlocal expandtab shiftwidth=4 softtabstop=4
