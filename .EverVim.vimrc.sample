@@ -38,9 +38,6 @@
     "   let g:header_field_author = 'YOUR_NAME'
     "   let g:header_field_author_email = 'YOUR_EMAIL_ADDRESS'
 
-    " Disable views
-    "   let g:evervim_no_views = 1
-
     " Leader keys
     "   let g:evervim_leader='\'
     "   let g:evervim_localleader='_'

@@ -42,9 +42,6 @@ if !exists('g:evervim_use_indentguides')
 else
     Plug 'nathanaelkane/vim-indent-guides'
 endif
-if !exists('g:evervim_no_views')
-    Plug 'vim-scripts/restore_view.vim'
-endif
 if !exists('g:evervim_no_restore_cursor')
     Plug 'farmergreg/vim-lastplace'
 endif

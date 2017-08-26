@@ -1,7 +1,7 @@
 " General
 let g:vimrc_author='LER0ever'
 let g:vimrc_email='etasry@gmail.com'
-let g:vimrc_homepage='http://yirong.ml'
+let g:vimrc_homepage='https://yirong.ml'
 
 set background=dark         " Assume a dark background
 
@@ -77,15 +77,5 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
         set undofile                " So is persistent undo ...
         set undolevels=1000         " Maximum number of changes that can be undone
         set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
-    endif
-
-    " To disable views add the following to your .vimrc.before.local file:
-    "   let g:evervim_no_views = 1
-    if !exists('g:evervim_no_views')
-        " Add exclusions to mkview and loadview
-        " eg: *.*, svn-commit.tmp
-        let g:skipview_files = [
-            \ '\[example pattern\]'
-            \ ]
     endif
 " }
