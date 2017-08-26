@@ -3,6 +3,8 @@ Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'
 Plug 'briancollins/vim-jst'
 Plug 'kchmck/vim-coffee-script'
+Plug 'mxw/vim-jsx'
+Plug 'posva/vim-vue'
 if executable('flow')
     Plug 'flowtype/vim-flow'
 endif

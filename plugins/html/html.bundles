@@ -1,8 +1,5 @@
 " EverVim HTML Bundles
 Plug 'alvan/vim-closetag'
-Plug 'hail2u/vim-css3-syntax'
 Plug 'tpope/vim-haml'
-Plug 'wavded/vim-stylus'
-Plug 'posva/vim-vue'
 Plug 'mattn/emmet-vim'
 Plug 'digitaltoad/vim-pug'
