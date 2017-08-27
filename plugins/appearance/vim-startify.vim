@@ -97,7 +97,8 @@ if isdirectory(expand("~/.vim/bundle/vim-startify"))
         let startify_vim_version = startify_icon_vim . " Vim " . substitute(v:version, '[\0]', '.', '')
     endif
 
-    highlight StartifyHeader ctermfg=120 guifg=#87ff87
+    "highlight StartifyHeader ctermfg=120 guifg=#87ff87
+    hi link StartifyHeader Function
     let g:startify_custom_header = [
                 \' _______   ___      ___ _______   ________  ___      ___ ___  _____ ______      ',
                 \'|\  ___ \ |\  \    /  /|\  ___ \ |\   __  \|\  \    /  /|\  \|\   _ \  _   \    ',
