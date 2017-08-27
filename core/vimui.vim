@@ -12,6 +12,12 @@ if !exists('g:evervim_airline_theme')
     let g:evervim_airline_theme = "dracula"
 endif
 
+if !exists('g:evervim_light_background')
+    set background=dark     " Assume a dark background
+else
+    set background=light
+endif
+
 execute 'color ' . g:evervim_color_theme
 
 " Default Font setting

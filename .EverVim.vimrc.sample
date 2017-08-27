@@ -17,6 +17,7 @@
     " Use :Colors for a list of available colorschemes
     "   let g:evervim_color_theme="dracula"
     "   let g:evervim_airline_theme="dracula"
+    "   let g:evervim_light_background = 1
 
     " Customize Patched Font
     " Pick one at https://github.com/ryanoasis/nerd-fonts
