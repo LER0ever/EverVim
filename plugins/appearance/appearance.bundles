@@ -1,17 +1,21 @@
 " EverVim Appearance Bundles
-Plug 'altercation/vim-colors-solarized'
-Plug 'spf13/vim-colors'
-Plug 'flazz/vim-colorschemes'
-Plug 'joshdick/onedark.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 if !TERMUX() && !exists('g:evervim_no_patched_fonts')
     Plug 'ryanoasis/vim-devicons'
 endif
-if exists('g:evervim_use_airline')
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-else
+if exists('g:evervim_use_lightline')
     Plug 'itchyny/lightline.vim'
     Plug 'taohex/lightline-buffer'
+else
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 endif
 Plug 'mhinz/vim-startify'
+
+" Additional Color Schemes
+Plug 'tomasiser/vim-code-dark'
+Plug 'altercation/vim-colors-solarized'
+Plug 'spf13/vim-colors'
+Plug 'flazz/vim-colorschemes'
+Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'

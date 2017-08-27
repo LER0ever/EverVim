@@ -14,6 +14,7 @@
     "   let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'youcompleteme', 'programming', 'python', 'javascript', 'typescript', 'html', 'css', 'misc', 'go', 'rust', 'cpp', 'lua']
 
     " Color Theme
+    " Use :Colors for a list of available colorschemes
     "   let g:evervim_color_theme="dracula"
     "   let g:evervim_airline_theme="dracula"
 
@@ -30,9 +31,9 @@
     " May cause airline to misbehave
     "   let g:evervim_autochdir = 1
 
-    " Default statusline is lightline.vim
-    " You can change to the popular vim-airline by uncomment the following
-    "   let g:evervim_use_airline = 1
+    " Default statusline is vim-airline
+    " You can change to the more configurable lightline.vim by uncomment the following
+    "   let g:evervim_use_lightline = 1
 
     " Header constants for generating and updating the comment header
     "   let g:header_field_author = 'YOUR_NAME'

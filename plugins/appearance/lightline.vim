@@ -90,19 +90,19 @@ if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
     endif
 
     function! DeviconsFileType()
-	if !exists('g:evervim_no_patched_fonts')
+        if !exists('g:evervim_no_patched_fonts')
             return winwidth(0) > 65 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-	else
-	    return winwidth(0) > 65 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
-	endif
+        else
+            return winwidth(0) > 65 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
+        endif
     endfunction
 
     function! DeviconsFileFormat()
-	if !exists('g:evervim_no_patched_fonts')
-	    return winwidth(0) > 75 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
-	else
-	    return winwidth(0) > 75 ? &fileformat : ''
-	endif
+        if !exists('g:evervim_no_patched_fonts')
+            return winwidth(0) > 75 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+        else
+            return winwidth(0) > 75 ? &fileformat : ''
+        endif
     endfunction
 
     " Functions from lightline author
