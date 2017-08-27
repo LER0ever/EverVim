@@ -16,7 +16,13 @@ if isdirectory(expand("~/.vim/bundle/vim-airline-themes/"))
     "let g:airline#extensions#bufferline#enabled = 1
     if !exists('g:evervim_no_patched_fonts')
         " Use the default set of separators with a few customizations
-        let g:airline_left_sep=''  " Slightly fancier than '>'
-        let g:airline_right_sep='' " Slightly fancier than '<'
+        let g:airline_left_sep=''
+        let g:airline_left_alt_sep=''
+        let g:airline_right_sep=''
+        let g:airline_right_alt_sep=''
+        let g:airline#extensions#tabline#left_sep = ""
+        let g:airline#extensions#tabline#left_alt_sep = ''
+        let g:airline#extensions#tabline#right_sep = ""
+        let g:airline#extensions#tabline#right_alt_sep = ''
     endif
 endif
