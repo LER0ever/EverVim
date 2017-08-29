@@ -20,6 +20,7 @@ Plug 'luochen1990/rainbow'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
 Plug 'cohama/agit.vim'
+Plug 'mhinz/vim-signify'
 if executable('ctags')
     Plug 'majutsushi/tagbar'
 endif

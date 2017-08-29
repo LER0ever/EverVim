@@ -48,7 +48,6 @@ endif
 if exists('g:evervim_smooth_scrolling')
     Plug 'yuttie/comfortable-motion.vim'
 endif
-Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-abolish'
 Plug 'jamessan/vim-gnupg'
 Plug 'osyo-manga/vim-over'
