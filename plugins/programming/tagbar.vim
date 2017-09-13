@@ -48,6 +48,16 @@ if isdirectory(expand("~/.vim/bundle/tagbar/"))
                 \ ]
                 \ }
 
+    " Basic R Tags
+    let g:tagbar_type_r = {
+                \ 'ctagstype' : 'r',
+                \ 'kinds'     : [
+                \ 'f:Functions',
+                \ 'g:GlobalVariables',
+                \ 'v:FunctionVariables',
+                \ ]
+                \ }
+
     " TXT Novel tags for English and Chinese
     let g:tagbar_type_text = {
                 \ 'ctagstype': 'text',
