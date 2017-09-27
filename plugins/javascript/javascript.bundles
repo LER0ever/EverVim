@@ -5,6 +5,7 @@ Plug 'briancollins/vim-jst'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mxw/vim-jsx'
 Plug 'posva/vim-vue'
+Plug 'ElmCast/elm-vim'
 if executable('flow')
     Plug 'flowtype/vim-flow'
 endif
