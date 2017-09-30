@@ -1,4 +1,4 @@
-if isdirectory(expand("~/.vim/bundle/vim-autoformat"))
+if isdirectory(expand(EverVimBundleDir("vim-autoformat")))
     noremap <Leader>fm :Autoformat<CR>
     if !exists('g:evervim_no_autoformat')
         au BufWrite *.c,*.cpp,*.h,*.hpp,*.cxx :Autoformat

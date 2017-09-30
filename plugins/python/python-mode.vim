@@ -2,7 +2,7 @@ if !has('python') && !has('python3')
     let g:pymode = 0
 endif
 
-if isdirectory(expand("~/.vim/bundle/python-mode"))
+if isdirectory(expand(EverVimBundleDir("python-mode")))
     let g:pymode_python = 'python3'
     let g:pymode_trim_whitespaces = 0
     let g:pymode_options = 0

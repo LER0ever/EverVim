@@ -18,7 +18,7 @@ Plug 'junegunn/fzf.vim'
 endif
 
 Plug 'dyng/ctrlsf.vim'
-Plug 'hecal3/vim-leader-guide', {'do' : ':call DeleteLinesInFile(\"~/.vim/bundle/vim-leader-guide/autoload/leaderGuide.vim\", \"statusline=\")'}
+Plug 'hecal3/vim-leader-guide', {'do' : ':call DeleteLinesInFile(EverVimBundleDir(\"vim-leader-guide/autoload/leaderGuide.vim\"), \"statusline=\")'}
 if !NVIM() && !WINDOWS()
     Plug 'Shougo/vimproc.vim', {'do' : 'make'}
     Plug 'Shougo/vimshell.vim'

@@ -1,4 +1,4 @@
-if isdirectory(expand('~/.vim/bundle/vim-php-namespace'))
+if isdirectory(expand(EverVimBundleDir('vim-php-namespace')))
     " Automatic insert use according to source code
     function! IPhpInsertUse()
         call PhpInsertUse()

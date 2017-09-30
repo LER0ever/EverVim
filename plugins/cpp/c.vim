@@ -1,3 +1,4 @@
-if isdirectory(expand('~/.vim/bundle/c.vim'))
+if isdirectory(expand(EverVimBundleDir('c.vim')))
     let g:C_MapLeader = '\'
 endif
+

@@ -1,4 +1,4 @@
-if isdirectory(expand('~/.vim/bundle/vim-leader-guide'))
+if isdirectory(expand(EverVimBundleDir('vim-leader-guide')))
     let g:vim_leader_guide_map = {
                 \   mapleader: {
                 \       'name': '<leader>',

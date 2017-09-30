@@ -2,6 +2,7 @@
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 " Source support_function.vim to support vim-snippets.
-if filereadable(expand("~/.vim/bundle/vim-snippets/snippets/support_functions.vim"))
-    source ~/.vim/bundle/vim-snippets/snippets/support_functions.vim
+if filereadable(expand($evervim_root . "/bundle/vim-snippets/snippets/support_functions.vim"))
+    source $evervim_root/bundle/vim-snippets/snippets/support_functions.vim
 endif
+

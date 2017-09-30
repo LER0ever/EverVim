@@ -5,7 +5,7 @@
 
 " See `:echo g:airline_theme_map` for some more choices
 " Default in terminal vim is 'dark'
-if isdirectory(expand("~/.vim/bundle/vim-airline-themes/"))
+if isdirectory(expand(EverVimBundleDir("vim-airline-themes")))
     set laststatus=2
     if !exists('g:evervim_airline_theme')
         let g:airline_theme = 'dracula' " 'molokai' 'solarized'

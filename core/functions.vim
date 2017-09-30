@@ -122,6 +122,10 @@ function! DeleteLinesInFile(file, regexmatch)
     execute 'args ' . a:file . ' | argdo g/' . a:regexmatch . '/d | argdo wq'
 endfunction
 
+function! EverVimBundleDir(bundlename)
+    return $evervim_root . "/bundle/" . a:bundlename
+endfunction
+
 function! EverVimUpdateConfig()
     if WINDOWS()
         execute '!git -C \%USERPROFILE\%/.EverVim pull'

@@ -1,4 +1,4 @@
-if isdirectory(expand('~/.vim/bundle/vim-localvimrc'))
+if isdirectory(expand(EverVimBundleDir('vim-localvimrc')))
     let g:localvimrc_name = [
                 \".EverVim.project",
                 \".EverVim.Project",

@@ -7,7 +7,7 @@
 " }
 
 " Setup Vim-Plug Support {
-    call plug#begin('~/.vim/bundle')
+    call plug#begin(EverVimBundleDir(''))
 " }
 
 " Bundles {

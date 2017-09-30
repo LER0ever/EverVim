@@ -1,4 +1,4 @@
-if isdirectory(expand('~/.vim/bundle/ultisnips'))
+if isdirectory(expand(EverVimBundleDir('ultisnips')))
     let g:UltiSnipsEditSplit="vertical"
 
     " remap Ultisnips for compatibility for YCM

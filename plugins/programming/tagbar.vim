@@ -1,4 +1,4 @@
-if isdirectory(expand("~/.vim/bundle/tagbar/"))
+if isdirectory(expand(EverVimBundleDir("tagbar")))
     nnoremap <leader>tt :TagbarToggle<CR>
     let g:tagbar_width = 30
 

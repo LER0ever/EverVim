@@ -1,4 +1,4 @@
-if isdirectory(expand('~/.vim/bundle/fzf.vim'))
+if isdirectory(expand(EverVimBundleDir('fzf.vim')))
 
     " fzf drop down
     let g:fzf_layout = { 'down': '~40%' }
@@ -28,7 +28,7 @@ if isdirectory(expand('~/.vim/bundle/fzf.vim'))
 
     nmap <Leader>z <Leader>.
 
-    if isdirectory(expand('~/.vim/bundle/lightline.vim'))
+    if isdirectory(expand(EverVimBundleDir('lightline.vim')))
         autocmd! User FzfStatusLine call lightline#update_once()
     endif
 

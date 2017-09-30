@@ -1,4 +1,4 @@
-if isdirectory(expand("~/.vim/bundle/vim-startify"))
+if isdirectory(expand(EverVimBundleDir("vim-startify")))
     function! PLATFORM_ICON_STRING()
         let platform_icon = ""
         let platform_string = ""

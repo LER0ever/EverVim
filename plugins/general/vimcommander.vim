@@ -1,3 +1,4 @@
-if isdirectory(expand("~/.vim/bundle/vimcommander"))
+if isdirectory(expand(EverVimBundleDir("vimcommander")))
     noremap <silent> <Leader>vc :cal VimCommanderToggle()<CR>
 endif
+

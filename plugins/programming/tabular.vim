@@ -1,4 +1,4 @@
-if isdirectory(expand("~/.vim/bundle/tabular"))
+if isdirectory(expand(EverVimBundleDir("tabular")))
     nmap <Leader>a& :Tabularize /&<CR>
     vmap <Leader>a& :T, { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }abularize /&<CR>
     nmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>

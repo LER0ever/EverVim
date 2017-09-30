@@ -1,5 +1,5 @@
 " Vim UI
-if !exists('g:evervim_color_theme') && filereadable(expand("~/.vim/bundle/vim/colors/dracula.vim"))
+if !exists('g:evervim_color_theme') && filereadable(expand(EverVimBundleDir("vim/colors/dracula.vim")))
     "let g:solarized_termcolors=256
     "let g:solarized_termtrans=1
     "let g:solarized_contrast="normal"

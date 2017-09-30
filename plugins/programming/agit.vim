@@ -1,4 +1,4 @@
-if isdirectory(expand('~/.vim/bundle/agit.vim'))
+if isdirectory(expand(EverVimBundleDir('agit.vim')))
     nnoremap <Leader>ga :Agit<CR>
 
     let g:agit_max_log_lines = 1000

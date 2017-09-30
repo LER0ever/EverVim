@@ -1,4 +1,4 @@
-if isdirectory(expand("~/.vim/bundle/neoformat"))
+if isdirectory(expand(EverVimBundleDir("neoformat")))
     noremap <Leader>fm :Neoformat<CR>
     if !exists('g:evervim_no_autoformat')
         augroup neofmt

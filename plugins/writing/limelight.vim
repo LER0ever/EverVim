@@ -1,4 +1,4 @@
-if isdirectory(expand('~/.vim/bundle/limelight.vim'))
+if isdirectory(expand(EverVimBundleDir('limelight.vim')))
     let g:limelight_default_coefficient = 0.7
     let g:limelight_paragraph_span = 0
     let g:limelight_priority = -1

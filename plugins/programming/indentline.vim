@@ -1,4 +1,4 @@
-if isdirectory(expand("~/.vim/bundle/indentLine/"))
+if isdirectory(expand(EverVimBundleDir("indentLine")))
     " Vim
     let g:indentLine_color_term = 156
 

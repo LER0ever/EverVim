@@ -1,4 +1,4 @@
-if isdirectory(expand("~/.vim/bundle/vimwiki"))
+if isdirectory(expand(EverVimBundleDir("vimwiki")))
     let g:vimwiki_folding = 'syntax'
     nmap <Leader>vww <Plug>VimwikiIndex
     nmap <Leader>vwti <Plug>VimwikiTabIndex

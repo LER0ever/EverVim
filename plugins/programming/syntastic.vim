@@ -1,4 +1,4 @@
-if isdirectory(expand('~/.vim/bundle/syntastic'))
+if isdirectory(expand(EverVimBundleDir('syntastic')))
     set statusline+=%#warningmsg#
     set statusline+=%{SyntasticStatuslineFlag()}
     set statusline+=%*

@@ -1,4 +1,4 @@
-if isdirectory(expand("~/.vim/bundle/nerdtree"))
+if isdirectory(expand(EverVimBundleDir("nerdtree")))
     let g:NERDShutUp=1
     " map <C-e> <plug>NERDTreeTabsToggle<CR>
     map <F3> :NERDTreeToggle<CR>

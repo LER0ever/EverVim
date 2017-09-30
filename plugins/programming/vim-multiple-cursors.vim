@@ -1,4 +1,4 @@
-if isdirectory(expand('~/.vim/bundle/vim-multiple-cursors'))
+if isdirectory(expand(EverVimBundleDir('vim-multiple-cursors')))
     let g:multi_cursor_use_default_mapping=0
     let g:multi_cursor_next_key='<C-n>'
     let g:multi_cursor_prev_key='<C-p>'

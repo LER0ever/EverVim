@@ -1,4 +1,4 @@
-if isdirectory(expand("~/.vim/bundle/vim-bookmarks"))
+if isdirectory(expand(EverVimBundleDir("vim-bookmarks")))
     let g:bookmark_no_default_key_mappings = 1
     let g:bookmark_highlight_lines=1
     let g:bookmark_manage_per_buffer = 1

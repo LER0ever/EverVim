@@ -1,4 +1,4 @@
-if isdirectory(expand("~/.vim/bundle/lightline.vim/"))
+if isdirectory(expand(EverVimBundleDir("lightline.vim")))
     if !exists('g:evervim_airline_theme') || g:evervim_airline_theme == "dracula"
         let g:lightline_theme = 'Dracula'
     else
