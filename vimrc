@@ -7,7 +7,9 @@
 " }
 
 " EverVim Configuration Root Directory
-let $evervim_root = "~/.EverVim"
+if empty($evervim_root)
+    let $evervim_root = "~/.EverVim"
+endif
 
 " Core Config
 source $evervim_root/core/core.vim
