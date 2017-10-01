@@ -1,4 +1,4 @@
-if isdirectory(expand('~/.vim/vim-javacomplete2'))
+if isdirectory(expand(EverVimBundleDir('vim-javacomplete2')))
     autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
     " Keymaps for java complete
