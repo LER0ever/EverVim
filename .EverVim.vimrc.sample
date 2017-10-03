@@ -46,8 +46,14 @@
 
     " Restore cursor
     " Automatically restore your cursor to the place you left
-    " Disable by uncomment the following line.
+    " Disable by uncommenting the following line.
     "   let g:evervim_no_restore_cursor = 1
+
+    " Linting engine
+    " Use ALE by default. But if you are using an older version
+    " of vim or experiencing issues with ALE, you can switch to
+    " Syntastic by uncommenting the following line
+    "   let g:evervim_use_syntastic = 1
 
     " Fuzzy Finder
     " By default, CtrlP is used on Windows and FZF.vim on Unix
@@ -99,31 +105,22 @@
     " Don't turn conceallevel or concealcursor
     "   let g:evervim_no_conceal = 1
 
-    " For some colorschemes, autocolor will not work (eg: 'desert', 'ir_black')
-    " Indent guides will attempt to set your colors smartly. If you
-    " want to control them yourself, do it here.
-    "   let g:indent_guides_auto_colors = 0
-    "   autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#212121 ctermbg=233
-    "   autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#404040 ctermbg=234
-
-    " Leave the default font and size in GVim
-    " To set your own font, do it from ~/.vimrc.local
-    "   let g:evervim_no_big_font = 1
-
     " Disable  omni complete
     "   let g:evervim_no_omni_complete = 1
 
     " Prefer indentguides
     "   let g:evervim_use_indentguides = 1
 
-    " Prefer Neoformat
+    " Prefer Neoformat over vim-autoformat
     "   let g:evervim_use_neoformat = 1
 
-    " Disable autoformat
+    " Disable autoformat on write
     " You can still use <Leader>fm to manually format the file
     "   let g:evervim_no_autoformat = 1
 
     " Hybrid Linenumber
+    " Show absolute line number for current line and relative
+    " for the rest
     "   let g:evervim_hybrid_linenumber = 1
 
     " 80 Column Warning
@@ -141,7 +138,7 @@
     "   let g:multi_cursor_start_key='+'
 
     " Mappings for editing/applying evervim config
-    "   let g:evervim_edit_config_mapping='<leader>ev'
-    "   let g:evervim_apply_config_mapping='<leader>sv'
+    "   let g:evervim_edit_config_mapping='<leader>ec'
+    "   let g:evervim_apply_config_mapping='<leader>ac'
 " }
 
