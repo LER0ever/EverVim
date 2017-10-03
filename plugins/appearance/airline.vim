@@ -1,4 +1,4 @@
-if isdirectory(expand(EverVimBundleDir("vim-airline-themes")))
+if isdirectory(expand(EverVimBundleDir("vim-airline")))
     set laststatus=2
     if !exists('g:evervim_airline_theme')
         let g:airline_theme = 'dracula' " 'molokai' 'solarized'
