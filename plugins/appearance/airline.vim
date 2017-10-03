@@ -1,10 +1,3 @@
-" Set configuration options for the statusline plugin vim-airline.
-" Use the powerline theme and optionally enable powerline symbols.
-" If the symbols do not render for you then install a
-" powerline enabled font.
-
-" See `:echo g:airline_theme_map` for some more choices
-" Default in terminal vim is 'dark'
 if isdirectory(expand(EverVimBundleDir("vim-airline-themes")))
     set laststatus=2
     if !exists('g:evervim_airline_theme')
