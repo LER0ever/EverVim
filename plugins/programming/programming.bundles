@@ -1,6 +1,10 @@
 " EverVim Programming Bundles
-" Pick one of the checksyntax, jslint, or syntastic
-Plug 'vim-syntastic/syntastic'
+" Pick ALE by default, and fall back to syntastic
+if !exists('g:evervim_use_syntastic')
+    Plug 'w0rp/ale'
+else
+    Plug 'vim-syntastic/syntastic'
+endif
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 " Plug 'sheerun/vim-polyglot' " disabled by default, conflicts
