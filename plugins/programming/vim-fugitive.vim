@@ -11,5 +11,6 @@ if isdirectory(expand(EverVimBundleDir("vim-fugitive")))
     " Mnemonic _i_nteractive
     nnoremap <silent> <leader>gi :Git add -p %<CR>
     nnoremap <silent> <leader>gg :SignifyToggle<CR>
+    nnoremap <silent> <leader>gu :Gpull --rebase<CR>
     set statusline+=%{fugitive#statusline()} " Git Hotness
 endif
