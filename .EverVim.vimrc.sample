@@ -40,6 +40,10 @@
     "   let g:header_field_author = 'YOUR_NAME'
     "   let g:header_field_author_email = 'YOUR_EMAIL_ADDRESS'
 
+    " Startup Screen
+    " You can customize the welcome message by changing the following line
+    "   let g:evervim_welcome_message = "Code your life with EverVim!"
+
     " Leader keys
     "   let g:evervim_leader='\'
     "   let g:evervim_localleader='_'

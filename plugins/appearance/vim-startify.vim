@@ -111,14 +111,23 @@ if isdirectory(expand(EverVimBundleDir("vim-startify")))
                 \'     ' . s:boxed_header(startify_icon_vulkan . ' Welcome to EverVim. The Ultimate Vim Distribution for everyone.'),
                 \'     ' . s:boxed_header(startify_icon_love . ' Made with <3 by LER0ever | ' . startify_icon_link . ' Freenode IRC: #EverVim'),
                 \'     ' . s:boxed_header(startify_icon_github . ' Github Repository: https://github.com/LER0ever/EverVim'),
-                \'     ||-----------------------------------------------------------------------||',
-                \'     ' . s:boxed_header(startify_vim_version . " " . startify_vim_components),
-                \'     ' . s:boxed_header(startify_platform_string),
-                \'     ' . s:boxed_header(startify_icon_color . " Color Scheme: " .g:evervim_color_theme . " | " . startify_icon_airline . " Airline Theme: " . g:evervim_airline_theme),
-                \'     ' . s:boxed_header(startify_icon_font . " Gui Font: " . g:evervim_font . " | " . startify_icon_fontsize . " Size: " . g:evervim_font_size),
-                \'     ' . s:boxed_header(startify_icon_key . " Leader Key: `" . mapleader . "` | Leader Guide: <Space>"),
-                \'     ' . s:boxed_header(startify_evervim_lastupdated . ' | ' . startify_icon_watch . ' Now: ' . strftime("%y/%m/%d %H:%M", localtime())),
-                \'     ||=======================================================================||']
+                \'     ||-----------------------------------------------------------------------||']
+
+    if exists('g:evervim_welcome_message')
+        let g:startify_custom_header = g:startify_custom_header + [
+                    \'     ' . s:boxed_header(g:evervim_welcome_message),
+                    \'     ||-----------------------------------------------------------------------||']
+    endif
+    if !exists('g:evervim_no_startify_detail')
+        let g:startify_custom_header = g:startify_custom_header + [
+                    \'     ' . s:boxed_header(startify_vim_version . " " . startify_vim_components),
+                    \'     ' . s:boxed_header(startify_platform_string),
+                    \'     ' . s:boxed_header(startify_icon_color . " Color Scheme: " .g:evervim_color_theme . " | " . startify_icon_airline . " Airline Theme: " . g:evervim_airline_theme),
+                    \'     ' . s:boxed_header(startify_icon_font . " Gui Font: " . g:evervim_font . " | " . startify_icon_fontsize . " Size: " . g:evervim_font_size),
+                    \'     ' . s:boxed_header(startify_icon_key . " Leader Key: `" . mapleader . "` | Leader Guide: <Space>"),
+                    \'     ' . s:boxed_header(startify_evervim_lastupdated . ' | ' . startify_icon_watch . ' Now: ' . strftime("%y/%m/%d %H:%M", localtime())),
+                    \'     ||=======================================================================||']
+    endif
     let g:startify_files_number = 5
     let g:startify_list_order = [
                 \ ['   [MRU] Most Recently Used files:'],
