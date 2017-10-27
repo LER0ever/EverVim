@@ -1,2 +1,5 @@
 Plug 'kiith-sa/DSnips'
 Plug 'idanarye/vim-dutyl'
+if count(g:evervim_bundle_groups, 'deoplete')
+    Plug 'landaire/deoplete-d', { 'do': ':UpdateRemotePlugins' }
+endif
