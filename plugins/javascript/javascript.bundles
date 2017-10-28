@@ -9,3 +9,7 @@ Plug 'ElmCast/elm-vim'
 if executable('flow')
     Plug 'flowtype/vim-flow'
 endif
+
+if count(g:evervim_bundle_groups, 'deoplete')
+    Plug 'carlitux/deoplete-ternjs', { 'do': ':UpdateRemotePlugins' }
+endif

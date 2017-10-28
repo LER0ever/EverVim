@@ -5,3 +5,6 @@ Plug 'yssource/python.vim'
 "Plug 'python_match.vim' " no longer use vim-scripts
 Plug 'vim-scripts/python_match.vim'
 "Plug 'pythoncomplete' " use youcompleteme + jedi instead
+if count(g:evervim_bundle_groups, 'deoplete')
+    Plug 'zchee/deoplete-jedi', { 'do': ':UpdateRemotePlugins' }
+endif
