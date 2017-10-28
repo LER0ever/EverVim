@@ -7,7 +7,7 @@ Plug 'simeji/winresizer'
 Plug 'wesQ3/vim-windowswap'
 Plug 'Konfekt/FastFold'
 Plug 'rhysd/conflict-marker.vim'
-
+Plug 'romainl/vim-qf'
 " Fuzzy finder choice
 if exists('g:evervim_use_ctrlp') || WINDOWS()
 Plug 'ctrlpvim/ctrlp.vim'
