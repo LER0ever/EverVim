@@ -50,7 +50,6 @@ if exists('g:evervim_smooth_scrolling')
 endif
 Plug 'tpope/vim-abolish'
 Plug 'jamessan/vim-gnupg'
-Plug 'osyo-manga/vim-over'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-indent'
 Plug 'gcmt/wildfire.vim'

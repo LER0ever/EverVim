@@ -44,3 +44,4 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'} " needed by vim-vebugger
 Plug 'idanarye/vim-vebugger'
 Plug 'metakirby5/codi.vim'
 Plug 'alpertuna/vim-header'
+Plug 'sgur/vim-editorconfig'
