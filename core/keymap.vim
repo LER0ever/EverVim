@@ -41,10 +41,10 @@ execute "noremap " . s:evervim_apply_config_mapping . " :source ~/.EverVim/vimrc
 " .vimrc.before.local file:
 "   let g:evervim_easyWindows = 1
 if !exists('g:evervim_no_easyWindows')
-    map <C-J> <C-W>j<C-W>_
-    map <C-K> <C-W>k<C-W>_
-    map <C-L> <C-W>l<C-W>_
-    map <C-H> <C-W>h<C-W>_
+    map <C-J> <C-W>j
+    map <C-K> <C-W>k
+    map <C-L> <C-W>l
+    map <C-H> <C-W>h
     nnoremap <Leader>jh 1<C-W>w
     nnoremap <Leader>jl 1<C-W>b
 endif
