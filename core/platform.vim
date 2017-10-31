@@ -15,7 +15,7 @@ silent function! WSL()
     return LINUX() && system('uname -r') =~ 'Microsoft'
 endfunction
 silent function! CROS()
-    return LINUX() && (system('cat /proc/version') =~ 'cros' || system('ls /dev') =~ 'cros')
+    return LINUX() && (system('cat /proc/version') =~ 'chrome-bot')
 endfunction
 silent function! ANDROID()
     return isdirectory(expand('/system/priv-app'))
@@ -28,6 +28,7 @@ silent function! DISTRO()
 endfunction
 silent function! DISTROVERSION()
     return executable('dpkg') ? substitute(system('lsb_release -sd'), '[\n|\"]\+', '', 'g'):
+                \ CROS() ? substitute(system('lsb_release -sir'), '[\n|\"]\+', '', 'g') :
                 \ substitute(system('lsb_release -sdr'), '[\n|\"]\+', '', 'g')
 endfunction
 silent function! BSDDistro()
