@@ -5,7 +5,7 @@ if count(g:evervim_bundle_groups, 'youcompleteme')
     let g:ycm_collect_identifiers_from_tags_files = 1
 
     " load ycm global config
-    let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+    let g:ycm_global_ycm_extra_conf = $evervim_root . "/plugins/youcompleteme/ycm_global_conf.py"
 
     " YouCompleteMe keymap
     let g:ycm_key_detailed_diagnostics = '<leader>yd'
