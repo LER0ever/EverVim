@@ -1,6 +1,6 @@
 " EverVim Go Bundles
 "Plug 'Blackrush/vim-gocode'
-Plug 'fatih/vim-go', {'for': ['go', 'html', 'pts', 'nox']}
+Plug 'fatih/vim-go', {'for': ['go', 'html', 'gohtmltmpl', 'pts', 'nox']}
 if count(g:evervim_bundle_groups, 'deoplete')
     Plug 'zchee/deoplete-go', { 'do': ':UpdateRemotePlugins' }
 endif
