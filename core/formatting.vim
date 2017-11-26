@@ -26,7 +26,7 @@ autocmd BufNewFile,BufRead *.nox,*.pts set filetype=gohtmltmpl
 autocmd BufNewFile,BufRead *.amber set filetype=pug
 autocmd BufNewFile,BufRead *.csv,*.dat set filetype=csv
 autocmd FileType haskell,puppet,ruby,yml setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd FileType html,xml setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType html,xml,gohtmltmpl setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType typescript setlocal expandtab shiftwidth=4 softtabstop=4
 " preceding line best in a plugin but here for now.
 
