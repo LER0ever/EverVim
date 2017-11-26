@@ -45,8 +45,8 @@
     "   let g:evervim_welcome_message = "Code your life with EverVim!"
 
     " Leader keys
-    "   let g:evervim_leader='\'
-    "   let g:evervim_localleader='_'
+    "   let g:evervim_leader=','
+    "   let g:evervim_localleader='\\'
 
     " Restore cursor
     " Automatically restore your cursor to the place you left

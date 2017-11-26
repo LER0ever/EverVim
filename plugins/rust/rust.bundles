@@ -1,3 +1,6 @@
 " EverVim Rust Bundles
-Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
+Plug 'rust-lang/rust.vim', {'for': ['rust']}
+Plug 'racer-rust/vim-racer', {'for': ['rust']}
+if count(g:evervim_bundle_groups, 'deoplete')
+    Plug 'sebastianmarkow/deoplete-rust', { 'do': ':UpdateRemotePlugins', 'for': ['rist'] }
+endif
