@@ -1,7 +1,7 @@
 # EverVim: The Ultimate Vim Distribution
 ![EverVim](https://img.shields.io/badge/Coded%20with-EverVim-bd93f9.svg?style=flat-square)
 
-![evervim-header-1](https://i.imgur.com/RnmMrBQ.png "EverVim with VimR on macOS")
+![evervim-header-1](https://i.imgur.com/T0CBBbk.png "EverVim with VimR on macOS")
 ![evervim-header-2](https://i.imgur.com/BK4vSuP.png "EverVim with GVIM on Windows")
 
 * * *
