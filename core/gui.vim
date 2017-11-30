@@ -34,6 +34,10 @@
         call rpcnotify(1, 'Gui', 'Option', 'Tabline', 0)
     endif
 
+    if VIMR()
+        set termguicolors
+    endif
+
     if NVIM()
         let g:terminal_color_0 =  "#282a36"
         let g:terminal_color_1 =  "#ff5555"
