@@ -19,6 +19,7 @@ if isdirectory(expand(EverVimBundleDir('vim-leader-guide')))
                 \       'i': { 'name' : 'Alternate File Switch' },
                 \       'j': { 'name' : 'Jump' },
                 \       'l': { 'name' : 'Language Specific' },
+                \       'm': { 'name' : 'User-Defined Keymaps' },
                 \       'n': { 'name' : 'NerdTree' },
                 \       'o': { 'name' : 'Fold' },
                 \       'r': { 'name' : 'Resize/Rainbow' },
