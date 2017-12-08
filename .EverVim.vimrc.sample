@@ -131,6 +131,10 @@
     " Shows a magenta line at column 81 only for those lines that exceeds 80
     "   let g:evervim_80_column_warning = 1
 
+    " Minimap Support
+    " Shows a minimap on the right hand side, need has_python
+    "   let g:evervim_minimap
+
     " Don't create default mappings for multicursors
     " See :help multiple-cursors-mappings
     "   let g:multi_cursor_use_default_mapping=0

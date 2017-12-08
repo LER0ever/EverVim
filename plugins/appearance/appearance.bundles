@@ -12,6 +12,9 @@ Plug 'mhinz/vim-startify'
 if !TERMUX() && !exists('g:evervim_no_patched_fonts')
     Plug 'ryanoasis/vim-devicons'
 endif
+if exists('g:evervim_minimap')
+    Plug 'severin-lemaignan/vim-minimap'
+endif
 " Additional Color Schemes
 " Some of them are already included in the vim-colorscheme pack
 " But just missing the airline/lightline color
