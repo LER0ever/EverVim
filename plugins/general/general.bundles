@@ -2,6 +2,7 @@
 Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
 Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-repeat'
 Plug 'simeji/winresizer'
 Plug 't9md/vim-choosewin'
