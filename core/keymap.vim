@@ -10,7 +10,7 @@ else
     let mapleader=g:evervim_leader
 endif
 if !exists('g:evervim_localleader')
-    let maplocalleader = '_'
+    let maplocalleader = '\'
 else
     let maplocalleader=g:evervim_localleader
 endif
