@@ -1,8 +1,9 @@
 " EverVim Writing Bundles
 Plug 'plasticboy/vim-markdown' ", {'for': 'markdown'}
 Plug 'Rykka/riv.vim', {'for': 'rst'}
-Plug 'cespare/vim-toml'
 Plug 'vimwiki/vimwiki'
+Plug 'jceb/vim-orgmode'
+Plug 'cespare/vim-toml'
 Plug 'reedes/vim-litecorrect'
 Plug 'reedes/vim-textobj-sentence'
 Plug 'reedes/vim-textobj-quote'
