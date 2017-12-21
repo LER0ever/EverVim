@@ -1,0 +1,4 @@
+Plug 'JuliaEditorSupport/julia-vim'
+if count(g:evervim_bundle_groups, 'deoplete')
+    Plug 'JuliaEditorSupport/deoplete-julia'
+endif

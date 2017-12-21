@@ -11,5 +11,5 @@ if executable('flow')
 endif
 
 if count(g:evervim_bundle_groups, 'deoplete')
-    Plug 'carlitux/deoplete-ternjs', { 'do': ':UpdateRemotePlugins' }
+    Plug 'carlitux/deoplete-ternjs'
 endif

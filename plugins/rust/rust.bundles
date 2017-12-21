@@ -2,5 +2,5 @@
 Plug 'rust-lang/rust.vim', {'for': ['rust']}
 Plug 'racer-rust/vim-racer', {'for': ['rust']}
 if count(g:evervim_bundle_groups, 'deoplete')
-    Plug 'sebastianmarkow/deoplete-rust', { 'do': ':UpdateRemotePlugins', 'for': ['rust'] }
+    Plug 'sebastianmarkow/deoplete-rust', { 'for': ['rust'] }
 endif

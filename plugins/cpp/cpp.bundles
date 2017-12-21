@@ -4,5 +4,5 @@ Plug 'vim-scripts/c.vim'
 Plug 'vim-scripts/a.vim'
 Plug 'peterhoeg/vim-qml'
 if count(g:evervim_bundle_groups, 'deoplete')
-    Plug 'tweekmonster/deoplete-clang2', { 'do': ':UpdateRemotePlugins' }
+    Plug 'tweekmonster/deoplete-clang2'
 endif
