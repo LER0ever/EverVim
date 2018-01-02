@@ -29,6 +29,10 @@
         endif
     endif
 
+    if REMOTE()
+        set termguicolors " Useful when using Neovim Remote and nvim-qt remote mode
+    endif
+
     if NVIMGTK()
         call rpcnotify(1, 'Gui', 'Font', g:evervim_font . ' ' . g:evervim_font_size)
         call rpcnotify(1, 'Gui', 'Option', 'Tabline', 0)

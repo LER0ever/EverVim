@@ -77,3 +77,6 @@ endfunction
 silent function! TERMUX()
     return isdirectory(expand('/data/data/com.termux')) " #FIXME: Dirty judge
 endfunction
+silent function! REMOTE()
+    return NVIM() && (v:servername =~ "127.0.0.1" || v:servername =~ "0.0.0.0" || v:servername =~ "localhost")
+endfunction

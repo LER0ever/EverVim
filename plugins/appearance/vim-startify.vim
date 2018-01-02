@@ -75,6 +75,7 @@ if isdirectory(expand(EverVimBundleDir("vim-startify")))
     let startify_icon_airline = s:tic('')
     let startify_icon_font = s:tic('')
     let startify_icon_fontsize = s:tic('')
+    let startify_icon_server = s:tic('')
 
     let startify_vim_version = ""
     let startify_platform_string = PLATFORM_ICON_STRING()
@@ -125,7 +126,13 @@ if isdirectory(expand(EverVimBundleDir("vim-startify")))
                     \'     ' . s:boxed_header(startify_icon_color . " Color Scheme: " .g:evervim_color_theme . " | " . startify_icon_airline . " Airline Theme: " . g:evervim_airline_theme),
                     \'     ' . s:boxed_header(startify_icon_font . " Gui Font: " . g:evervim_font . " | " . startify_icon_fontsize . " Size: " . g:evervim_font_size),
                     \'     ' . s:boxed_header(startify_icon_key . " Leader Key: `" . mapleader . "` | Leader Guide: <Space>"),
-                    \'     ' . s:boxed_header(startify_evervim_lastupdated . ' | ' . startify_icon_watch . ' Now: ' . strftime("%y/%m/%d %H:%M", localtime())),
+                    \'     ' . s:boxed_header(startify_evervim_lastupdated . ' | ' . startify_icon_watch . ' Now: ' . strftime("%y/%m/%d %H:%M", localtime()))]
+        if (REMOTE())
+            let g:startify_custom_header = g:startify_custom_header + [
+                        \ '     ' . s:boxed_header(startify_icon_server . " NeoVim Remote Mode: " . v:servername)]
+        endif
+
+            let g:startify_custom_header = g:startify_custom_header + [
                     \'     ||=======================================================================||']
     endif
     let g:startify_files_number = 5
