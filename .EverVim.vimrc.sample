@@ -34,6 +34,10 @@
     " Simply uncomment the following line and add remove plugins in the
     " ~/.EverVim.bundles file using `Plug` and `UnPlug` commands
     "   let g:override_evervim_bundles = 1
+    "
+    " in ~/.EverVim.bundles,
+    "   Plug 'Someone/AwesomePlugin'
+    "   UnPlug 'Someone/PluginToDisable'
 
     " Automatically changing to open file directory
     " May cause airline to misbehave
