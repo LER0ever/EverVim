@@ -28,6 +28,13 @@
     " Disable Patched Font
     "   let g:evervim_no_patched_fonts = 1
 
+    " Override Bundle Configuration
+    " You can add additional plugins, or disable a set of plugins instead of
+    " adding/removing a whole bundle
+    " Simply uncomment the following line and add remove plugins in the
+    " ~/.EverVim.bundles file using `Plug` and `UnPlug` commands
+    "   let g:override_evervim_bundles = 1
+
     " Automatically changing to open file directory
     " May cause airline to misbehave
     "   let g:evervim_autochdir = 1
