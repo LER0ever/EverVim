@@ -22,18 +22,29 @@
         endif
     endif
 
-    if !exists('g:override_evervim_bundles')
-        for $bundle_group in g:evervim_bundle_groups
-            source $evervim_root/plugins/$bundle_group/$bundle_group.bundles
-        endfor
+    if exists('g:override_evervim_bundles')
+        " Disable a specific plugin
+        " https://github.com/junegunn/vim-plug/issues/469#issuecomment-226965736
+        function! s:evervim_disable_plugin(repo)
+          let repo = substitute(a:repo, '[\/]\+$', '', '')
+          let name = fnamemodify(repo, ':t:s?\.git$??')
+          call remove(g:plugs, name)
+          call remove(g:plugs_order, index(g:plugs_order, name))
+        endfunction
+
+        command! -nargs=1 -bar UnPlug call s:evervim_disable_plugin(<args>)
     endif
+
+    for $bundle_group in g:evervim_bundle_groups
+        source $evervim_root/plugins/$bundle_group/$bundle_group.bundles
+    endfor
 
     " Run PlugInstall if bundle does not exists
     autocmd VimEnter * call EverVimInitPlugins()
 " }
 
 " Use local bundles config if available {
-    if filereadable(expand("~/.EverVim.bundles"))
+    if exists('g:override_evervim_bundles') && filereadable(expand("~/.EverVim.bundles"))
         source ~/.EverVim.bundles
     endif
 " }
