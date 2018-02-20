@@ -2,7 +2,7 @@
 Plug 'tpope/vim-cucumber'
 Plug 'quentindecock/vim-cucumber-align-pipes'
 Plug 'saltstack/salt-vim'
-Plug 'ryanss/vim-hackernews'
+Plug 'adelarsq/vim-hackernews'
 Plug 'itchyny/calendar.vim'
 Plug 'chrisbra/csv.vim'
 Plug 'chemzqm/wxapp.vim'
