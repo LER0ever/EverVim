@@ -29,3 +29,4 @@ Plug 'reedes/vim-colors-pencil'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'nightsense/vimspectr'
+Plug 'noahfrederick/vim-noctu'
