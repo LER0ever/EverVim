@@ -5,4 +5,8 @@ if isdirectory(expand(EverVimBundleDir('vim-devicons')))
     let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
     let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {}
     let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['\.EverVim\.*'] = '⋞'
+    " Refresh devicons on resourcing vimrc, i.e. <Leader>ac
+    if exists("g:loaded_webdevicons")
+        call webdevicons#refresh()
+    endif
 endif
