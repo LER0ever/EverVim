@@ -2,6 +2,7 @@
 Plug 'plasticboy/vim-markdown' ", {'for': 'markdown'}
 Plug 'Rykka/riv.vim', {'for': 'rst'}
 Plug 'vimwiki/vimwiki', {'branch': 'dev'}
+Plug 'vimoutliner/vimoutliner'
 Plug 'jceb/vim-orgmode'
 Plug 'cespare/vim-toml'
 Plug 'reedes/vim-litecorrect'
