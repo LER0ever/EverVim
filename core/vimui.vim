@@ -1,10 +1,11 @@
 " Vim UI
-if !exists('g:evervim_color_theme') && filereadable(expand(EverVimBundleDir("vim/colors/dracula.vim")))
-    "let g:solarized_termcolors=256
-    "let g:solarized_termtrans=1
-    "let g:solarized_contrast="normal"
-    "let g:solarized_visibility="normal"
-    let g:evervim_color_theme = "dracula"
+if !exists('g:evervim_color_theme')
+    if filereadable(expand(EverVimBundleDir("vim/colors/dracula.vim")))
+        let g:evervim_color_theme = "dracula"
+    else
+        echo "No color theme available, falling back to desert ..."
+        let g:evervim_color_theme = "desert"
+    endif
 endif
 
 if !exists('g:evervim_airline_theme')
@@ -18,6 +19,7 @@ else
     set background=light
 endif
 
+" Colorscheme changed here
 execute 'color ' . g:evervim_color_theme
 
 " Default Font setting

@@ -1,7 +1,7 @@
 " General
 let g:vimrc_author='LER0ever'
 let g:vimrc_email='etasry@gmail.com'
-let g:vimrc_homepage='https://yirong.ml'
+let g:vimrc_homepage='https://rongyi.blog'
 
 set background=dark         " Assume a dark background
 
