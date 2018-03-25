@@ -39,14 +39,14 @@
         source $evervim_root/plugins/$bundle_group/$bundle_group.bundles
     endfor
 
-    " Run PlugInstall if bundle does not exists
-    autocmd VimEnter * call EverVimInitPlugins()
-" }
-
-" Use local bundles config if available {
+    " Use local bundles config if available {
     if exists('g:override_evervim_bundles') && filereadable(expand("~/.EverVim.bundles"))
         source ~/.EverVim.bundles
     endif
+    " }
+
+    " Run PlugInstall if bundle does not exists
+    autocmd VimEnter * call EverVimInitPlugins()
 " }
 
 " Vim-Plug Teardown {

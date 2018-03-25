@@ -3,7 +3,7 @@ if !exists('g:evervim_color_theme')
     if filereadable(expand(EverVimBundleDir("vim/colors/dracula.vim")))
         let g:evervim_color_theme = "dracula"
     else
-        echo "No color theme available, falling back to desert ..."
+        silent !echo "No color theme available, falling back to desert ..."
         let g:evervim_color_theme = "desert"
     endif
 endif

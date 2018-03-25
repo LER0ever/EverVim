@@ -1,0 +1,48 @@
+# EverVim Appveyor Autobuild
+version: "{build}"
+
+skip_tags: true
+
+init:
+  - ps: "iex ((new-object net.webclient).DownloadString((\
+      'https://raw.githubusercontent.com/appveyor/ci/master/scripts/\
+      enable-rdp.ps1')))"
+  - "set PATH=\
+      %SystemRoot%\\system32\
+      ;%SystemRoot%\
+      ;%SystemRoot%\\System32\\Wbem\
+      ;C:\\Program Files\\7-Zip\
+      ;C:\\Program Files\\Git\\cmd\
+      ;C:\\Program Files\\AppVeyor\\BuildAgent\
+      ;C:\\msys64\\usr\\bin\
+    "
+
+
+before_build:
+  - cd %HOMEPATH%
+  - appveyor DownloadFile https://github.com/neovim/neovim/releases/download/v0.2.2/nvim-win32.zip
+  - 7z x nvim-win32.zip -y -o"%APPVEYOR_BUILD_FOLDER%"
+  - rm -f nvim-win32.zip
+  - git clone https://github.com/LER0ever/EverVim .EverVim
+
+
+build_script:
+  - echo "Building ..."
+  - cd %HOMEPATH%\.EverVim
+  - ps: .\Boot-EverVim.ps1
+  - cd %APPVEYOR_BUILD_FOLDER%
+  - .\Neovim\bin\nvim.exe --headless +PlugInstall +qa >NUL
+
+after_build:
+  - xcopy "%HOMEPATH%\.EverVim\bundle" "%APPVEYOR_BUILD_FOLDER%\bundle" /s /e /y /i
+  - cd %APPVEYOR_BUILD_FOLDER%
+  - ls
+  - 7z a EverVim-bundle-win32.zip %APPVEYOR_BUILD_FOLDER%\bundle
+
+on_failure:
+  - ps: "$blockRdp = $true; iex ((new-object net.webclient).DownloadString((\
+      'https://raw.githubusercontent.com/appveyor/ci/master/scripts/\
+      enable-rdp.ps1')))"
+
+artifacts:
+  - path: EverVim-bundle-win32.zip
