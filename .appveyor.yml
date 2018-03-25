@@ -3,7 +3,7 @@ version: "{build}"
 
 skip_tags: true
 
-init: # Simplify the PATH variable
+init:
   - ps: "iex ((new-object net.webclient).DownloadString((\
       'https://raw.githubusercontent.com/appveyor/ci/master/scripts/\
       enable-rdp.ps1')))"
@@ -18,7 +18,7 @@ init: # Simplify the PATH variable
     "
 
 
-before_build: # Download content
+before_build:
   - cd %HOMEPATH%
   - appveyor DownloadFile https://github.com/neovim/neovim/releases/download/v0.2.2/nvim-win32.zip
   - 7z x nvim-win32.zip -y -o"%APPVEYOR_BUILD_FOLDER%"
@@ -26,17 +26,18 @@ before_build: # Download content
   - git clone https://github.com/LER0ever/EverVim .EverVim
 
 
-build_script: # Compile with Visual Studio
+build_script:
   - echo "Building ..."
   - cd %HOMEPATH%\.EverVim
   - ps: .\Boot-EverVim.ps1
   - cd %APPVEYOR_BUILD_FOLDER%
   - .\Neovim\bin\nvim.exe --headless +PlugInstall +qa >NUL
 
-after_build: # Package with MSYS2
+after_build:
   - xcopy "%HOMEPATH%\.EverVim\bundle" "%APPVEYOR_BUILD_FOLDER%\bundle" /s /e /y /i
   - cd %APPVEYOR_BUILD_FOLDER%
-  - 7z a EverVim.zip %APPVEYOR_BUILD_FOLDER%
+  - ls
+  - 7z a EverVim-bundle-win32.zip %APPVEYOR_BUILD_FOLDER%\bundle
 
 on_failure:
   - ps: "$blockRdp = $true; iex ((new-object net.webclient).DownloadString((\
@@ -44,4 +45,4 @@ on_failure:
       enable-rdp.ps1')))"
 
 artifacts:
-  - path: EverVim.zip
+  - path: EverVim-bundle-win32.zip
