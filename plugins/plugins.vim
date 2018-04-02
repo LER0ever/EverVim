@@ -12,8 +12,7 @@
 
 " Bundles {
 
-    " In your .vimrc.before.local file
-    " list only the plugin groups you will use
+    " list only the bundle groups you will use
     if !exists('g:evervim_bundle_groups')
         if WINDOWS()
             let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'neocomplete', 'programming', 'python', 'javascript', 'typescript', 'html', 'css', 'misc', 'go', 'rust', 'cpp', 'lua']
