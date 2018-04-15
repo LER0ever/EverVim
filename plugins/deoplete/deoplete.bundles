@@ -1,4 +1,8 @@
-if (has ('nvim') == 0 || has('python3') == 0)
+if !NVIM()
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+endif
+if (has('python3') == 0)
     echoerr "Deoplete needs NeoVim with +Python3 support!"
 endif
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
