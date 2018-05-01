@@ -19,13 +19,13 @@ endif
 " To disable the stripping of whitespace, add the following to your
 " .vimrc.before.local file:
 "   let g:evervim_keep_trailing_whitespace = 1
-autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl,sql autocmd BufWritePre <buffer> if !exists('g:evervim_keep_trailing_whitespace') | call StripTrailingWhitespace() | endif
+autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,yaml,perl,sql autocmd BufWritePre <buffer> if !exists('g:evervim_keep_trailing_whitespace') | call StripTrailingWhitespace() | endif
 "autocmd FileType go autocmd BufWritePre <buffer> Fmt
 autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
 autocmd BufNewFile,BufRead *.nox,*.pts set filetype=gohtmltmpl
 autocmd BufNewFile,BufRead *.amber set filetype=pug
 autocmd BufNewFile,BufRead *.csv,*.dat set filetype=csv
-autocmd FileType haskell,puppet,ruby,yml setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType haskell,puppet,ruby,yml,yaml setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType html,xml,gohtmltmpl setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType typescript setlocal expandtab shiftwidth=4 softtabstop=4
 " preceding line best in a plugin but here for now.
