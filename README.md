@@ -1,5 +1,6 @@
 # EverVim: The Ultimate Vim Distribution
 ![EverVim](https://img.shields.io/badge/Coded%20with-EverVim-bd93f9.svg?style=flat-square)
+[![Build status](https://ci.appveyor.com/api/projects/status/v06dkj0d3irjxntr?svg=true)](https://ci.appveyor.com/project/LER0ever/evervim)
 
 ![evervim-header-1](https://i.imgur.com/T0CBBbk.png "EverVim with VimR on macOS")
 ![evervim-header-2](https://i.imgur.com/BK4vSuP.png "EverVim with GVIM on Windows")
