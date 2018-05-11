@@ -1,14 +1,15 @@
 " EverVim Javascript Bundles
-Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'
 Plug 'briancollins/vim-jst'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mxw/vim-jsx'
 Plug 'posva/vim-vue'
 Plug 'ElmCast/elm-vim'
+Plug 'elzr/vim-json'
 if executable('flow')
     Plug 'flowtype/vim-flow'
 endif
+Plug 'othree/javascript-libraries-syntax.vim'
 
 if count(g:evervim_bundle_groups, 'deoplete')
     Plug 'carlitux/deoplete-ternjs'
