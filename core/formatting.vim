@@ -24,6 +24,7 @@ autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,ya
 autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
 autocmd BufNewFile,BufRead *.nox,*.pts set filetype=gohtmltmpl
 autocmd BufNewFile,BufRead *.amber set filetype=pug
+autocmd BufNewFile,BufRead *.scss set filetype=scss.css
 autocmd BufNewFile,BufRead *.csv,*.dat set filetype=csv
 autocmd FileType haskell,puppet,ruby,yml,yaml setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType html,xml,gohtmltmpl setlocal expandtab shiftwidth=2 softtabstop=2
