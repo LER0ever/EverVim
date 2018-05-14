@@ -23,9 +23,9 @@
     " NeoVim-Qt (here instead of ginit.vim)
     if exists('g:GuiLoaded')
         if !WINDOWS()
-            execute 'Guifont ' . g:evervim_font . ':h' . g:evervim_font_size
+            execute 'Guifont! ' . g:evervim_font . ':h' . g:evervim_font_size
         else
-            execute 'Guifont ' . g:evervim_font . ':h' . g:evervim_font_size
+            execute 'Guifont! ' . g:evervim_font . ':h' . g:evervim_font_size
         endif
     endif
 
