@@ -1,16 +1,22 @@
 " EverVim Javascript Bundles
-Plug 'pangloss/vim-javascript'
-Plug 'othree/yajs.vim'
+" Javascript and React syntax/indentation
+Plug 'neoclide/vim-jsx-improve'
+" ES Next syntax
 Plug 'othree/es.next.syntax.vim'
+Plug 'othree/javascript-libraries-syntax.vim'
+" CoffeeScript
 Plug 'kchmck/vim-coffee-script'
-Plug 'mxw/vim-jsx'
+" Vue.js
 Plug 'posva/vim-vue'
+" Elm syntax
 Plug 'ElmCast/elm-vim'
+Plug 'othree/yajs.vim'
+Plug 'moll/vim-node'
 Plug 'elzr/vim-json'
+Plug 'heavenshell/vim-jsdoc'
 if executable('flow')
     Plug 'flowtype/vim-flow'
 endif
-Plug 'othree/javascript-libraries-syntax.vim'
 
 if count(g:evervim_bundle_groups, 'deoplete')
     Plug 'carlitux/deoplete-ternjs'
