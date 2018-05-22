@@ -44,7 +44,24 @@ if isdirectory(expand(EverVimBundleDir("tagbar")))
                 \ 'v:varlambdas',
                 \ 'm:members',
                 \ 'i:interfaces',
+                \ 't:types',
                 \ 'e:enums',
+                \ 'I:imports',
+                \ ]
+                \ }
+    let g:tagbar_type_typescriptreact = {
+                \ 'ctagstype': 'typescriptreact',
+                \ 'kinds': [
+                \ 'c:classes',
+                \ 'n:modules',
+                \ 'f:functions',
+                \ 'v:variables',
+                \ 'v:varlambdas',
+                \ 'm:members',
+                \ 'i:interfaces',
+                \ 't:types',
+                \ 'e:enums',
+                \ 'I:imports',
                 \ ]
                 \ }
 

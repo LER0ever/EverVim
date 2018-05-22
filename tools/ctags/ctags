@@ -1,5 +1,282 @@
 --recurse=yes
---tag-relative=yes
+--langmap=vim:+(vimrc)
+
+--exclude=.git
+--exclude=.svn
+--exclude=.hg
+--exclude=min
+--exclude=vendor
+--exclude=build*
+--exclude=\*.min.\*
+--exclude=\*.map
+--exclude=\*.swp
+--exclude=\*.bak
+--exclude=\*.pyc
+--exclude=\*.class
+--exclude=\*.sln
+--exclude=\*.Master
+--exclude=\*.csproj
+--exclude=\*.csproj.user
+--exclude=\*.cache
+--exclude=\*.dll
+--exclude=\*.pdb
+--exclude=db/*
+--exclude=log/*
+--exclude=tags
+--exclude=cscope.\*
+--exclude=\*.tar.\*
+--exclude=node_modules/*
+--exclude=bower_components/*
+--exclude=.coverage\*
+--exclude=coverage\*
+--exclude=dist/*
+--exclude=compiled/*
+--exclude=docs/*
+--exclude=platforms/*
+--exclude=test/*
+--exclude=__tests__/*
+
+--languages=-javascript
+
+--langdef=js
+--langmap=js:.js
+--langmap=js:+.jsx
+--langmap=js:+.es6
+--regex-js=/[ \t.]([A-Z][A-Z0-9._$]+)[ \t]*[=:][ \t]*([0-9"'`\[\{]|null)/\1/n,constant/
+--regex-js=/\.([A-Za-z0-9._$]+)[ \t]*=[ \t]*\{/\1/o,object/
+--regex-js=/['"]*([A-Za-z0-9_$]+)['"]*[ \t]*:[ \t]*\{/\1/o,object/
+--regex-js=/([A-Za-z0-9._$]+)\[["']([A-Za-z0-9_$]+)["']\][ \t]*=[ \t]*\{/\1\.\2/o,object/
+--regex-js=/([A-Za-z0-9._$]+)[ \t]*=[ \t]*\(function\(\)/\1/c,class/
+--regex-js=/['"]*([A-Za-z0-9_$]+)['"]*:[ \t]*\(function\(\)/\1/c,class/
+--regex-js=/class[ \t]+([A-Za-z0-9._$]+)[ \t]*/\1/c,class/
+--regex-js=/([A-Za-z$][A-Za-z0-9_$()]+)[ \t]*=[ \t]*[Rr]eact.createClass[ \t]*\(/\1/c,class/
+--regex-js=/([A-Z][A-Za-z0-9_$]+)[ \t]*=[ \t]*[A-Za-z0-9_$]*[ \t]*[{(]/\1/c,class/
+--regex-js=/([A-Z][A-Za-z0-9_$]+)[ \t]*:[ \t]*[A-Za-z0-9_$]*[ \t]*[{(]/\1/c,class/
+--regex-js=/([A-Za-z$][A-Za-z0-9_$]+)[ \t]*=[ \t]*function[ \t]*\(/\1/f,function/
+--regex-js=/(function)*[ \t]*([A-Za-z$_][A-Za-z0-9_$]+)[ \t]*\([^)]*\)[ \t]*\{/\2/f,function/
+--regex-js=/['"]*([A-Za-z$][A-Za-z0-9_$]+)['"]*:[ \t]*function[ \t]*\(/\1/m,method/
+--regex-js=/([A-Za-z0-9_$]+)\[["']([A-Za-z0-9_$]+)["']\][ \t]*=[ \t]*function[ \t]*\(/\2/m,method/
+--regex-js=/^[ \t]*export[ \t]+(var|let|const)[ \t]+([a-zA-Z0-9_]+)/\2/v,variables/
+--regex-js=/^[ \t]*(export)?[ \t]*function[ \t]+([a-zA-Z0-9_]+)/\2/f,functions/
+
+--langdef=typescript
+--langmap=typescript:.ts
+--langmap=typescript:+.tsx
+--regex-typescript=/^[ \t]*(export([ \t]+abstract)?)?[ \t]*class[ \t]+([a-zA-Z0-9_]+)/\3/c,classes/
+--regex-typescript=/^[ \t]*(declare)?[ \t]*namespace[ \t]+([a-zA-Z0-9_]+)/\2/c,modules/
+--regex-typescript=/^[ \t]*(export)?[ \t]*module[ \t]+([a-zA-Z0-9_]+)/\2/n,modules/
+--regex-typescript=/^[ \t]*(export)?[ \t]*function[ \t]+([a-zA-Z0-9_]+)/\2/f,functions/
+--regex-typescript=/^[ \t]*export[ \t]+(var|let|const)[ \t]+([a-zA-Z0-9_]+)/\2/v,variables/
+--regex-typescript=/^[ \t]*(var|let|const)[ \t]+([a-zA-Z0-9_]+)[ \t]*=[ \t]*function[ \t]*\(\)/\2/v,varlambdas/
+--regex-typescript=/^[ \t]*(export)?[ \t]*(public|protected|private)[ \t]+(static)?[ \t]*([a-zA-Z0-9_]+)/\4/m,members/
+--regex-typescript=/^[ \t]*(export)?[ \t]+(static)?[ \t]*([a-zA-Z0-9_]+)(\()/\3/m,members/
+--regex-typescript=/^[ \t]*(export)?[ \t]*interface[ \t]+([a-zA-Z0-9_]+)/\2/i,interfaces/
+--regex-typescript=/^[ \t]*(export)?[ \t]*type[ \t]+([a-zA-Z0-9_]+)/\2/t,types/
+--regex-typescript=/^[ \t]*(export)?[ \t]*enum[ \t]+([a-zA-Z0-9_]+)/\2/e,enums/
+--regex-typescript=/^[ \t]*import[ \t]+([a-zA-Z0-9_]+)/\1/I,imports/
+
+--langdef=less
+--langmap=less:.less
+--regex-less=/^[ \t&]*#([A-Za-z0-9_-]+)/\1/i,id,ids/
+--regex-less=/^[ \t&]*\.([A-Za-z0-9_-]+)/\1/c,class,classes/
+--regex-less=/^[ \t]*(([A-Za-z0-9_-]+[ \t\n,]+)+)\{/\1/t,tag,tags/
+--regex-less=/^[ \t]*@media\s+([A-Za-z0-9_-]+)/\1/m,media,medias/
+--regex-less=/^[ \t]*(@[A-Za-z0-9_-]+):/\1/v,variable,variables/
+--regex-less=/\/\/[ \t]*(TODO)[ \t]*\:*(.*)/\1/i,TODO/
+--regex-less=/\/\/[ \t]*(FIXME)[ \t]*\:*(.*)/\1/i,FIXME/
+
+--langdef=scss
+--langmap=scss:.scss
+--regex-scss=/^[ \t]*@mixin ([A-Za-z0-9_-]+)/\1/m,mixin,mixins/
+--regex-scss=/^[ \t]*\$([A-Za-z0-9_-]+)/\1/v,variable,variables/
+--regex-scss=/^([A-Za-z0-9_-]*)*\.([A-Za-z0-9_-]+) *[,{]/\2/c,class,classes/
+--regex-scss=/^[ \t&]+\.([A-Za-z0-9_-]+) *[,{]/\1/c,class,classes/
+--regex-scss=/^(.*)*\#([A-Za-z0-9_-]+) *[,{]/\2/i,id,ids/
+--regex-scss=/^[ \t&]*#([A-Za-z0-9_-]+)/\1/i,id,ids/
+--regex-scss=/(^([A-Za-z0-9_-])*([A-Za-z0-9_-]+)) *[,|\{]/\1/t,tag,tags/
+--regex-scss=/(^([^\/\/])*)[ \t]+([A-Za-z0-9_-]+)) *[,|\{]/\3/t,tag,tags/
+--regex-scss=/(^(.*, *)([A-Za-z0-9_-]+)) *[,|\{]/\3/t,tag,tags/
+--regex-scss=/(^[ \t]+([A-Za-z0-9_-]+)) *[,|\{]/\1/t,tag,tags/
+--regex-scss=/^[ \t]*@media\s+([A-Za-z0-9_-]+)/\1/d,media,media/
+--regex-scss=/\/\/[ \t]*(TODO)[ \t]*\:*(.*)/\1/i,TODO/
+--regex-scss=/\/\/[ \t]*(FIXME)[ \t]*\:*(.*)/\1/i,FIXME/
+
+--langdef=stylus
+--langmap=stylus:.styl
+--regex-stylus=/^[ \t]*([A-Za-z0-9_:-]+)$/\1/t,tag,tags/
+
+--langdef=pug
+--langmap=pug:+.jade,pug:+.pug
+--regex-pug=/^[ \t]*[^"'()]*#*([.A-Za-z0-9_-]+)/\1/t,tag,tags/
+--regex-pug=/^[ \t]*mixin [ \t]*([A-Za-z0-9_$]*)[ \t]*\(/\1/m,mixin/
+--regex-pug=/\/\/-[ \t]*(TODO[ \t]+.+)/\1/i,TODO/
+--regex-pug=/\/\/-[ \t]*(FIXME[ \t]+.+)/\1/i,FIXME/
+
+--regex-html=/id="([A-Za-z0-9_-]+)"/\1/i,id,ids/
+--regex-html=/class="([A-Za-z0-9_-]+)"/\1/c,class,classes/
+
+--langdef=help
+--langmap=help:.txt
+--regex-help=/^([0-9]+\. [A-Z].*)\*$/\1/s,section/
+--regex-help=/^DISABLED: ([A-Z][A-Za-z0-9 ]*).*\*.+\*$/\1/h,heading/
+--regex-help=/^([A-Z][A-Za-z0-9 ]*)[ \t]+\*.+\*/\1/h,heading/
+--regex-help=/[\*]([^* \t]+)[\*]$/\1/m,marker/
+
+--langdef=Scala
+--langmap=Scala:.scala
+--regex-Scala=/^[ \t]*class[ \t]*([a-zA-Z0-9_]+)/\1/c,class/
+--regex-Scala=/^[ \t]*object[ \t]*([a-zA-Z0-9_]+)/\1/o,object/
+--regex-Scala=/^[ \t]*trait[ \t]*([a-zA-Z0-9_]+)/\1/t,trait/
+--regex-Scala=/^[ \t]*case[ \t]*class[ \t]*([a-zA-Z0-9_]+)/\1/r,cclass/
+--regex-Scala=/^[ \t]*abstract[ \t]*class[ \t]*([a-zA-Z0-9_]+)/\1/a,aclass/
+--regex-Scala=/^[ \t]*((private|override)[ \t]+)*def[ \t]*([a-zA-Z0-9_=]+)[ \t]*.*[:=]/\1/m,method/
+--regex-Scala=/[ \t]*val[ \t]*([a-zA-Z0-9_]+)[ \t]*[:=]/\1/V,value/
+--regex-Scala=/[ \t]*var[ \t]*([a-zA-Z0-9_]+)[ \t]*[:=]/\1/v,variable/
+--regex-Scala=/^[ \t]*type[ \t]*([a-zA-Z0-9_]+)[ \t]*[\[<>=]/\1/T,type/
+--regex-Scala=/^[ \t]*import[ \t]*([a-zA-Z0-9_{}., \t=>]+$)/\1/i,include/
+--regex-Scala=/^[ \t]*package[ \t]*([a-zA-Z0-9_.]+$)/\1/p,package/
+
+--regex-c=/^(COMMENT: The reason we use [ \t] instead of \s is that \s was not working on OS X)/\1/X,XXX/
+
+--regex-c=/^(COMMENT: Vim, C, Java, Javascript, Asm have defaults, so need no langdef, but we can extend them)/\1/X,XXX/
+--regex-c=/^(COMMENT: It is possible to disable built-in tag detection if we want, piecewise, e.g.: ctags --extra=-q --c-kinds=-d)/\1/X,XXX/
+
+--regex-vim=/^(COMMENT: ex-ctags already provides a 'map' tag)/\2/X,XXX/
+--regex-vim=/[ \t]*(([nvxsoilc]*)(noremap|map))[ \t]+(<(buffer|silent|special|script|expr|unique)>[ \t]+)*([^   ]*).*/\6 (\1)/m,mapping/
+--regex-vim=/^(COMMENT: python functions)/\1/X,XXX/
+--regex-vim=/^[ \t]*def[ \t]+([a-zA-Z0-9_$]+)/\1/f,function/
+
+--regex-vim=/^(COMMENT: htag matches any *bold* text, so I don't recommend displaying these, but they may still be useful for Ctrl-})/\1/X,XXX/
+--regex-vim=/\*([A-Za-z0-9_\-]+)\*/\1/h,htag/
+--regex-vim=/^(COMMENT: not needed use augroup)[ \t]*au[tocmd]*[ \t]+[^[ \t]]+[ \t]+([A-Za-z0-9]+)/\1/d,autocmd/
+
+--langmap=c:+.jpp,c:+.uc
+--langmap=java:+.jpp,java:+.uc
+
+--langdef=opa
+--langmap=opa:+.opa
+--regex-opa=/^[ \t]*\<type\>[ \t]*(\<[a-zA-Z_$.][0-9a-zA-Z_$.]*\>)/\1/t,type/
+--regex-opa=/^[ \t]*\<database\>[ \t]*(\<[a-zA-Z_$.][0-9a-zA-Z_$.]*\>)/\1/d,database/
+--regex-opa=/^[ \t]*\<module\>[ \t]*(\<[a-zA-Z_$.][0-9a-zA-Z_$.]*\>)/\1/m,module/
+--regex-opa=/^(\<[a-zA-Z_$.][0-9a-zA-Z_$.]*\>)[ \t]*=/\1/g,global/
+--regex-opa=/^([ \t]*client|[ \t]*server|[ \t]*)[ \t]*\<function\>[ \t]*(\<[a-zA-Z_$.][0-9a-zA-Z_$.]*\>)/\2/f,function/
+
+--langdef=man
+--langmap=man:+.~,man:+.man
+--regex-man=/^(COMMENT: I can't seem to get the ~ extension to match.)/\1/s,section/
+--regex-man=/^([A-Z].*)/\1/s,section/
+
+--langdef=uc
+--langmap=uc:+.jpp,uc:+.uc
+--regex-uc=/^(COMMENT: This is not working, although it does if we put it in the JS rules and set ft=javascript! O_o)/\1/X,XXX/
+--regex-uc=/\<state\>[ \t]+([a-zA-Z_$][0-9a-zA-Z_$]*).*$/\1/s,state/
+
+--langdef=coffee
+--langmap=coffee:.coffee
+--regex-coffee=/^(COMMENT: some of the .*s in below functions are over-optimistic, picking up anonymous callbacks with the wrong =)/\1/X,XXX/
+--regex-coffee=/^class @?([a-zA-Z_$][0-9a-zA-Z_$]*)( extends [a-zA-Z_$][0-9a-zA-Z_$]*)?$/\1/c,class/
+--regex-coffee=/^(COMMENT: The second case (this|@) is not an export when inside a method, it's just a property assignment. [ \t]*(@|this\.)([a-zA-Z_$][0-9a-zA-Z_$]*)[ \t]*=.*)$/\2/e,export/
+--regex-coffee=/^[ \t]*(module\.exports\.)([a-zA-Z_$][0-9a-zA-Z_$]*)[ \t]*=.*$/\2/e,export/
+--regex-coffee=/^[ \t]*(@[.]*|this\.)([a-zA-Z_$][0-9a-zA-Z_$]*)[ \t]*=.*$/\2/a,assigned/
+--regex-coffee=/^(COMMENT: Choose one of the following rules, but not both, or you will generate duplicate tags!  1. all properties, 2. only function properties.  TODO: We might be able to fudge the property regexp to ignore functions (with or without arguments) so we can keep both rules at once.)/\1/X,XXX/
+--regex-coffee=/^DISABLED: [ \t]*([a-zA-Z_$][0-9a-zA-Z_$]*):[^:]/\1/p,property/
+--regex-coffee=/^[ \t]*([a-zA-Z_$][0-9a-zA-Z_$]*):[ \t]*(\([^(]*\)[ \t]*|[ \t]*)[-=]>.*$/\1/f,function/
+--regex-coffee=/^[ \t]*([a-zA-Z_$][0-9a-zA-Z_$.:]*)[ \t]*=.*[-=]>.*$/\1/f,function/
+--regex-coffee=/^[ \t]*([a-zA-Z_$][0-9a-zA-Z_$]*)[ \t]*=[^->\n]*$/\1/v,variable/
+
+--langmap=Asm:+.spp
+--regex-Asm=/^[^;]*\.macro[ \t]+([a-zA-Z_$][0-9a-zA-Z_$]*)/\1/m,macro/
+--regex-Asm=/^[^;]*\.context[ \t]+([a-zA-Z_$][0-9a-zA-Z_$]*)/\1/c,context/
+--regex-Asm=/^([A-Za-z0-9_]+):/\1/l,label/
+
+--langdef=dosini
+--langmap=dosini:.ini
+--regex-dosini=/^\[([^]]*)\]/\1/s,section/
+
+--langdef=haxe
+--langmap=haxe:.hx
+--regex-haxe=/^package[ \t]+([A-Za-z0-9_.]+)/\1/p,package/
+--regex-haxe=/^[ \t]*[(@:macro|private|public|static|override|inline|dynamic)( \t)]*function[ \t]+([A-Za-z0-9_]+)/\1/f,function/
+--regex-haxe=/^[ \t]*([private|public|static|protected|inline][ \t]*)+var[ \t]+([A-Za-z0-9_]+)/\2/v,variable/
+--regex-haxe=/^[ \t]*package[ \t]*([A-Za-z0-9_]+)/\1/p,package/
+--regex-haxe=/^[ \t]*(extern[ \t]*|@:native\([^)]*\)[ \t]*)*class[ \t]+([A-Za-z0-9_]+)[ \t]*[^\{]*/\2/c,class/
+--regex-haxe=/^[ \t]*(extern[ \t]+)?interface[ \t]+([A-Za-z0-9_]+)/\2/i,interface/
+--regex-haxe=/^[ \t]*typedef[ \t]+([A-Za-z0-9_]+)/\1/t,typedef/
+--regex-haxe=/^[ \t]*enum[ \t]+([A-Za-z0-9_]+)/\1/t,typedef/
+--regex-haxe=/^[ \t]*([A-Za-z0-9_]+)(;|\([^)]*:[^)]*\))/\1/t,enum_field/
+
+--langdef=haxe-sws
+--langmap=haxe-sws:.hx.sws
+--regex-haxe-sws=/^package[ \t]+([A-Za-z0-9_.]+)/\1/p,package/
+--regex-haxe-sws=/^[ \t]*[(@:macro|private|public|static|override|inline|dynamic)( \t)]*function[ \t]+([A-Za-z0-9_]+)/\1/f,function/
+--regex-haxe-sws=/^[ \t]*([private|public|static|protected|inline][ \t]*)+var[ \t]+([A-Za-z0-9_]+)/\2/v,variable/
+--regex-haxe-sws=/^[ \t]*package[ \t]*([A-Za-z0-9_]+)/\1/p,package/
+--regex-haxe-sws=/^[ \t]*(extern[ \t]*|@:native\([^)]*\)[ \t]*)*class[ \t]+([A-Za-z0-9_]+)[ \t]*[^\{]*/\2/c,class/
+--regex-haxe-sws=/^[ \t]*(extern[ \t]+)?interface[ \t]+([A-Za-z0-9_]+)/\2/i,interface/
+--regex-haxe-sws=/^[ \t]*typedef[ \t]+([A-Za-z0-9_]+)/\1/t,typedef/
+--regex-haxe-sws=/^[ \t]*enum[ \t]+([A-Za-z0-9_]+)/\1/t,typedef/
+--regex-haxe-sws=/^[ \t]*([A-Za-z0-9_]+)(;|\([^)]*:[^)]*\))/\1/t,enum_field/
+
+--langdef=joeygrammar
+--langmap=joeygrammar:.grm
+--regex-joeygrammar=/^[ \t]*([A-Za-z0-9_$@]*)[ \t]*=/\1/r,rule/
+
+--langdef=haskell
+--langmap=haskell:.hs
+--regex-haskell=/^(COMMENT: matching = may miss functions declared with pattern matching, however those will tend to throw up multiple results which will be annoying.  We could seek :: but these are optional - the favourite probably depends on the style of the file you are editing.)/\1/X,XXX/
+--regex-haskell=/^([a-zA-Z_][a-zA-Z0-9_]*)[ \t]*::.*/\1/s,signature/
+--regex-haskell=/^(WARNING: Patterns can produce multiple entries, and this regexp also accidentally catches data and type lines too!)/\1/X,XXX/
+--regex-haskell=/^data ([a-zA-Z_][a-zA-Z0-9_]*)/\1/d,data/
+--regex-haskell=/^type ([a-zA-Z_][a-zA-Z0-9_]*)/\1/t,type/
+--regex-haskell=/^([a-zA-Z_][a-zA-Z0-9_]*)[ \t]*=.*/\1/f,function/
+--regex-haskell=/^([a-zA-Z_][a-zA-Z0-9_]*)[ \t]+[^=:].*=/\1/p,pattern/
+--regex-haskell=/^(COMMENT: Argh, we could just go for signature and other (anything with =)!)/\1/X,XXX/
+--regex-haskell=/^DISABLED: ([a-zA-Z_][a-zA-Z0-9_]*)[ \t]+[^=:].*=/\1/d,definition/
+--regex-haskell=/^(COMMENT: Probably what we really want is one entry (the top one) instead of multiple pattern entries.)/\1/X,XXX/
+
+--langdef=mkd
+--langmap=mkd:.md
+--regex-mkd=/^(#[^#].*)/\1/1,level1/
+--regex-mkd=/^(##[^#].*)/\1/2,level2/
+--regex-mkd=/^(###[^#].{0,19})/\1/3,level3/
+--regex-mkd=/^(=[^=].*)/\1/1,level1/
+--regex-mkd=/^(==[^=].*)/\1/2,level2/
+--regex-mkd=/^(===[^=].{0,19})/\1/3,level3/
+
+--langdef=clojure
+--langmap=clojure:.clj
+--regex-clojure=/\([ \t]*create-ns[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/n,namespace/
+--regex-clojure=/\([ \t]*def[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/d,definition/
+--regex-clojure=/\([ \t]*defn-?[ \t]+(\^[-[:alnum:]*+!_:\/.?]+[ \t]+)?([-[:alnum:]*+!_:\/.?]+)/\2/f,function/
+--regex-clojure=/\([ \t]*defmacro[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/m,macro/
+--regex-clojure=/\([ \t]*defroutes[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/m,macro/
+--regex-clojure=/\([ \t]*definline[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/i,inline/
+--regex-clojure=/\([ \t]*defmulti[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/a,multimethod definition/
+--regex-clojure=/\([ \t]*defmethod[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/b,multimethod instance/
+--regex-clojure=/\([ \t]*defonce[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/c,definition (once)/
+--regex-clojure=/\([ \t]*defstruct[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/s,struct/
+--regex-clojure=/\([ \t]*intern[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/v,intern/
+--regex-clojure=/\([ \t]*ns[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/n,namespace/
+
+--regex-ruby=/.*alias(_method)?[[:space:]]+:([[:alnum:]_=!?]+),?[[:space:]]+:([[:alnum:]_=!]+)/\2/f,function/
+--regex-ruby=/(^|[:;])[ \t]*([A-Z][[:alnum:]_]+) *=/\2/c,class,constant/
+--regex-ruby=/(^|;)[ \t]*(has_many|belongs_to|has_one|has_and_belongs_to_many)\(? *:([[:alnum:]_]+)/\3/f,function,association/
+--regex-ruby=/(^|;)[ \t]*(named_)?scope\(? *:([[:alnum:]_]+)/\3/f,function,named_scope/
+--regex-ruby=/(^|;)[ \t]*expose\(? *:([[:alnum:]_]+)/\2/f,function,exposure/
+--regex-ruby=/(^|;)[ \t]*event\(? *:([[:alnum:]_]+)/\2/f,function,aasm_event/
+--regex-ruby=/(^|;)[ \t]*event\(? *:([[:alnum:]_]+)/\2!/f,function,aasm_event/
+--regex-ruby=/(^|;)[ \t]*event\(? *:([[:alnum:]_]+)/\2?/f,function,aasm_event/
+
+--langmap=Ruby:+(Rakefile)
+
+--langmap=C++:+.mm
+
+--langdef=golang
+--langmap=golang:.go
+--regex-golang=/func([ \t]+\([^)]+\))?[ \t]+([a-zA-Z0-9_]+)/\2/d,func/
+--regex-golang=/var[ \t]+([a-zA-Z_][a-zA-Z0-9_]+)/\1/d,var/
+--regex-golang=/type[ \t]+([a-zA-Z_][a-zA-Z0-9_]+)/\1/d,type/
+
 --langdef=Rust
 --langmap=Rust:.rs
 --regex-Rust=/^[ \t]*(#\[[^\]]\][ \t]*)*(pub[ \t]+)?(extern[ \t]+)?("[^"]+"[ \t]+)?(unsafe[ \t]+)?fn[ \t]+([a-zA-Z0-9_]+)/\6/f,functions,function definitions/
@@ -7,26 +284,17 @@
 --regex-Rust=/^[ \t]*(pub[ \t]+)?enum[ \t]+([a-zA-Z0-9_]+)/\2/g,enum,enumeration names/
 --regex-Rust=/^[ \t]*(pub[ \t]+)?struct[ \t]+([a-zA-Z0-9_]+)/\2/s,structure names/
 --regex-Rust=/^[ \t]*(pub[ \t]+)?mod[ \t]+([a-zA-Z0-9_]+)/\2/m,modules,module names/
---regex-Rust=/^[ \t]*(pub[ \t]+)?(static|const)[ \t]+(mut[ \t]+)?([a-zA-Z0-9_]+)/\4/c,consts,static constants/
---regex-Rust=/^[ \t]*(pub[ \t]+)?(unsafe[ \t]+)?trait[ \t]+([a-zA-Z0-9_]+)/\3/t,traits,traits/
---regex-Rust=/^[ \t]*(pub[ \t]+)?(unsafe[ \t]+)?impl([ \t\n]*<[^>]*>)?[ \t]+(([a-zA-Z0-9_:]+)[ \t]*(<[^>]*>)?[ \t]+(for)[ \t]+)?([a-zA-Z0-9_]+)/\5 \7 \8/i,impls,trait implementations/
+--regex-Rust=/^[ \t]*(pub[ \t]+)?static[ \t]+([a-zA-Z0-9_]+)/\2/c,consts,static constants/
+--regex-Rust=/^[ \t]*(pub[ \t]+)?trait[ \t]+([a-zA-Z0-9_]+)/\2/t,traits,traits/
+--regex-Rust=/^[ \t]*(pub[ \t]+)?impl([ \t\n]*<[^>]*>)?[ \t]+(([a-zA-Z0-9_:]+)[ \t]*(<[^>]*>)?[ \t]+(for)[ \t]+)?([a-zA-Z0-9_]+)/\4 \6 \7/i,impls,trait implementations/
 --regex-Rust=/^[ \t]*macro_rules![ \t]+([a-zA-Z0-9_]+)/\1/d,macros,macro definitions/
---langdef=typescript
---langmap=typescript:.ts
---regex-typescript=/^[ \t]*(export([ \t]+abstract)?)?[ \t]*class[ \t]+([a-zA-Z0-9_]+)/\3/c,classes/
---regex-typescript=/^[ \t]*(export)?[ \t]*module[ \t]+([a-zA-Z0-9_]+)/\2/n,modules/
---regex-typescript=/^[ \t]*(export)?[ \t]*function[ \t]+([a-zA-Z0-9_]+)/\2/f,functions/
---regex-typescript=/^[ \t]*export[ \t]+var[ \t]+([a-zA-Z0-9_]+)/\1/v,variables/
---regex-typescript=/^[ \t]*var[ \t]+([a-zA-Z0-9_]+)[ \t]*=[ \t]*function[ \t]*\(\)/\1/v,varlambdas/
---regex-typescript=/^[ \t]*(export)?[ \t]*(public|private)[ \t]+(static)?[ \t]*([a-zA-Z0-9_]+)/\4/m,members/
---regex-typescript=/^[ \t]*(export)?[ \t]*interface[ \t]+([a-zA-Z0-9_]+)/\2/i,interfaces/
---regex-typescript=/^[ \t]*(export)?[ \t]*enum[ \t]+([a-zA-Z0-9_]+)/\2/e,enums/
---regex-typescript=/^[ \t]*import[ \t]+([a-zA-Z0-9_]+)/\1/I,imports/
---langdef=R
---langmap=r:.R.r
---regex-R=/^[ \t]*"?([.A-Za-z][.A-Za-z0-9_]*)"?[ \t]*<-[ \t]function/\1/f,Functions/
---regex-R=/^"?([.A-Za-z][.A-Za-z0-9_]*)"?[ \t]*<-[ \t][^f][^u][^n][^c][^t][^i][^o][^n]/\1/g,GlobalVars/
---regex-R=/[ \t]"?([.A-Za-z][.A-Za-z0-9_]*)"?[ \t]*<-[ \t][^f][^u][^n][^c][^t][^i][^o][^n]/\1/v,FunctionVariables/``
+
+--langdef=elm
+--langmap=elm:.elm
+--regex-elm=/^module[ \t]*([A-Z][a-zA-Z0-9'_.]*)/\1/m,module/
+--regex-elm=/^type[ \t]*([A-Z][a-zA-Z0-9'_]*)./\1/t,type/
+--regex-elm=/^([a-z_][a-zA-Z0-9'_]*).*=/\1/v,function/
+
 --langdef=text
 --langmap=text:.txt
 --regex-text=/(第{0,1}(零|一|二|三|四|五|六|七|八|九|十|百|千|万|[0-9]){0,10}(章|回|节|讲|卷|篇|集).{0,50}\s)/\1/C,ChineseChapter/
