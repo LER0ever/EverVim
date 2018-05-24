@@ -80,6 +80,9 @@
     " Friction and air-drag can be override here
     "   let g:evervim_smooth_scrolling = 1
 
+    " Enable transparent background on terminal vim/nvim
+    "   let g:evervim_transparent_bg = 1
+
     " Disable easier moving in tabs and windows
     " only if you need <C-J> for jumping or other conflicting plugin
     " keybinding

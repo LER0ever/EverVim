@@ -15,6 +15,7 @@ endif
 if exists('g:evervim_minimap')
     Plug 'severin-lemaignan/vim-minimap'
 endif
+Plug 'miyakogi/seiya.vim'
 " Additional Color Schemes
 " Some of them are already included in the vim-colorscheme pack
 " But just missing the airline/lightline color
