@@ -34,6 +34,7 @@ SOURCE_EXTENSIONS = [
 
 SOURCE_DIRECTORIES = [
         'src',
+        'source',
         'lib'
         ]
 
