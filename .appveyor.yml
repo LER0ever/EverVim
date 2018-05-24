@@ -4,9 +4,6 @@ version: "{build}"
 skip_tags: true
 
 init:
-  - ps: "iex ((new-object net.webclient).DownloadString((\
-      'https://raw.githubusercontent.com/appveyor/ci/master/scripts/\
-      enable-rdp.ps1')))"
   - "set PATH=\
       %SystemRoot%\\system32\
       ;%SystemRoot%\
