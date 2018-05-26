@@ -11,10 +11,27 @@ _*
 home/
 neovim/
 vim-x86/
-autoload/
 bundle/
-init.vim
-ginit.vim
 .netrwhist
 UltiSnips/
 
+# -- Golang
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, build with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# vendor
+vendor/
+
+# -- EverVim
+EverVim
+glide.lock
