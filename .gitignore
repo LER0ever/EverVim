@@ -32,6 +32,10 @@ UltiSnips/
 # vendor
 vendor/
 
+# -- Misc
+.idea/
+.vscode/
+
 # -- EverVim
 EverVim
-glide.lock
+*.lock

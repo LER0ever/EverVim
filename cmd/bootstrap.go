@@ -1,9 +1,8 @@
 package cmd
 
 import (
-	"fmt"
-
 	"github.com/spf13/cobra"
+	"github.com/LER0ever/EverVim/bootstrap"
 )
 
 // bootstrapCmd represents the bootstrap command
@@ -16,7 +15,7 @@ var bootstrapCmd = &cobra.Command{
 It automatically detects the system environments and installs the necessary
 components for running EverVim.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("bootstrap called")
+		bootstrap.GuidedInstall()
 	},
 }
 
