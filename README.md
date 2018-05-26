@@ -5,7 +5,7 @@
 
 * * *
 
-This branch of EverVim should not be considered as stable until its name become 'master'.
+**This branch of EverVim should not be considered as stable until its name become 'master'.**
 
 * * *
 
@@ -16,7 +16,8 @@ EverVim is licensed under **Apache 2.0**. See [LICENSE.md](https://github.com/LE
 
 EverVim rely on the following open source projects
 
-| Project   | Usage              | License    |
-| :---      | :---               | :---       |
-| spf13-vim | some configuration | Apache 2.0 |
-| volt      | direct use of code | MIT        |
+| Project              | Usage                   | License    |
+| :---                 | :---                    | :---       |
+| spf13/spf13-vim      | some configuration      | Apache 2.0 |
+| vim-volt/volt        | direct use of code      | MIT        |
+| liuchengxu/space-vim | plugin load time offset | MIT        |
