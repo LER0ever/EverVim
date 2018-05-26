@@ -15,6 +15,7 @@ This branch of EverVim should not be considered as stable until its name become 
 EverVim is licensed under **Apache 2.0**. See [LICENSE.md](https://github.com/LER0ever/EverVim/blob/master/LICENSE.md) for details.
 
 EverVim rely on the following open source projects
+
 | Project   | Usage              | License    |
 | :---      | :---               | :---       |
 | spf13-vim | some configuration | Apache 2.0 |
