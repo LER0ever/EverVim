@@ -17,7 +17,7 @@ const (
 	FreeBSD
 	Android
 	Solaris
-	Unknown
+	UnknownOS
 )
 
 func GetOS() OS {
@@ -35,7 +35,7 @@ func GetOS() OS {
 	case "solaris":
 		return Solaris
 	default:
-		return Unknown
+		return UnknownOS
 	}
 }
 

@@ -19,6 +19,7 @@ func TestGetOS(t *testing.T) {
 		if runtime.GOOS == "darwin" {
 			So(res_getOS, ShouldEqual, macOS)
 		}
+		So(res_getOS, ShouldNotEqual, UnknownOS)
 	})
 }
 
