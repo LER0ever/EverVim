@@ -6,11 +6,11 @@ import (
 )
 
 func IsVimAvailable() (bool, string) {
-	return IsExeInPath("vim")
+	return ExePath("vim")
 }
 
 func IsNeoVimAvailable() (bool, string) {
-	return IsExeInPath("nvim")
+	return ExePath("nvim")
 }
 
 func GetVimVersionString(useRPC bool) string {

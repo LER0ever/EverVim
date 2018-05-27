@@ -3,6 +3,7 @@ package bootstrap
 import (
 	"github.com/dixonwille/wmenu"
 	log "github.com/sirupsen/logrus"
+	"github.com/LER0ever/EverVim/utils"
 )
 
 type AutoCompletionPlugin int
@@ -16,6 +17,20 @@ const (
 )
 
 func askForAutoCompletion() int {
+	completer := utils.MultipleChoice(
+		"Which AutoCompletion Plugin do you prefer",
+		[]string {
+			"YouCompleteMe",
+			"Deoplete",
+			"NeoComplete",
+			"Language Server Protocol",
+		},
+	)
+	log.Debugf("User choosed %d", completer)
+	return completer
+}
+
+func askForAutoCompletionOld() int {
 	choice := -1
 	menu := wmenu.NewMenu("Which AutoCompletion Plugin do you prefer?")
 	menu.Action(func(opts []wmenu.Opt) error {

@@ -9,15 +9,15 @@ import (
 func ensureVimReq() bool {
 	b_NeoVim := detectNeoVimWLog()
 	b_Vim := detectVimWLog()
-	if b_NeoVim{
+	if b_NeoVim {
 		return true
 	} else if b_Vim {
 		if askForVimInstallation() {
-			tryInstallNeoVim()
+			tryInstallVim()
 		}
 		return true
 	} else {
-		if askForVimInstallation() && tryInstallNeoVim() {
+		if askForVimInstallation() && tryInstallVim() {
 			return true
 		}
 		return false
@@ -59,6 +59,31 @@ func askForVimInstallation() bool {
 	return ans
 }
 
-func tryInstallNeoVim() bool {
-	return true
+func tryInstallVim() bool {
+	if utils.Apt.IsAvailable() {
+		suc := utils.Apt.Install("neovim")
+		if suc {
+			return true
+		}
+	}
+
+	if utils.Pacman.IsAvailable() {
+		suc := utils.Pacman.Install("neovim")
+		if suc {
+			return true
+		}
+	}
+
+	if utils.Apk.IsAvailable() {
+		suc := utils.Apk.Install("neovim")
+		if suc {
+			return true
+		}
+	}
+
+	log.Warnf("Cannot figure out how to install Neovim for you, falling back to install Vim")
+
+
+
+	return false
 }

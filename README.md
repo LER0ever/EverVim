@@ -5,7 +5,7 @@
 
 * * *
 
-**This branch of EverVim should not be considered as stable until its name become 'master'.**
+**This branch of EverVim is in pre-pre-pre-alpha stage, and should not be considered as stable until its name becomes 'master'.**
 
 * * *
 

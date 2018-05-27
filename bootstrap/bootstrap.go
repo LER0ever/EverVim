@@ -9,7 +9,7 @@ func init() {
 }
 
 func GuidedInstall() {
-	log.Infof("Starting Guided EverVim Installation ...")
+	log.Infof("Starting EverVim Installation Guide ...")
 	assert(ensureOS(), "current system is supported")
 	assert(ensureArch(), "current architecture is supported")
 	assert(ensureVimReq(), "either neovim(preferred) or vim is available")

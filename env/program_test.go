@@ -10,14 +10,14 @@ import (
 func TestIsExecInPath(t *testing.T) {
 	Convey("Check if **ls** is in Unix", t, func() {
 		if runtime.GOOS != "windows" {
-			inpath, exepath := IsExeInPath("ls")
+			inpath, exepath := ExePath("ls")
 			So(inpath, ShouldEqual, true)
 			t.Logf("ls is at %s\n", exepath)
 		}
 	})
 
 	Convey("Check if aoeuidhtns is not in path", t, func() {
-		inpath, _ := IsExeInPath("aoeuidhtns")
+		inpath, _ := ExePath("aoeuidhtns")
 		So(inpath, ShouldEqual, false)
 	})
 }
