@@ -1,6 +1,7 @@
 if isdirectory(expand(EverVimBundleDir("tagbar")))
     nnoremap <leader>tt :TagbarToggle<CR>
     let g:tagbar_width = 30
+    let g:tagbar_sort = 0
 
     " Markdown Tags
     let g:tagbar_type_markdown = {
