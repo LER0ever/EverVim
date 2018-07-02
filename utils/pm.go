@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"github.com/LER0ever/EverVim/env"
+	"code.rongyi.io/LER0ever/EverVim/env"
 	log "github.com/sirupsen/logrus"
 	"strings"
 )

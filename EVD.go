@@ -1,6 +1,6 @@
 package main
 
-import "github.com/LER0ever/EverVim/cmd"
+import "code.rongyi.io/LER0ever/EverVim/cmd"
 
 func main() {
 	cmd.Execute()

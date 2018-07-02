@@ -3,7 +3,7 @@ package bootstrap
 import (
 	"github.com/dixonwille/wmenu"
 	log "github.com/sirupsen/logrus"
-	"github.com/LER0ever/EverVim/utils"
+	"code.rongyi.io/LER0ever/EverVim/utils"
 )
 
 type AutoCompletionPlugin int

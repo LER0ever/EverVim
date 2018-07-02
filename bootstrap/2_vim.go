@@ -1,8 +1,8 @@
 package bootstrap
 
 import (
-	"github.com/LER0ever/EverVim/env"
-	"github.com/LER0ever/EverVim/utils"
+	"code.rongyi.io/LER0ever/EverVim/env"
+	"code.rongyi.io/LER0ever/EverVim/utils"
 	log "github.com/sirupsen/logrus"
 )
 
