@@ -1,6 +1,7 @@
 package utils
 
 import (
+	ct "github.com/daviddengcn/go-colortext"
 	"github.com/dixonwille/wmenu"
 	log "github.com/sirupsen/logrus"
 	wlog "gopkg.in/dixonwille/wlog.v2"
