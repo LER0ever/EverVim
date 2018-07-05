@@ -1,9 +1,10 @@
 package utils
 
 import (
+	"strings"
+
 	"code.rongyi.io/LER0ever/EverVim/env"
 	log "github.com/sirupsen/logrus"
-	"strings"
 )
 
 // Ubuntu/Debian and their derivatives
@@ -40,7 +41,8 @@ func (*apt) IsInstalled(packagename string) bool {
 }
 
 // Manjaro/Archlinux and their derivatives
-type pacman struct {}
+type pacman struct{}
+
 var Pacman pacman
 
 func (*pacman) IsAvailable() bool {
@@ -71,7 +73,8 @@ func (*pacman) IsInstalled(packagename string) bool {
 	return false
 }
 
-type apk struct {}
+type apk struct{}
+
 var Apk apk
 
 func (*apk) IsAvailable() bool {

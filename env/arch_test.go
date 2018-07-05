@@ -22,4 +22,3 @@ func TestGetArch(t *testing.T) {
 		So(res_getArch, ShouldNotEqual, UnknownArch)
 	})
 }
-

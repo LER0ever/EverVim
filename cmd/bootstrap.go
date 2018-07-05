@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	"github.com/spf13/cobra"
 	"code.rongyi.io/LER0ever/EverVim/bootstrap"
+	"github.com/spf13/cobra"
 )
 
 // bootstrapCmd represents the bootstrap command

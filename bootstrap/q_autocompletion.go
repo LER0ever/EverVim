@@ -1,15 +1,15 @@
 package bootstrap
 
 import (
+	"code.rongyi.io/LER0ever/EverVim/utils"
 	"github.com/dixonwille/wmenu"
 	log "github.com/sirupsen/logrus"
-	"code.rongyi.io/LER0ever/EverVim/utils"
 )
 
 type AutoCompletionPlugin int
 
 const (
-	_ AutoCompletionPlugin = iota-1
+	_ AutoCompletionPlugin = iota - 1
 	YouCompleteMe
 	Deoplete
 	NeoComplete
@@ -19,7 +19,7 @@ const (
 func askForAutoCompletion() int {
 	completer := utils.MultipleChoice(
 		"Which AutoCompletion Plugin do you prefer",
-		[]string {
+		[]string{
 			"YouCompleteMe",
 			"Deoplete",
 			"NeoComplete",

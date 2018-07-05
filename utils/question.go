@@ -1,7 +1,6 @@
 package utils
 
 import (
-	"github.com/daviddengcn/go-colortext"
 	"github.com/dixonwille/wmenu"
 	log "github.com/sirupsen/logrus"
 	wlog "gopkg.in/dixonwille/wlog.v2"
@@ -51,7 +50,7 @@ func MultipleChoice(
 		menu.Option(choices[i], i, i == 0, nil)
 	}
 	menu.Run()
-	if (ans == -1) {
+	if ans == -1 {
 		log.WithFields(log.Fields{
 			"Choice": ans,
 		}).Fatalf("Invalid User Choice.")

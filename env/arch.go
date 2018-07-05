@@ -33,4 +33,3 @@ func GetArch() Arch {
 		return UnknownArch
 	}
 }
-

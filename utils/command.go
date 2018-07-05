@@ -2,9 +2,10 @@ package utils
 
 import (
 	"bytes"
-	log "github.com/sirupsen/logrus"
 	"os"
 	"os/exec"
+
+	log "github.com/sirupsen/logrus"
 )
 
 // ExecCmd wraps the command execution

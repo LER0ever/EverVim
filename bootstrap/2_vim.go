@@ -83,7 +83,5 @@ func tryInstallVim() bool {
 
 	log.Warnf("Cannot figure out how to install Neovim for you, falling back to install Vim")
 
-
-
 	return false
 }
