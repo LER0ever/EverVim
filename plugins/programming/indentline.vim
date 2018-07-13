@@ -9,6 +9,8 @@ if isdirectory(expand(EverVimBundleDir("indentLine")))
     let g:indentLine_color_tty_light = 7 " (default: 4)
     let g:indentLine_color_dark = 1 " (default: 2)
     let g:indentLine_enabled = 1
-    let g:indentLine_char = '│' " 
+
+    " https://www.reddit.com/r/vim/comments/7bcado/setting_default_values_for_plugins_global/
+    let g:indentLine_char = get(g:, 'indentLine_char', '│') " 
     let g:indentLine_fileTypeExclude = ['startify', '' , 'help', 'nerdtree', 'tutor', 'calendar']
 endif
