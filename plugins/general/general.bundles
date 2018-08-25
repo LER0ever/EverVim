@@ -1,4 +1,7 @@
 " EverVim General Bundles
+if NVIM()
+    Plug 'equalsraf/neovim-gui-shim'
+endif
 Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
 Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
 Plug 'tpope/vim-surround'
