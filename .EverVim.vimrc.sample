@@ -8,6 +8,10 @@
 
 " EverVim options {
 
+    " Disable folding
+    "   let g:evervim_disable_folding=1
+    "
+
     " EverVim Bundle Groups
     " Bundle Group name is just folders under ~/.EverVim/plugins
     " Below is the default config, uncomment and make your own

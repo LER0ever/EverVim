@@ -79,7 +79,12 @@ set scrolljump=5                " Lines to scroll when cursor leaves screen
 if !ONI()
     set scrolloff=3             " Minimum lines to keep above and below cursor
 endif
-set foldenable                  " Auto fold code
+if exists('g:evervim_disable_folding')
+    set nofoldenable                " Disable Auto fold code
+else
+    set foldenable                  " Auto fold code
+endif
+
 set list
 set listchars=tab:\│\ ,trail:•,extends:#,nbsp:· " Highlight problematic whitespace, tab: ›
 if exists('g:evervim_80_column_warning')
